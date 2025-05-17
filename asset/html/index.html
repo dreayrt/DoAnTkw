@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- reset -->
     <link rel="stylesheet" href="../css/reset.css" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- style bootstrap -->
     <link
       rel="stylesheet"
@@ -15,6 +23,50 @@
     <title>Shop quan ao</title>
   </head>
   <body>
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg justify-content-around bg-light">
+      <div class="container d-flex align-items-center">
+        <a href="#" class="navbar-brand">
+          <img src="../images/logo3.png" alt="logo" />
+        </a>
+        <!-- menu list -->
+        <div class="navbar-collapse">
+          <ul class="navbar-nav ms-5">
+            <li class="navbar-item me-3">
+              <a href="#" class="nav-link active">Home</a>
+            </li>
+            <li class="navbar-item me-3">
+              <a href="#" class="nav-link">Shop</a>
+            </li>
+            <li class="navbar-item me-3 features">
+              <a href="#" class="nav-link ">Features</a>
+              <span id="hot" class="border rounded-pill px-3 py-1 text-bg-danger">Hot</span>
+            </li>
+            <li class="navbar-item me-3">
+              <a href="#" class="nav-link">Blog</a>
+            </li>
+            <li class="navbar-item me-3">
+              <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="navbar-item">
+              <a href="#" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!-- search -->
+        <div class="input-group mb-3 search ms-auto">
+          <a class="input-group-text btn btn-outline-dark" id="btn-search"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></a>
+          <input
+            type="text"
+            class="form-control input-search"
+            placeholder="Tìm kiếm..."
+          />
+        </div>
+      </div>
+    </nav>
+    
     <!-- script bootstrap -->
     <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <!-- script -->
