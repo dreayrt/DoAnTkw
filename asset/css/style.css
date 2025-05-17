@@ -11,10 +11,13 @@ body {
 }
 /*===============common===============  */
 .navbar-brand img {
-  width: 150px;
+  width: 120px;
 }
 input {
   font-size: 1.5rem !important;
+}
+.btn {
+  font-size: 1.5rem;
 }
 /*===============navbar===============  */
 #btn-search {
@@ -51,4 +54,18 @@ input {
   top: -10px;
   left: 45px;
   font-size: 1rem;
+}
+/*===============header===============  */
+header {
+  background-color: #000;
+}
+.btn-help,
+.btn-acc {
+  color: white;
+}
+.btn-help:hover,
+.btn-acc:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
 }

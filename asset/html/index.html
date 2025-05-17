@@ -22,9 +22,25 @@
     <link rel="stylesheet" href="../css/style.css" />
     <title>Shop quan ao</title>
   </head>
-  <body>
+  <body style="height: 1000px">
+    <!-- header -->
+    <header>
+      <div class="container">
+        <div class="row py-2 d-flex justify-content-center align-items-center">
+          <div class="col-8 text-white">free shipping nationwide</div>
+          <div class="col-2 text-center">
+            <a href="#" class="btn btn-help">Help & FAQs</a>
+          </div>
+          <div class="col-2">
+            <a href="#" class="btn btn-acc">My Account</a>
+          </div>
+        </div>
+      </div>
+    </header>
     <!-- nav -->
-    <nav class="navbar navbar-expand-lg justify-content-around bg-light">
+    <nav
+      class="navbar navbar-expand-lg justify-content-around bg-light sticky-top"
+    >
       <div class="container d-flex align-items-center">
         <a href="#" class="navbar-brand">
           <img src="../images/logo3.png" alt="logo" />
@@ -39,8 +55,12 @@
               <a href="#" class="nav-link">Shop</a>
             </li>
             <li class="navbar-item me-3 features">
-              <a href="#" class="nav-link ">Features</a>
-              <span id="hot" class="border rounded-pill px-3 py-1 text-bg-danger">Hot</span>
+              <a href="#" class="nav-link">Features</a>
+              <span
+                id="hot"
+                class="border rounded-pill px-3 py-1 text-bg-danger"
+                >Hot</span
+              >
             </li>
             <li class="navbar-item me-3">
               <a href="#" class="nav-link">Blog</a>
@@ -66,7 +86,7 @@
         </div>
       </div>
     </nav>
-    
+
     <!-- script bootstrap -->
     <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <!-- script -->
