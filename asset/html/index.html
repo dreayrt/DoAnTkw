@@ -24,83 +24,144 @@
   </head>
   <body style="height: 1000px">
     <!-- header -->
-    <header>
+    <header class="bg-dark">
       <div class="container">
-        <div class="row py-2 d-flex justify-content-center align-items-center">
-          <div class="col-9 text-white">free shipping nationwide</div>
-          <div class="col-1 text-center">
-            <a href="#" class="btn btn-help">Help & FAQs</a>
+        <div class="row py-3">
+          <div class="col-9 text-white">Free shipping nationwide</div>
+          <div class="col-1">
+            <a href="#" class="btn text-bg-dark fs-5"> Help & FAQs </a>
           </div>
           <div class="col-1">
-            <a href="#" class="btn btn-acc">My Account</a>
+            <a href="#" class="btn text-bg-dark fs-5">My Account</a>
           </div>
           <div class="col-1">
-            <a href="#" class="btn btn-shopcart"
-              ><i class="fa-solid fa-cart-shopping fs-1 p-3"></i
+            <a href="#" class="btn text-bg-dark fs-5"
+              ><i class="fa-solid fa-cart-shopping"></i
             ></a>
           </div>
         </div>
       </div>
     </header>
     <!-- nav -->
-    <nav class="navbar navbar-expand-lg justify-content-around bg-light">
-      <div class="container d-flex align-items-center">
-        <a href="#" class="navbar-brand">
-          <img src="../images/logo.png" alt="logo" />
-        </a>
-        <!-- menu list -->
-        <div class="navbar-collapse">
-          <ul class="navbar-nav ms-5">
-            <li class="navbar-item me-5">
-              <a href="#" class="nav-link active">Home</a>
-            </li>
-            <li class="navbar-item me-5">
-              <a href="#" class="nav-link">Shop</a>
-            </li>
-            <li class="navbar-item me-5 features">
-              <a href="#" class="nav-link">Features</a>
-              <span
-                id="hot"
-                class="border rounded-pill px-3 py-1 text-bg-danger"
-                >Hot</span
-              >
-            </li>
-            <li class="navbar-item me-5">
-              <a href="#" class="nav-link">Blog</a>
-            </li>
-            <li class="navbar-item me-5">
-              <a href="#" class="nav-link">About</a>
-            </li>
-            <li class="navbar-item">
-              <a href="#" class="nav-link">Contact</a>
-            </li>
-          </ul>
-        </div>
-        <!-- search -->
-        <div class="input-group mb-3 search ms-auto">
-          <input
-            type="text"
-            class="form-control input-search"
-            placeholder="Tìm kiếm..."
-          />
-          <a class="input-group-text btn btn-outline-dark" id="btn-search"
-            ><i class="fa-solid fa-magnifying-glass"></i
-          ></a>
+    <nav>
+      <div class="container">
+        <div class="row d-flex align-items-center">
+          <div class="col-2">
+            <a href="#"
+              ><img src="../images/logo.png" alt="logo" class="logo-header"
+            /></a>
+          </div>
+          <div class="col-7">
+            <ul class="nav">
+              <li class="nav-item me-4">
+                <a href="#" class="nav-link active">Home</a>
+              </li>
+              <li class="nav-item me-4">
+                <a href="#" class="nav-link">Shop</a>
+              </li>
+              <li class="nav-item me-4">
+                <a href="#" class="nav-link feature"
+                  >Feature
+                  <span class="hot fs-5 text-bg-danger rounded-pill px-2"
+                    >HOT</span
+                  ></a
+                >
+              </li>
+              <li class="nav-item me-4">
+                <a href="#" class="nav-link">Blog</a>
+              </li>
+              <li class="nav-item me-4">
+                <a href="#" class="nav-link">About</a>
+              </li>
+              <li class="nav-item me-4">
+                <a href="#" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-3 input-group">
+            <input
+              type="text"
+              class="form-control input-search fs-3"
+              placeholder="Tìm kiếm..."
+            />
+            <span class="btn btn-search fs-3 btn-outline-dark"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></span>
+          </div>
         </div>
       </div>
     </nav>
     <!-- hero -->
-    <section class="hero py-5">
-      <div class="container">
-        <div class="banner1">
-          <div class="title">
-            <h1>Thanh xuân như 1 tách trà Đồ hot đồ đẹp ghé liền shop em</h1>
+    <section class="hero">
+      <div
+        id="carouselExampleAutoplaying"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div
+              style="background-image: url(../images/slide-01.jpg)"
+              class="slide-item h-100"
+            >
+              <div class="content">
+                <p>Women Collection 2018</p>
+                <span>NEW SEASON</span>
+                <a href="#" class="btn bg-primary-subtle fs-1 rounded-pill">
+                  SHOP NOW
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div
+              style="background-image: url(../images/slide-02.jpg)"
+              class="slide-item h-100"
+            >
+              <div class="content">
+                <p>Men New-Season</p>
+                <span>JACKETS & COATS</span>
+                <a href="#" class="btn bg-primary-subtle fs-1 rounded-pill">
+                  SHOP NOW
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div
+              style="background-image: url(../images/slide-03.jpg)"
+              class="slide-item h-100"
+            >
+              <div class="content">
+                <p>Men Collection 2018</p>
+                <span>NEW ARRIVALS</span>
+                <a href="#" class="btn bg-primary-subtle fs-1 rounded-pill">
+                  SHOP NOW
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="banner2"></div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </section>
-
     <!-- script bootstrap -->
     <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <!-- script -->
