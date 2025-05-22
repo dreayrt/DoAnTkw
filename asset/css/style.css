@@ -34,7 +34,7 @@ input {
   padding: 0;
   border: none;
   visibility: hidden;
-  transition: 1s linear;
+  transition: 0.5s linear;
 }
 .search.search-active .input-search {
   max-width: 200px;
@@ -60,12 +60,33 @@ header {
   background-color: #000;
 }
 .btn-help,
-.btn-acc {
+.btn-acc,
+.btn-shopcart {
   color: white;
 }
 .btn-help:hover,
-.btn-acc:hover {
+.btn-acc:hover,
+.btn-shopcart:hover {
   background-color: #fff;
   color: #000;
   border: 1px solid #000;
+}
+/*===============hero===============  */
+.hero {
+  max-width: 700px;
+}
+.hero .banner1,
+.hero .banner2 {
+  width: 100%;
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .banner1 {
+  background-image: url(../images/banner.jpg);
+}
+
+.hero .banner2 {
+  background-image: url(../images/banner1.jpg);
 }
