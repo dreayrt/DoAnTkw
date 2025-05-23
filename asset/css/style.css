@@ -9,11 +9,13 @@ html {
 body {
   font-size: 1.6rem;
 }
+:root {
+  --bg-coating: #6666ff60;
+}
 /*===============common===============  */
 .active {
   font-weight: 600;
 }
-
 /*===============header===============  */
 header .btn:hover {
   background-color: white !important;
@@ -65,6 +67,25 @@ header .btn:hover {
 .hero .carousel .carousel-inner .carousel-item .slide-item .content a {
   padding: 0 20px;
 }
+.hero
+  .carousel
+  .carousel-inner
+  .carousel-item
+  .slide-item
+  .content
+  .hero__btn--shopnow {
+  background-color: #6666ff60;
+}
+.hero
+  .carousel
+  .carousel-inner
+  .carousel-item
+  .slide-item
+  .content
+  .hero__btn--shopnow:hover {
+  background-color: #000;
+  transition: 0.5s;
+}
 .feature {
   position: relative;
 }
@@ -72,4 +93,73 @@ header .btn:hover {
   position: absolute;
   top: -7px;
   left: 44px;
+}
+/*===============overview===============  */
+main .overview {
+  height: 300px;
+  width: 100vw;
+}
+main .overview .overview__item {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid rgba(0, 0, 0, 0.197);
+  position: relative;
+}
+main .overview .overview__item .btn-shop {
+  text-align: center;
+  width: 100px;
+  height: 35px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.197);
+}
+main .overview .overview__item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: var(--bg-coating);
+  opacity: 0;
+}
+main .overview .overview__item:hover .overlay {
+  opacity: 1;
+}
+main .overview .overview__item .btn-shop {
+  display: none;
+  transform: translate(20px, -72px);
+}
+main .overview .overview__item:hover .btn-shop {
+  color: #fff;
+  font-size: 1.5rem;
+  display: block;
+  animation: scale 0.5s linear;
+}
+@keyframes scale {
+  0% {
+    transform: translate(20px, -72px) scale(0);
+  }
+  25% {
+    transform: translate(20px, -72px) scale(0.25);
+  }
+  50% {
+    transform: translate(20px, -72px) scale(0.5);
+  }
+  75% {
+    transform: translate(20px, -72px) scale(0.75);
+  }
+  100% {
+    transform: translate(20px, -72px) scale(1);
+  }
+}
+
+main .overview .overview__item .title {
+  margin: 50px;
+}
+main .overview .overview__item:hover .title {
+  color: #fff;
+}
+main .overview .overview__item .title .overview__item--title-header {
+  font-size: 3.5rem;
 }
