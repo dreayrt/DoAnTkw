@@ -94,12 +94,12 @@ header .btn:hover {
   top: -7px;
   left: 44px;
 }
-/*===============overview===============  */
-main .overview {
+/*===============category===============  */
+main .category {
   height: 300px;
   width: 100vw;
 }
-main .overview .overview__item {
+main .category .category__item {
   height: 100%;
   background-size: cover;
   background-position: center;
@@ -107,13 +107,13 @@ main .overview .overview__item {
   border: 1px solid rgba(0, 0, 0, 0.197);
   position: relative;
 }
-main .overview .overview__item .btn-shop {
+main .category .category__item .btn-shop {
   text-align: center;
   width: 100px;
   height: 35px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.197);
 }
-main .overview .overview__item .overlay {
+main .category .category__item .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -123,14 +123,14 @@ main .overview .overview__item .overlay {
   background-color: var(--bg-coating);
   opacity: 0;
 }
-main .overview .overview__item:hover .overlay {
+main .category .category__item:hover .overlay {
   opacity: 1;
 }
-main .overview .overview__item .btn-shop {
+main .category .category__item .btn-shop {
   display: none;
   transform: translate(20px, -72px);
 }
-main .overview .overview__item:hover .btn-shop {
+main .category .category__item:hover .btn-shop {
   color: #fff;
   font-size: 1.5rem;
   display: block;
@@ -154,12 +154,12 @@ main .overview .overview__item:hover .btn-shop {
   }
 }
 
-main .overview .overview__item .title {
+main .category .category__item .title {
   margin: 50px;
 }
-main .overview .overview__item:hover .title {
+main .category .category__item:hover .title {
   color: #fff;
 }
-main .overview .overview__item .title .overview__item--title-header {
+main .category .category__item .title .category__item--title-header {
   font-size: 3.5rem;
 }
