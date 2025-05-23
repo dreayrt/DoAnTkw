@@ -10,7 +10,7 @@ body {
   font-size: 1.6rem;
 }
 :root {
-  --bg-coating: #6666ff60;
+  --bg-coating: #6666ff60 !important;
 }
 /*===============common===============  */
 .active {
@@ -162,4 +162,84 @@ main .category .category__item:hover .title {
 }
 main .category .category__item .title .category__item--title-header {
   font-size: 3.5rem;
+}
+/*===============over view===============  */
+.overview .overview__heading h2 {
+  font-size: 4rem;
+}
+.overview .overview__heading .overview__list .overview__item:hover {
+  border-bottom: 1px solid black;
+  font-weight: bold;
+  transition: 0.75s;
+}
+.overview
+  .overview__heading
+  .overview__list
+  .overview__item.overview__item--active {
+  border-bottom: 1px solid black;
+  font-weight: bold;
+}
+
+.overview .container .carousel .name-item:hover {
+  color: #6666ffa1 !important;
+}
+.overview .container .carousel .heart1:hover {
+  background-image: url(../images/icon-heart-02.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.overview .carousel .thumb {
+  height: 500px;
+  overflow: hidden;
+}
+.overview .carousel .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.overview .carousel .thumb:hover img {
+  transform: scale(1.25);
+}
+.thumb {
+  position: relative;
+}
+.thumb:hover .quick-view {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 2rem;
+  z-index: 10;
+  animation: scaleqv 0.7s linear;
+}
+@keyframes scaleqv {
+  0% {
+    transform: translateX(-50%) scale(0);
+  }
+  25% {
+    transform: translateX(-50%) scale(0.25);
+  }
+  50% {
+    transform: translateX(-50%) scale(0.5);
+  }
+  75% {
+    transform: translateX(-50%) scale(0.75);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+.overview .carousel-control-prev {
+  color: black;
+  left: -60px;
+  width: 50px;
+  height: 100%;
+}
+.overview .carousel-control-next {
+  color: black;
+  right: -60px;
+  width: 50px;
+  height: 100%;
 }
