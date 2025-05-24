@@ -8,6 +8,8 @@ html {
 }
 body {
   font-size: 1.6rem;
+  width: 100vw;
+  overflow-x: hidden;
 }
 :root {
   --bg-coating: #6666ff60 !important;
@@ -15,6 +17,10 @@ body {
 /*===============common===============  */
 .active {
   font-weight: 600;
+}
+a {
+  text-decoration: none;
+  color: #000;
 }
 /*===============header===============  */
 header .btn:hover {
@@ -205,6 +211,16 @@ main .category .category__item .title .category__item--title-header {
 .thumb {
   position: relative;
 }
+.thumb .quick-view {
+  background: #fff;
+  color: #000;
+  border: none;
+  transition: 0.5s;
+}
+.thumb .quick-view:hover {
+  color: #fff;
+  background-color: #000;
+}
 .thumb:hover .quick-view {
   position: absolute;
   bottom: 10px;
@@ -242,4 +258,126 @@ main .category .category__item .title .category__item--title-header {
   right: -60px;
   width: 50px;
   height: 100%;
+}
+/*===============Blogs===============  */
+.blog .blog__heading {
+  padding-bottom: 50px;
+  font-weight: bold;
+  font-size: 4rem;
+}
+.blog .blog__list {
+  padding-bottom: 150px;
+}
+.blog .blog__item .blog__item--content {
+  max-width: 360px;
+}
+.blog .blog__item .blog__item--content .blog__text-link {
+  display: block;
+  margin: 10px 0px;
+  text-decoration: none;
+  color: #000;
+}
+.blog .blog__item .blog__item--content .blog__text-link:hover {
+  transition: 0.5s;
+  color: #6666ffa1;
+}
+.blog .blog__list .blog__item .blog__item--thumb {
+  overflow: hidden;
+}
+.blog .blog__list .blog__item .blog__item--thumb:hover img {
+  transition: 0.5s;
+  transform: scale(1.2);
+}
+/*===============Footer===============  */
+footer {
+  padding: 10px;
+  background-color: #000000db;
+}
+footer .footer__categories--col .footer__categories--categories-heading {
+  padding: 20px 0px;
+  margin-left: 20px;
+  color: #fff;
+}
+footer .container .row .footer__categories--col .footer__categories--list a {
+  color: #fff;
+}
+footer .container .footer__categories--col .footer__categories--list a:hover {
+  color: #6666ffa1;
+}
+footer .footer__help--col .footer__help--help-heading {
+  padding: 20px 0px;
+  margin-left: 20px;
+  color: #fff;
+}
+footer .container .row .footer__help--col .footer__help--list a {
+  color: #fff;
+}
+footer .container .footer__help--col .footer__help--list a:hover {
+  color: #6666ffa1;
+}
+.footer__getintouch--getintouch-heading {
+  padding: 20px 0px;
+  color: #fff;
+}
+footer .footer__geintouch--col .icon-getintouch span .fa-brands {
+  color: white;
+}
+footer .footer__geintouch--col .icon-getintouch span .fa-brands:hover {
+  color: #6666ffa1;
+  transition: 0.7s;
+}
+.footer__newsletter--newsletter-heading {
+  padding: 20px 0px;
+  color: #fff;
+}
+footer .footer__input {
+  max-width: 200px;
+  background-color: #4f4f4f00;
+  color: white;
+  border: none;
+  border-bottom: 1px solid #ffffff86;
+}
+footer .footer__input::placeholder {
+  color: #ffffff86;
+}
+footer .footer__input:focus {
+  outline: none;
+}
+.footer__newsletter--input {
+  position: relative;
+}
+
+.footer__newsletter--input::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0px;
+  height: 2px;
+  background-color: #6666ffa1;
+  transition: 0.5s linear;
+}
+.footer__newsletter--input.active__input-footer::before {
+  width: 185px;
+}
+.btn-sub {
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+  color: white;
+  font-size: 2.5rem;
+  background-color: #6666ffa1;
+  width: 180px;
+  padding: 0 20px;
+}
+.btn-sub:hover {
+  color: #6666ffa1;
+  background-color: white;
+  transition: 0.5s;
+}
+.copyright {
+  margin-top: 30px;
+  display: block;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.497);
 }
