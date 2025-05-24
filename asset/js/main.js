@@ -45,3 +45,64 @@ btn.addEventListener("click", function (e) {
   e.preventDefault();
   location.reload();
 });
+// tang giam so luong san pham
+const quantity = document.querySelector("#quantity");
+const increase = document.querySelector(".increase");
+const decrease = document.querySelector(".decrease");
+increase.addEventListener("click", function () {
+  quantity.value = parseInt(quantity.value) + 1;
+});
+decrease.addEventListener("click", function () {
+  quantity.value = parseInt(quantity.value) - 1;
+  if (quantity.value < 0) {
+    quantity.value = 0;
+  }
+});
+// hieu ung tuong ung anh cua carousel va anh nho
+const carouselModal = document.querySelector("#carouselModalQv");
+const carouselModalInner = document.querySelector(
+  "#carouselModalQv .carousel-inner"
+);
+const imgSmalls = document.querySelectorAll(".modal__item-img");
+const modalqv = document.querySelector(".modalqv");
+
+function updateActive() {
+  // tim chi muc cua muc hien dang hoat dong trong carousel modal
+  const activeIndex = [...carouselModalInner.children].findIndex((child) => {
+    return child.classList.contains("active");
+  });
+  //xoa tat ca cac active-border cua imgsmall
+  imgSmalls.forEach((img) => {
+    img.classList.remove("active-border");
+  });
+
+  if (activeIndex >= 0) {
+    imgSmalls[activeIndex].classList.add("active-border");
+  }
+}
+// su kien slid.bs.carousel: hieu ung chuyen trang hoan tat
+carouselModal.addEventListener("slid.bs.carousel", () => {
+  updateActive();
+});
+
+// su kien 'shown.bs.modal' tren modal de dong bo hoa khi no mo
+modalqv.addEventListener("shown.bs.modal", () => {
+  updateActive();
+});
+// dong bo hoa ban dau khi script tai
+updateActive();
+
+// bat modal quick view
+const quickViews = document.querySelectorAll(".quick-view");
+const modalQuickView = document.querySelector(".modalqv");
+quickViews.forEach((quickView) => {
+  quickView.addEventListener("click", function (e) {
+    e.preventDefault();
+    modalQuickView.classList.remove("d-none");
+  });
+});
+// close
+const closeModal = document.querySelector(".icon-close");
+closeModal.addEventListener("click", function () {
+  modalQuickView.classList.add("d-none");
+});

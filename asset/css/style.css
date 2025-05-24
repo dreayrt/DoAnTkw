@@ -259,6 +259,98 @@ main .category .category__item .title .category__item--title-header {
   width: 50px;
   height: 100%;
 }
+/* modal quick view */
+.modal-heading{
+  font-size: 3.5rem;
+}
+.modalqv .carousel-control-prev {
+  color: black;
+  left: 6px;
+  width: 50px;
+  height: 100%;
+}
+.modalqv .carousel-control-next {
+  color: black;
+  right: -5px;
+  width: 50px;
+  height: 100%;
+}
+.modalqv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.375);
+  position: fixed; 
+  top: 0;
+  left: 0;
+  z-index: 1050; /
+}
+.modalqv .container {
+  background-color: #fff;
+  width: 80%;
+  height: 90%;
+}
+.modal-detail .modal-detail__form form select {
+  max-width: 250px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.108);
+  padding: 10px 20px;
+}
+.form-item {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.add-to-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn__add-to-cart {
+  display: block;
+  width: 150px;
+  height: 30px;
+  background-color: #6666ffa1;
+  text-align: center;
+  color: white;
+  margin-left: -30px;
+}
+.add-to-cart:hover .btn__add-to-cart {
+  background-color: black;
+  transition: 0.5s;
+}
+.quantity{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px ;
+  margin-top: 20px;
+}
+.quantity .input-group input {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.09);
+  border-left: none;
+  border-right: none;
+  border-color: rgba(0, 0, 0, 0.09);
+}
+.quantity .input-group button {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-color: rgba(0, 0, 0, 0.09);
+}
+.active-border {
+  border: 1px solid black;
+}
+.icon-close {
+  position: absolute;
+  top: 10px;
+  right: 129px;
+}
+
 /*===============Blogs===============  */
 .blog .blog__heading {
   padding-bottom: 50px;
