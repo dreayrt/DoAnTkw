@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- reset -->
+  <link rel="stylesheet" href="../css/reset.css" />
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- style bootstrap -->
+  <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css" />
+  <!-- myStyle -->
+  <link rel="stylesheet" href="../css/feature.css" />
+  <!-- simplyCountdown -->
+   <link rel="stylesheet" href="../css/simplyCountdown.css" />
+  <title>Shop quan ao</title>
+
+
+</head>
+
+<body>
+  <!-- nav -->
+  <nav>
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-2">
+          <a href="#"><img src="../images/logo.png" alt="logo" class="logo-header" /></a>
+        </div>
+        <div class="col-7">
+          <ul class="nav">
+            <li class="nav-item me-4">
+              <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item me-4">
+              <a href="#" class="nav-link">Shop</a>
+            </li>
+            <li class="nav-item me-4">
+              <a href="#" class="nav-link feature active">Feature
+                <span class="hot fs-5 text-bg-danger rounded-pill px-2">HOT</span></a>
+            </li>
+            <li class="nav-item me-4">
+              <a href="#" class="nav-link">Blog</a>
+            </li>
+            <li class="nav-item me-4">
+              <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-item me-4">
+              <a href="#" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-3 input-group">
+          <input type="text" class="form-control input-search fs-3" placeholder="Tìm kiếm..." />
+          <span class="btn btn-search fs-3 btn-outline-dark"><i class="fa-solid fa-magnifying-glass"></i></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- hero -->
+  <section class="hero">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div style="background-image: url(../images/slide-05.jpg)" class="slide-item h-100">
+            <div class="content">
+              <p>Women Collection 2018</p>
+              <span>NEW SEASON</span>
+              <a href="#" class="btn fs-1 rounded-pill hero__btn--shopnow">
+                SHOP NOW
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div style="background-image: url(../images/slide-06.jpg)" class="slide-item h-100">
+            <div class="content">
+              <p>Men New-Season</p>
+              <span>JACKETS & COATS</span>
+              <a href="#" class="btn fs-1 rounded-pill hero__btn--shopnow">
+                SHOP NOW
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div style="background-image: url(../images/slide-07.jpg)" class="slide-item h-100">
+            <div class="content">
+              <p>Men Collection 2018</p>
+              <span>NEW ARRIVALS</span>
+              <a href="#" class="btn fs-1 rounded-pill hero__btn--shopnow">
+                SHOP NOW
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div> <!-- Kết thúc carousel -->
+    <div class="carousel-thumbnails d-flex justify-content-center mt-3">
+      <div class="thumb-item mx-2 active" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0">
+        <img src="../images/thumb-01.jpg" alt="Women's Wear" />
+        <span class="thumb-caption">Women's Wear</span>
+      </div>
+      <div class="thumb-item mx-2" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1">
+        <img src="../images/thumb-02.jpg" alt="Men's Wear" />
+        <span class="thumb-caption">Men's Wear</span>
+      </div>
+      <div class="thumb-item mx-2" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2">
+        <img src="../images/thumb-03.jpg" alt="New Arrivals" />
+        <span class="thumb-caption">New Arrivals</span>
+      </div>
+    </div>
+    </div>
+  </section>
+  <section class="container my-5">
+    <h1 class="tx1">New Arrivals for you</h1>
+  <div class="row g-4">
+    <!-- Product 1 -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card h-100">
+        <div class="position-relative">
+          <img src="../images/product-01.jpg" class="card-img-top" alt="Esprit Ruffle Shirt">
+          <span class="badge bg-success position-absolute top-0 start-0 m-2">New</span>
+        </div>
+        <div class="card-body text-center">
+          <p>Esprit Ruffle Shirt</p>
+          <p class="card-text text-muted">$16.64</p>
+          <button class="btn btn-outline-secondary">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Product 2 -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card h-100">
+        <img src="../images/product-02.jpg" class="card-img-top" alt="Herschel supply">
+        <div class="card-body text-center">
+          <p>Herschel supply</p>
+          <p class="card-text text-muted">$35.31</p>
+          <button class="btn btn-outline-secondary">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Product 3 -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card h-100">
+        <img src="../images/product-03.jpg" class="card-img-top" alt="Only Check Trouser">
+        <div class="card-body text-center">
+          <p>Only Check Trouser</p>
+          <p class="card-text text-muted">$25.50</p>
+          <button class="btn btn-outline-secondary">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Product 4 -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card h-100">
+        <img src="../images/product-04.jpg" class="card-img-top" alt="Classic Trench Coat">
+        <div class="card-body text-center">
+          <p>Classic Trench Coat</p>
+          <p class="card-text text-muted">$75.00</p>
+          <button class="btn btn-outline-secondary">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Thêm các sản phẩm khác tương tự -->
+  </div>
+</section>
+<div class="row">
+					<div class="col-md-12 middle-slider my-4">
+						<div class="middle-text-info ">
+
+							<h3 class="tittle-w3layouts two text-center my-lg-4 mt-3">Summer Flash sale</h3>
+							<div class="simply-countdown-custom" id="simply-countdown-custom"></div>
+
+						</div>
+					</div>
+				</div>
+  <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+  <!-- script -->
+  <script src="../js/main.js"></script>
+   <!--script simplyCountdown -->
+  <script src="../js/simplyCountdown.js"></script>
+</body>
+
+</html>
