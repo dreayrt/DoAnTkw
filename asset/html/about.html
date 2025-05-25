@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- reset -->
+    <link rel="stylesheet" href="../css/reset.css" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- style bootstrap -->
+    <link
+      rel="stylesheet"
+      href="../bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
+    <!-- myStyle -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>shop quan ao</title>
+  </head>
+  <body>
+    <header class="bg-dark position-relative">
+      <div class="container">
+        <div class="row py-3">
+          <div class="col-9 text-white">Free shipping nationwide</div>
+          <div class="col-1">
+            <a href="#" class="btn text-bg-dark fs-5 btn-helpfaqs">
+              Help & FAQs
+            </a>
+          </div>
+          <div class="col-1">
+            <a href="#" class="btn text-bg-dark fs-5">My Account</a>
+          </div>
+          <div class="col-1">
+            <a href="#" class="btn text-bg-dark fs-5 class btn-your-cart"
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <!-- modal your cart -->
+      <div class="your-cart d-none">
+        <div class="your-cart__box p-5">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+              <h2>Your Cart</h2>
+            </div>
+            <div class="btn btn-close__modal-your-cart fw-bold fs-2">X</div>
+          </div>
+          <!--cart list  -->
+          <div class="cart-list row mb-3">
+            <div class="cart-item__img col-3">
+              <img src="../images/item-cart-01.jpg" alt="" class="w-100" />
+            </div>
+            <div class="cart-item__content col-9">
+              <div class="cart-item__heading py-3 fw-light">
+                <a href="#"> White Shirt Pleat</a>
+              </div>
+              <div class="cart-item__detail fw-light">1 x $19.00</div>
+            </div>
+          </div>
+          <div class="cart-list row mb-3">
+            <div class="cart-item__img col-3">
+              <img src="../images/item-cart-02.jpg" alt="" class="w-100" />
+            </div>
+            <div class="cart-item__content col-9">
+              <div class="cart-item__heading py-3 fw-light">
+                <a href="#"> Converse All Star </a>
+              </div>
+              <div class="cart-item__detail fw-light">1 x $39.00</div>
+            </div>
+          </div>
+          <div class="cart-list row">
+            <div class="cart-item__img col-3">
+              <img src="../images/item-cart-03.jpg" alt="" class="w-100" />
+            </div>
+            <div class="cart-item__content col-9">
+              <div class="cart-item__heading py-3 fw-light">
+                <a href="#"> Nixon Porter Leather </a>
+              </div>
+              <div class="cart-item__detail fw-light">1 x $17.00</div>
+            </div>
+          </div>
+          <!-- total -->
+          <p class="fs-4 total mb-4">Total: $75.00</p>
+          <div
+            class="btn-yourcart-footer d-flex justify-content-center align-items-center"
+          >
+            <div class="btn-yourcart btn-viewcart me-3">
+              <a href="#">VIEW CART</a>
+            </div>
+            <div class="btn-yourcart btn-checkout">
+              <a href="#">CHECK OUT</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal help&FAQs -->
+      <div class="help-faqs d-none">
+        <div class="card-box">
+          <div class="card text-center">
+            <div class="card-header fw-bold p-3 bg-dark text-bg-dark">
+              Get Help
+            </div>
+            <div class="card-body p-3">
+              <form action="">
+                <div class="d-flex justify-content-between">
+                  <input
+                    type="text"
+                    placeholder="name"
+                    class="form-control me-4"
+                  />
+                  <input
+                    type="email"
+                    placeholder="email"
+                    class="form-control"
+                  />
+                </div>
+                <div class="py-3">
+                  <input
+                    type="text"
+                    placeholder="Your Questions Title"
+                    class="form-control"
+                  />
+                </div>
+                <div class="d-flex justify-content-center mb-3">
+                  <textarea
+                    name=""
+                    id=""
+                    cols="85"
+                    rows="5"
+                    class="fw-light"
+                    placeholder="Question in detail"
+                  ></textarea>
+                </div>
+                <button
+                  class="btn btn-outline-success btn-sm d-inline-flex align-items-center w-100 justify-content-center p-3"
+                  type="submit"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="me-2 bi bi-envelope-check-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 4.697v4.974A4.491 4.491 0 0 0 12.5 8a4.49 4.49 0 0 0-1.965.45l-.338-.207L16 4.697Z"
+                    ></path>
+                    <path
+                      d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z"
+                    ></path>
+                  </svg>
+                  <span class="fs-3">Subscribe</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- nav -->
+    <nav>
+      <div class="container">
+        <div class="row d-flex align-items-center">
+          <div class="col-2">
+            <a href="#"
+              ><img src="../images/logo.png" alt="logo" class="logo-header"
+            /></a>
+          </div>
+          <div class="col-7">
+            <ul class="nav">
+              <li class="nav-item me-4">
+                <a href="index.html" class="nav-link active">Home</a>
+              </li>
+              <li class="nav-item me-4">
+                <a href="#" class="nav-link">Shop</a>
+              </li>
+              <li class="nav-item me-4">
+                <a href="#" class="nav-link feature"
+                  >Feature
+                  <span class="hot fs-5 text-bg-danger rounded-pill px-2"
+                    >HOT</span
+                  ></a
+                >
+              </li>
+              <li class="nav-item me-4">
+                <a href="#" class="nav-link">Blog</a>
+              </li>
+              <li class="nav-item me-4">
+                <a href="about.html" class="nav-link">About</a>
+              </li>
+              <li class="nav-item me-4">
+                <a href="#" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-3 input-group">
+            <input
+              type="text"
+              class="form-control input-search fs-3"
+              placeholder="Tìm kiếm..."
+            />
+            <span class="btn btn-search fs-3 btn-outline-dark"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+	<main>
+         <!-- Title page -->
+        <section class="about">
+            <p class="about-title text-center fw-bold">About</p>
+    <!-- About page -->
+	<div class="about-page">
+    <div class="container">
+      <!-- Our Story -->
+      <div class="story row align-items-center">
+        <div class="story-content col-8">
+          <h3 class="fw-bold">Our Story</h3>
+          <p class="story-paragraph py-3">
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat consequat enim, non auctor massa ultrices non. Morbi sed odio massa. Quisque at vehicula tellus, sed tincidunt augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas varius egestas diam, eu sodales metus scelerisque congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas gravida justo eu arcu egestas convallis. Nullam eu erat bibendum, tempus ipsum eget, dictum enim. Donec non neque ut enim dapibus tincidunt vitae nec augue. Suspendisse potenti. Proin ut est diam. Donec condimentum euismod tortor, eget facilisis diam faucibus et. Morbi a tempor elit.
+          </p>
+          <p class="story-paragraph pb-3">
+           Donec gravida lorem elit, quis condimentum ex semper sit amet. Fusce eget ligula magna. Aliquam aliquam imperdiet sodales. Ut fringilla turpis in vehicula vehicula. Pellentesque congue ac orci ut gravida. Aliquam erat volutpat. Donec iaculis lectus a arcu facilisis, eu sodales lectus sagittis. Etiam pellentesque, magna vel dictum rutrum, neque justo eleifend elit, vel tincidunt erat arcu ut sem. Sed rutrum, turpis ut commodo efficitur, quam velit convallis ipsum, et maximus enim ligula ac ligula.
+          <p class="story-paragraph">
+          Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+          </p>
+        </div>
+        <div class="col-4">
+          <div class="story-img">
+            <img src="../images/about-01.jpg" alt="" class="w-100">
+        </div>
+        </div>
+      </div>
+      <!-- Our Mission -->
+      <div class="row mission align-items-center">
+       <div class="col-4">
+      <div class="mission-img">
+            <img src="../images/about-02.jpg" alt="" class="w-100">
+        </div>
+       </div>
+       <div class="col-8">
+          <div class="mission-text">
+          <h3 class="mission-title fw-bold">Our Mission</h3>
+          <p class="mission-paragraph">
+           Mauris non lacinia magna. Sed nec lobortis dolor. Vestibulum rhoncus dignissim risus, sed consectetur erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam maximus mauris sit amet odio convallis, in pharetra magna gravida. Praesent sed nunc fermentum mi molestie tempor. Morbi vitae viverra odio. Pellentesque ac velit egestas, luctus arcu non, laoreet mauris. Sed in ipsum tempor, consequat odio in, porttitor ante. Ut mauris ligula, volutpat in sodales in, porta non odio. Pellentesque tempor urna vitae mi vestibulum, nec venenatis nulla lobortis. Proin at gravida ante. Mauris auctor purus at lacus maximus euismod. Pellentesque vulputate massa ut nisl hendrerit, eget elementum libero iaculis.
+          </p>
+          <div class="quote-block">
+            <p class="quote-text">
+             Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something. It seemed obvious to them after a while.
+            </p>
+            <span class="quote-author fs-4">- Steve Jobs</span>
+          </div>
+        </div>
+       </div>
+      </div>
+    </div>
+    </div>	
+  </section>	
+    </main>
+    <footer>
+      <div class="container border-bottom">
+        <div class="row pb-5">
+          <!-- col-categories -->
+          <div class="col-3 footer__categories--col">
+            <div class="footer__categories--categories-heading">
+              <h2>Categories</h2>
+            </div>
+            <ul class="footer__categories--list">
+              <li class="fw-light py-3"><a href="#"> Women </a></li>
+              <li class="fw-light py-3"><a href="#">Men</a></li>
+              <li class="fw-light py-3"><a href="#">Shoe</a></li>
+              <li class="fw-light py-3"><a href="#">Watches</a></li>
+            </ul>
+          </div>
+          <!-- col-help -->
+          <div class="col-3 footer__help--col">
+            <div class="footer__help--help-heading">
+              <h2>HELP</h2>
+            </div>
+            <ul class="footer__help--list">
+              <li class="fw-light py-3"><a href="#"> Track Over </a></li>
+              <li class="fw-light py-3"><a href="#">Returns</a></li>
+              <li class="fw-light py-3"><a href="#">Shipping</a></li>
+              <li class="fw-light py-3"><a href="#">FAQs</a></li>
+            </ul>
+          </div>
+          <!-- col get in touch -->
+          <div class="col-3 footer__geintouch--col">
+            <div class="footer__getintouch--getintouch-heading">
+              <h2>GET IN TOUCH</h2>
+            </div>
+            <p class="text-light fw-light py-5">
+              Any questions? Let us know in store at 8th floor, 379 Hudson St,
+              New York, NY 10018 or call us on (+1) 96 716 6879
+            </p>
+            <div class="icon-getintouch">
+              <span><a href="#"><i class="fa-brands fa-facebook-f me-4"></i></a></span>
+              <span><a href="#"><i class="fa-brands fa-instagram me-4"></i></a></i></span>
+              <span><a href=""><i class="fa-brands fa-pinterest-p me-4"></i></a></i></span>
+            </div>
+          </div>
+          <!-- newsletter -->
+          <div class="col-3 footer__gnewsletter--col">
+            <div class="footer__newsletter--newsletter-heading">
+              <h2>NEWSLETTER</h2>
+            </div>
+            <!-- form -->
+            <div class="footer__newsletter--input">
+              <form action="">
+                <input
+                  type="email"
+                  name="email"
+                  id=""
+                  placeholder="email@example.com"
+                  class="footer__input"
+                />
+              </form>
+            </div>
+            <!-- Subscribe -->
+             <a href="#" class=" btn-sub rounded-pill">SUBSCRIBE</a>
+          </div>
+        </div>
+        <div class="iconpay__list d-flex justify-content-center mb-5">
+          <div class="iconpay__item me-3">
+            <img src="../images/icon-pay-01.png" alt="">
+          </div>
+          <div class="iconpay__item me-3">
+            <img src="../images/icon-pay-02.png" alt="">
+          </div>
+          <div class="iconpay__item me-3">
+            <img src="../images/icon-pay-03.png" alt="">
+          </div>
+          <div class="iconpay__item">
+            <img src="../images/icon-pay-04.png" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- copyright -->
+       <p class="copyright">Copyright © 2025.4duamenhh</p>
+    </footer>
+
+    <!-- script bootstrap -->
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- script -->
+    <script src="../js/about.js"></script>
+  </body>
+</html>
