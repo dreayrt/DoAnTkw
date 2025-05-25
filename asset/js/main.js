@@ -85,7 +85,8 @@ carouselModal.addEventListener("slid.bs.carousel", () => {
   updateActive();
 });
 
-// su kien 'shown.bs.modal' tren modal de dong bo hoa khi no mo
+// su kien 'shown.bs.modal' duoc goi khi modal da mo xong hoan tat (tuc la sau khi hieu ung mo modal ket thuc).
+// xay ra Ngay sau khi modal hien thi hoan tat tren man hinh
 modalqv.addEventListener("shown.bs.modal", () => {
   updateActive();
 });
@@ -105,4 +106,16 @@ quickViews.forEach((quickView) => {
 const closeModal = document.querySelector(".icon-close");
 closeModal.addEventListener("click", function () {
   modalQuickView.classList.add("d-none");
+});
+// card added added
+const btnAddQuickView = document.querySelector(".btn__add-to-cart");
+const modalAdded = document.querySelector(".modal-add");
+btnAddQuickView.addEventListener("click", function (e) {
+  e.preventDefault();
+  modalAdded.classList.remove("d-none");
+});
+// close card added
+const btnModalAdd = document.querySelector(".btn-modal-add");
+btnModalAdd.addEventListener("click", function () {
+  modalAdded.classList.add("d-none");
 });
