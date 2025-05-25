@@ -119,3 +119,21 @@ const btnModalAdd = document.querySelector(".btn-modal-add");
 btnModalAdd.addEventListener("click", function () {
   modalAdded.classList.add("d-none");
 });
+// open your cart
+const btnYourCart = document.querySelector(".btn-your-cart");
+btnYourCart.addEventListener("click", function () {
+  yourCart.classList.remove("d-none");
+});
+//close your cart
+const btnCloselYourCart = document.querySelector(".btn-close__modal-your-cart");
+const yourCart = document.querySelector(".your-cart");
+btnCloselYourCart.addEventListener("click", function () {
+  yourCart.classList.add("d-none");
+});
+
+// open faq
+const helpFaqs = document.querySelector(".help-faqs");
+const btnHelpFaqs = document.querySelector(".btn-helpfaqs");
+btnHelpFaqs.addEventListener("click", function () {
+  helpFaqs.classList.remove("d-none");
+});

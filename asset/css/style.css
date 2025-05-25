@@ -27,6 +27,75 @@ header .btn:hover {
   background-color: white !important;
   color: black !important;
 }
+/* modal your cart */
+.your-cart {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.171);
+  z-index: 3000;
+}
+.your-cart__box {
+  width: 30%;
+  height: 100vh;
+  background-color: #fff;
+}
+.btn-close__modal-your-cart:hover {
+  transition: 0.5;
+  background-color: #000;
+  color: #fff;
+}
+.cart-item__heading a {
+  display: block;
+}
+.cart-item__heading a:hover {
+  transition: 0.5s;
+  color: #6666ffa1;
+}
+.total {
+  margin-top: 100px;
+}
+
+.btn-yourcart a {
+  font-weight: bold;
+  width: 120px;
+  height: 40px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+}
+.btn-yourcart a:hover {
+  transition: 0.5s;
+  color: #fff;
+  background-color: #6666ffa1;
+}
+/* modal help&FAQs */
+.help-faqs .card-box .card {
+  width: 40%;
+  height: auto;
+  box-shadow: 10px 10px 10px gray;
+}
+.help-faqs .card-box {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00000045;
+  z-index: 4000;
+}
+.help-faqs .card-box .card-body {
+  height: 310px;
+}
+textarea {
+  resize: none;
+}
+
 /*===============nav===============  */
 .logo-header {
   width: 150px;
