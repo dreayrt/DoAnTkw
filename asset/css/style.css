@@ -632,7 +632,6 @@ footer .footer__input:focus {
   text-align: center;
   color: rgba(255, 255, 255, 0.497);
 }
-/*===============xong index(Thuan)===============  */
 /*===============about===============  */
 .about .about-title {
   color: #fff;
@@ -688,7 +687,7 @@ footer .footer__input:focus {
   padding: 0 20px;
   border-left: 2px solid rgba(0, 0, 0, 0.489);
 }
-/*===============xong about===============  */
+/*===============blog===============  */
 .blog .blog-banner img {
   width: 200px;
   object-fit: cover;
@@ -785,4 +784,184 @@ footer .footer__input:focus {
 .btn-pagination__active {
   color: white;
   background-color: gray;
+}
+/*===============shop===============  */
+.product-navigation {
+  padding: 50px 0px 80px;
+}
+.product-navigation__text .nav-link-product:hover {
+  font-weight: bold;
+  color: black !important;
+  text-decoration: underline;
+}
+.product-navigation .product-navigation__text .nav-link-product__active {
+  font-weight: bold;
+  color: black !important  ;
+  text-decoration: underline;
+}
+.btn-pro-nav button {
+  opacity: 0.7;
+  font-size: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.273);
+}
+.btn-pro-nav button:hover {
+  background-color: #6666ffa1;
+  color: #fff;
+}
+/* modal shop__search/filter */
+.modal-filter .container {
+  margin-top: 50px;
+  padding: 20px 0px;
+  background-color: rgba(0, 0, 0, 0.066);
+}
+.modal-fil li:hover {
+  color: #6666ffa1 !important;
+}
+.modal-fil .tag .tag-list .tag-item:hover {
+  color: #6666ffa1 !important;
+}
+.fil-heading {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-left: 30px;
+}
+.btn-pro-nav button {
+  opacity: 0.7;
+  font-size: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.273);
+}
+.btn-pro-nav button:hover {
+  background-color: #6666ffa1;
+  color: #fff;
+}
+.sort .sort-list {
+  list-style-type: none;
+}
+.sort .sort-list li {
+  display: block;
+  margin-top: 10px;
+}
+.price .price-list {
+  list-style-type: none;
+}
+.price .price-list li {
+  display: block;
+  margin-top: 10px;
+}
+.color .color-list li {
+  margin-top: 5px;
+}
+.color .color-list .color1:hover {
+  font-weight: bold;
+  transition: 0.5s;
+  color: black !important;
+}
+.color .color-list .color2:hover {
+  font-weight: bold;
+  transition: 0.5s;
+  color: blue !important;
+}
+.color .color-list .color3:hover {
+  font-weight: bold;
+  color: grey !important;
+  transition: 0.5s;
+}
+.color .color-list .color4:hover {
+  font-weight: bold;
+  color: green !important;
+  transition: 0.5s;
+}
+.color .color-list .color5:hover {
+  font-weight: bold;
+  transition: 0.5s;
+  color: red !important;
+}
+.color .color-list .color6:hover {
+  font-weight: bold;
+  color: white !important;
+  transition: 0.5s;
+}
+.tag .tag-list {
+  flex-wrap: wrap;
+  max-width: 200px;
+}
+.tag .tag-list .tag-item {
+  margin: 10px 10px 0px 0px;
+  padding: 0px 10px;
+  border-radius: 25px;
+  border: 2px solid rgba(0, 0, 0, 0.26);
+  color: rgba(0, 0, 0, 0.26);
+  margin-right: 10px;
+}
+.tag .tag-list .tag-item:hover {
+  border: 2px solid #6666ffa1;
+  color: #6666ffa1;
+}
+.modal-search__box {
+  max-width: 1500px;
+  border: 1px solid rgba(0, 0, 0, 0.203);
+}
+.shop-modal-search .modal-search__box input {
+  width: 80%;
+  height: 50px;
+}
+.shop-modal-search .container {
+  margin-top: 50px;
+}
+.shop-modal-search .icon-searchbox:hover {
+  transition: 0.5s;
+  color: #6666ffa1;
+}
+/* shop product */
+.shop-prod .card .card-body .card-body__content .card-title {
+  font-size: 1.5rem;
+}
+.shop-prod .card .card-body .card-body__content .card-title:hover {
+  color: #6666ffa1;
+}
+.shop-prod .card .thumb {
+  overflow: hidden;
+  position: relative;
+}
+
+.thumb .quick-view {
+  background: #fff;
+  color: #000;
+  border: none;
+  transition: opacity 0.5s, transform 0.5s, visibility 0.5s;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, 150%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  font-size: 2rem;
+  z-index: 10;
+}
+.thumb:hover .quick-view {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.thumb .quick-view:hover {
+  color: #fff;
+  background-color: #000;
+}
+.shop-prod .card .thumb:hover img {
+  transition: 0.5s;
+}
+
+.shop-prod .card .thumb:hover img {
+  transform: scale(1.25);
+}
+.load-more .btn-load-more {
+  color: #000;
+  background-color: rgba(128, 128, 128, 0.237);
+  transition: 0.5s;
+}
+.load-more .btn-load-more:hover {
+  background-color: #000;
+  color: #fff;
 }
