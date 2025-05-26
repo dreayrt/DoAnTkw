@@ -386,3 +386,34 @@ footer a:hover {
   font-size: 5rem;
   margin: 20px 0; 
 }
+/*-- //error --*/
+.middle-text-info {
+    background: url(../images/banner-mid.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    min-height: 400px;
+    padding: 3em 0 0 0;
+}
+.banner_inner {
+    background: url(../images/banner-mid.jpg)no-repeat 0px -73px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    moz-background-size: cover;
+    min-height: 180px;
+}
+h3.tittle.two{
+    font-weight:300;
+    color:#fff;
+    letter-spacing:10px;
+    font-size: 5rem;
+}
+h1.tx2{
+    margin: 0;
+    font-family: 'Inconsolata', monospace;
+    letter-spacing: 1px;
+}
