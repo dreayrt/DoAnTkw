@@ -633,7 +633,7 @@ footer .footer__input:focus {
   color: rgba(255, 255, 255, 0.497);
 }
 /*===============xong index(Thuan)===============  */
-/*===============about-title===============  */
+/*===============about===============  */
 .about .about-title {
   color: #fff;
   font-size: 6rem;
@@ -687,4 +687,102 @@ footer .footer__input:focus {
   margin: 40px 0px;
   padding: 0 20px;
   border-left: 2px solid rgba(0, 0, 0, 0.489);
+}
+/*===============xong about===============  */
+.blog .blog-banner img {
+  width: 200px;
+  object-fit: cover;
+}
+.blog .blog-banner .blog-banner__heading {
+  font-size: 5rem;
+}
+.blog .blog-banner {
+  margin-bottom: 70px;
+}
+.blog .blog-content .blog-post-item__img img {
+  height: 450px;
+  object-fit: cover;
+  transition: 0.5s;
+}
+.blog .blog-content .blog-post-item__img {
+  overflow: hidden;
+}
+.blog .blog-content .blog-post-item__img img:hover {
+  transform: scale(1.2);
+}
+.blog .blog-content .blog-post-item__img .blog-post-item__date {
+  width: 80px;
+  height: 80px;
+  top: 15px;
+  left: 15px;
+  background-color: #fff;
+  opacity: 0.7;
+}
+.blog-post-item__detail {
+  margin-bottom: 50px;
+}
+.blog-post-item__detail--heading:hover {
+  transition: 0.5s;
+  color: #6666ffa1;
+}
+.continue-read:hover {
+  transition: 0.5s;
+  color: #6666ffa1 !important;
+}
+.blog-content .sidebar {
+  padding: 40px;
+  position: relative;
+}
+.blog-content .sidebar .sidebar-search {
+  margin: 0 auto 50px;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+}
+.blog-content .sidebar .sidebar-search a i:hover {
+  transition: 0.5s;
+  color: #6666ffa1;
+}
+.blog-content .sidebar .sidebar-search .form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+.archive .list-unstyled li:hover a {
+  color: #6666ffa1 !important  ;
+  transition: 0.5s;
+}
+.tag .tag-link {
+  color: rgba(0, 0, 0, 0.222);
+  transition: 0.5s;
+  padding: 0 10px;
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.222);
+  border-radius: 45px;
+}
+.tag .tag-link:hover {
+  color: #6666ffa1;
+  border-color: #6666ffa1;
+}
+.pagination {
+  margin-bottom: 100px;
+}
+.pagination .btn-pagination {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.189);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.pagination .btn-pagination:hover {
+  color: white;
+  background-color: gray;
+}
+.btn-pagination__active {
+  color: white;
+  background-color: gray;
 }
