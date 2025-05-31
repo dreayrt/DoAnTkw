@@ -1,9 +1,9 @@
 // search-box
-const inputGroup = document.querySelector(".input-group");
-const btnSearch = document.querySelector(".btn-search");
-btnSearch.addEventListener("click", function () {
-  inputGroup.classList.toggle("active-search");
-});
+// const inputGroup = document.querySelector(".input-group");
+// const btnSearch = document.querySelector(".btn-search");
+// btnSearch.addEventListener("click", function () {
+//   inputGroup.classList.toggle("active-search");
+// });
 // //overview__item--active
 // const overViewItems = document.querySelectorAll(".overview__item");
 // overViewItems.forEach((item) => {
@@ -32,19 +32,19 @@ heart1s.forEach((heart1) => {
   });
 });
 // // border-bottom email
-// const footerNewSletterInput = document.querySelector(
-//   ".footer__newsletter--input"
-// );
-// const footerInput = document.querySelector(".footer__input");
-// footerInput.addEventListener("click", function () {
-//   footerNewSletterInput.classList.add("active__input-footer");
-// });
-// // load lai trang
-// const btn = document.querySelector(".btn-sub");
-// btn.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   location.reload();
-// });
+const footerNewSletterInput = document.querySelector(
+  ".footer__newsletter--input"
+);
+const footerInput = document.querySelector(".footer__input");
+footerInput.addEventListener("click", function () {
+  footerNewSletterInput.classList.add("active__input-footer");
+});
+// load lai trang
+const btn = document.querySelector(".btn-sub");
+btn.addEventListener("click", function (e) {
+  e.preventDefault();
+  location.reload();
+});
 // tang giam so luong san pham
 const quantity = document.querySelector("#quantity");
 const increase = document.querySelector(".increase");

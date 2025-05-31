@@ -32,13 +32,13 @@ btnSearch.addEventListener("click", function () {
 //   });
 // });
 // // border-bottom email
-// const footerNewSletterInput = document.querySelector(
-//   ".footer__newsletter--input"
-// );
-// const footerInput = document.querySelector(".footer__input");
-// footerInput.addEventListener("click", function () {
-//   footerNewSletterInput.classList.add("active__input-footer");
-// });
+const footerNewSletterInput = document.querySelector(
+  ".footer__newsletter--input"
+);
+const footerInput = document.querySelector(".footer__input");
+footerInput.addEventListener("click", function () {
+  footerNewSletterInput.classList.add("active__input-footer");
+});
 // // load lai trang
 // const btn = document.querySelector(".btn-sub");
 // btn.addEventListener("click", function (e) {

@@ -786,6 +786,12 @@ footer .footer__input:focus {
   background-color: gray;
 }
 /*===============shop===============  */
+.shop-prod .container .card-body div .heart1:hover {
+  background-image: url(../images/icon-heart-02.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .product-navigation {
   padding: 50px 0px 80px;
 }
@@ -957,6 +963,7 @@ footer .footer__input:focus {
   transform: scale(1.25);
 }
 .load-more .btn-load-more {
+  transition: 0.5s;
   color: #000;
   background-color: rgba(128, 128, 128, 0.237);
   transition: 0.5s;

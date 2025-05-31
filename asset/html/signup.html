@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- reset -->
+    <link rel="stylesheet" href="../css/reset.css" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- style bootstrap -->
+    <link
+      rel="stylesheet"
+      href="../bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
+    <!-- myStyle -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/signup.css" />
+    <title>Shop quan ao</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="bg-dark position-relative">
+      <div class="container">
+        <div class="row py-3">
+          <div class="col-11 text-white">Free shipping nationwide</div>
+          <div class="col-1">
+            <a href="#" class="btn text-bg-dark fs-5 btn-helpfaqs">
+              Help & FAQs
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- modal your cart -->
+      <div class="your-cart d-none">
+        <div class="your-cart__box p-5">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+              <h2>Your Cart</h2>
+            </div>
+            <div class="btn btn-close__modal-your-cart fw-bold fs-2">X</div>
+          </div>
+          <!--cart list  -->
+          <div class="cart-list row mb-3">
+            <div class="cart-item__img col-3">
+              <img src="../images/item-cart-01.jpg" alt="" class="w-100" />
+            </div>
+            <div class="cart-item__content col-9">
+              <div class="cart-item__heading py-3 fw-light">
+                <a href="#"> White Shirt Pleat</a>
+              </div>
+              <div class="cart-item__detail fw-light">1 x $19.00</div>
+            </div>
+          </div>
+          <div class="cart-list row mb-3">
+            <div class="cart-item__img col-3">
+              <img src="../images/item-cart-02.jpg" alt="" class="w-100" />
+            </div>
+            <div class="cart-item__content col-9">
+              <div class="cart-item__heading py-3 fw-light">
+                <a href="#"> Converse All Star </a>
+              </div>
+              <div class="cart-item__detail fw-light">1 x $39.00</div>
+            </div>
+          </div>
+          <div class="cart-list row">
+            <div class="cart-item__img col-3">
+              <img src="../images/item-cart-03.jpg" alt="" class="w-100" />
+            </div>
+            <div class="cart-item__content col-9">
+              <div class="cart-item__heading py-3 fw-light">
+                <a href="#"> Nixon Porter Leather </a>
+              </div>
+              <div class="cart-item__detail fw-light">1 x $17.00</div>
+            </div>
+          </div>
+          <!-- total -->
+          <p class="fs-4 total mb-4">Total: $75.00</p>
+          <div
+            class="btn-yourcart-footer d-flex justify-content-center align-items-center"
+          >
+            <div class="btn-yourcart btn-viewcart me-3">
+              <a href="#">VIEW CART</a>
+            </div>
+            <div class="btn-yourcart btn-checkout">
+              <a href="#">CHECK OUT</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal help&FAQs -->
+      <div class="help-faqs d-none">
+        <div class="card-box">
+          <div class="card text-center">
+            <div class="card-header fw-bold p-3 bg-dark text-bg-dark">
+              Get Help
+            </div>
+            <div class="card-body p-3">
+              <form action="">
+                <div class="d-flex justify-content-between">
+                  <input
+                    type="text"
+                    placeholder="name"
+                    class="form-control me-4"
+                  />
+                  <input
+                    type="email"
+                    placeholder="email"
+                    class="form-control"
+                  />
+                </div>
+                <div class="py-3">
+                  <input
+                    type="text"
+                    placeholder="Your Questions Title"
+                    class="form-control"
+                  />
+                </div>
+                <div class="d-flex justify-content-center mb-3">
+                  <textarea
+                    name=""
+                    id=""
+                    cols="85"
+                    rows="5"
+                    class="fw-light"
+                    placeholder="Question in detail"
+                  ></textarea>
+                </div>
+                <button
+                  class="btn btn-outline-success btn-sm d-inline-flex align-items-center w-100 justify-content-center p-3"
+                  type="submit"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="me-2 bi bi-envelope-check-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 4.697v4.974A4.491 4.491 0 0 0 12.5 8a4.49 4.49 0 0 0-1.965.45l-.338-.207L16 4.697Z"
+                    ></path>
+                    <path
+                      d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z"
+                    ></path>
+                  </svg>
+                  <span class="fs-3">Subscribe</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- nav -->
+    <nav>
+      <div class="container">
+        <div class="row d-flex align-items-center">
+          <div class="col-2">
+            <a href="#"
+              ><img src="../images/logo.png" alt="logo" class="logo-header"
+            /></a>
+          </div>
+          <div class="col-10">
+            <ul class="nav">
+              <li class="nav-item me-4">
+                <a href="index.html" class="nav-link ">Home</a>
+              </li>
+              <li class="nav-item me-4">
+                <a href="shop.html" class="nav-link">Shop</a>
+              </li>
+              <li class="nav-item me-4">
+                <a href="#" class="nav-link feature"
+                  >Feature
+                  <span class="hot fs-5 text-bg-danger rounded-pill px-2"
+                    >HOT</span
+                  ></a
+                >
+              </li>
+              <li class="nav-item me-4">
+                <a href="blog.html" class="nav-link">Blog</a>
+              </li>
+              <li class="nav-item me-4">
+                <a href="about.html" class="nav-link">About</a>
+              </li>
+              <li class="nav-item me-4">
+                <a href="#" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="signup">
+      <div class="container">
+        <div class="card row">
+          <div class="col-12 d-flex justify-content-center">
+            <img src="../images/logo.png" alt="" class="w-25" />
+          </div>
+          <div class="card-body row">
+            <form action="login.html" class="col-12">
+              <div class="row mb-3 align-items-center">
+                <label for="name" class="col-3 col-form-label">Họ tên:</label>
+                <div class="col-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row mb-3 align-items-center">
+                <label for="username" class="col-3 col-form-label"
+                  >Tên đăng nhập:</label
+                >
+                <div class="col-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="username"
+                    name="username"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row mb-3 align-items-center">
+                <label for="pass" class="col-3 col-form-label">Mật khẩu:</label>
+                <div class="col-9">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="pass"
+                    name="pass"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row mb-3 align-items-center">
+                <label for="gender" class="col-3 col-form-label"
+                  >Giới tính:</label
+                >
+                <div class="col-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="gender"
+                    name="gender"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row mb-3 align-items-center">
+                <label for="email" class="col-3 col-form-label">Email:</label>
+                <div class="col-9">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row mb-3 align-items-center">
+                <label for="address" class="col-3 col-form-label"
+                  >Địa chỉ:</label
+                >
+                <div class="col-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="address"
+                    name="address"
+                    required
+                  />
+                </div>
+              </div>
+              <div
+                class="signup-form__btn-submit d-flex justify-content-end mt-4"
+              >
+                <div class="signup-btn rounded-pill me-3">
+                  <button class="btn text-white fs-4" type="submit">
+                    Đăng ký
+                  </button>
+                </div>
+                <div class="reset-btn rounded-pill px-3">
+                  <button class="btn text-white fs-4" type="button">Hủy</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- script bootstrap -->
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- script -->
+    <script src="../js/signup.js"></script>
+  </body>
+</html>
