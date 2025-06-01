@@ -1,9 +1,9 @@
 // search-box
-const inputGroup = document.querySelector(".input-group");
-const btnSearch = document.querySelector(".btn-search");
-btnSearch.addEventListener("click", function () {
-  inputGroup.classList.toggle("active-search");
-});
+// const inputGroup = document.querySelector(".input-group");
+// const btnSearch = document.querySelector(".btn-search");
+// btnSearch.addEventListener("click", function () {
+//   inputGroup.classList.toggle("active-search");
+// });
 // //overview__item--active
 // const overViewItems = document.querySelectorAll(".overview__item");
 // overViewItems.forEach((item) => {

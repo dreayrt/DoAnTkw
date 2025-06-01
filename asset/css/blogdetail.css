@@ -1,0 +1,56 @@
+.breadcrumb {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  padding-bottom: 20px;
+}
+.breadcrumb-item a:hover {
+  transition: 0.5s;
+  color: #6666ffa1 !important;
+}
+.blog .blog-content .blog-post-list .blog-post-item__detail--heading {
+  font-size: 4rem;
+  padding-bottom: 25px;
+}
+.blog .blog-content .blog-post-list .blog-post-item__detail--heading:hover {
+  color: black;
+}
+.blog .blog-content .blog-post-list .blog-post-item__detail .desc {
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+.tag__detail {
+  margin-bottom: 80px;
+}
+.tag__detail .tag__heading,
+.tag__btn a {
+  font-size: 1.5rem;
+}
+.tag__detail .tag__btn a {
+  border: 1px solid rgba(0, 0, 0, 0.185);
+  padding: 0 10px;
+}
+.tag__detail .tag__btn:hover a {
+  transition: 0.5s;
+  border-color: #6666ffa1;
+  color: #6666ffa1;
+}
+.comment form .row {
+  padding: 10px 0px;
+}
+.comment form .row .form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, 0.185);
+}
+.postcomment-btn {
+  margin-top: 20px;
+  background-color: black;
+  color: #fff;
+  transition: 0.5s;
+  margin-bottom: 20px;
+}
+.postcomment-btn:hover {
+  color: #fff;
+  background-color: #6666ffa1;
+  border-color: #6666ffa1;
+}

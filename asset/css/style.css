@@ -539,6 +539,7 @@ main .category .category__item .title .category__item--title-header {
   transition: 0.5s;
   transform: scale(1.2);
 }
+
 /*===============Footer===============  */
 footer {
   padding: 10px;
@@ -710,7 +711,7 @@ footer .footer__input:focus {
   transform: scale(1.2);
 }
 .blog .blog-content .blog-post-item__img .blog-post-item__date {
-  width: 80px;
+  width: 100px;
   height: 80px;
   top: 15px;
   left: 15px;
@@ -720,7 +721,7 @@ footer .footer__input:focus {
 .blog-post-item__detail {
   margin-bottom: 50px;
 }
-.blog-post-item__detail--heading:hover {
+.blog-post-item__detail--heading:hover a {
   transition: 0.5s;
   color: #6666ffa1;
 }
