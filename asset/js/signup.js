@@ -1,46 +1,45 @@
-const reloadSignUp = document.querySelector(".reset-btn button");
+// open faq
+const helpFaqs = document.querySelector(".help-faqs");
+const btnHelpFaqs = document.querySelector(".btn-helpfaqs");
+btnHelpFaqs.addEventListener("click", function () {
+  helpFaqs.classList.remove("d-none");
+});
+
+// reset form
+const resetButton = document.querySelector(".reset-btn button");
 const inputValue = document.querySelectorAll("input");
-reloadSignUp.addEventListener("click", function () {
-  inputValue.forEach((inputItem) => {
-    inputItem.value = "";
-  });
+resetButton.addEventListener("click", function () {
+  signupForm.reset();
 });
-// // open faq
-// const helpFaqs = document.querySelector(".help-faqs");
-// const btnHelpFaqs = document.querySelector(".btn-helpfaqs");
-// btnHelpFaqs.addEventListener("click", function () {
-//   helpFaqs.classList.remove("d-none");
-// });
-// localStorage acc
-const form = document.querySelector(".card-body form");
-console.log("Form:", form);
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
-  const userName = document.querySelector("#username").value;
-  const passWord = document.querySelector("#pass").value;
-  localStorage.setItem("username", userName);
-  localStorage.setItem("password", passWord);
+resetButton.addEventListener("click", function () {
+  signupForm.reset();
 });
 
-// const form = document.querySelector(".card-body form");
+//localStorage acc
+const signupForm = document.getElementById("signupForm");
+signupForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const name = document.getElementById("name").value;
+  const username = document.getElementById("username").value;
+  const pass = document.getElementById("pass").value;
+  // khoi tao doi tuong
+  const newUser = {
+    id: Date.now(), // tao id duy nhat dua tren timestamp
+    username,
+    pass,
+  };
+  //lay danh sach hien co o localStorage
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+  // user la mang, neu localStorage chua co thi mac dinh []
 
-// form.addEventListener("submit", function (event) {
-//   event.preventDefault(); // Ngăn gửi form
+  users.push(newUser);
 
-//   const formData = {
-//     name: document.querySelector("#name").value,
-//     username: document.querySelector("#username").value,
-//     password: document.querySelector("#pass").value,
-//     gender: document.querySelector("#gender").value,
-//     email: document.querySelector("#email").value,
-//     address: document.querySelector("#address").value,
-//   };
+  //luu mang users tro lai localStorage
+  localStorage.setItem("users", JSON.stringify(users));
 
-//   const jsonData = JSON.stringify(formData);
-//   localStorage.setItem("user", jsonData);
+  // thong bao thanh cong va reset form
+  alert("Đăng ký thành công! Thông tin đã được lưu vào localStorage.");
+  signupForm.reset();
 
-//   // Delay 100ms để đảm bảo localStorage được lưu xong
-//   setTimeout(() => {
-//     window.location.href = "login.html";
-//   }, 100);
-// });
+  window.location.href = "login.html";
+});

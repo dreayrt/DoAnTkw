@@ -95,6 +95,30 @@ header .btn:hover {
 textarea {
   resize: none;
 }
+/* modal sign out */
+.modal-signout .box-signout {
+  width: 450px !important;
+  height: 250px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.375);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3000;
+}
+.modal-signout .box-signout .card-body {
+  height: 100px !important;
+}
+.modal-signout .box-signout .card-body .title h5 {
+  color: #fff;
+  font-size: 2rem;
+}
+.modal-signout .box-signout .icon--signout i {
+  color: #fff;
+  font-size: 5rem;
+  transform: translateY(50px);
+}
 
 /*===============nav===============  */
 .logo-header {

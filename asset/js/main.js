@@ -137,3 +137,38 @@ const btnHelpFaqs = document.querySelector(".btn-helpfaqs");
 btnHelpFaqs.addEventListener("click", function () {
   helpFaqs.classList.remove("d-none");
 });
+
+// doi my account -->username tren localStorage
+// lay doi tuong hien tai sau khi da login thanh cong
+const currUser = JSON.parse(localStorage.getItem("currentUser"));
+const myAcc = document.querySelector(".myacc");
+myAcc.innerHTML = `<i class="fa-solid fa-user"></i> ${currUser.username}`;
+myAcc.setAttribute("href", "");
+
+// bat sign out
+const boxSignOut = document.querySelector(".box-signout");
+myAcc.addEventListener("click", function (e) {
+  e.preventDefault();
+  boxSignOut.classList.toggle("d-none");
+});
+
+// dang xuat
+const signOut = document.querySelector(".signout");
+signOut.addEventListener("click", function (e) {
+  e.preventDefault();
+  boxSignOut.classList.add("d-none");
+  myAcc.innerHTML = `My Account`;
+});
+// signout box-quay lai
+const comeBack = document.querySelector(".comeback");
+const iconSignOut = document.querySelector(".icon--signout i");
+comeBack.addEventListener("click", function (e) {
+  e.preventDefault();
+  iconSignOut.classList.remove("fa-face-sad-tear");
+  iconSignOut.classList.add("fa-face-kiss-wink-heart");
+  setTimeout(() => {
+    iconSignOut.classList.remove("fa-face-kiss-wink-heart");
+    iconSignOut.classList.add("fa-face-sad-tear");
+    boxSignOut.classList.add("d-none");
+  }, 500);
+});
