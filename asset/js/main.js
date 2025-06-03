@@ -96,37 +96,119 @@ updateActive();
 // bat modal quick view
 const quickViews = document.querySelectorAll(".quick-view");
 const modalQuickView = document.querySelector(".modalqv");
+const modalThumbs = document.querySelectorAll(".modal__item-img img");
+const modalCarouselImages = document.querySelectorAll(
+  "#carouselModalQv .carousel-inner .carousel-item img"
+);
+
+const modalTitle = document.querySelector(".modal-title");
+const modalPrice = document.querySelector(".modal-price");
+const modalDesc = document.querySelector(".modal-desc");
+
 quickViews.forEach((quickView) => {
   quickView.addEventListener("click", function (e) {
     e.preventDefault();
+
+    const img1 = this.getAttribute("data-image1");
+    const img2 = this.getAttribute("data-image2");
+    const img3 = this.getAttribute("data-image3");
+
+    const title = this.getAttribute("data-title");
+    const price = this.getAttribute("data-price");
+    const desc = this.getAttribute("data-desc") || "";
+
+    if (modalThumbs.length >= 3) {
+      modalThumbs[0].src = img1;
+      modalThumbs[1].src = img2;
+      modalThumbs[2].src = img3;
+    }
+
+    if (modalCarouselImages.length >= 3) {
+      modalCarouselImages[0].src = img1;
+      modalCarouselImages[1].src = img2;
+      modalCarouselImages[2].src = img3;
+    }
+
+    modalTitle.textContent = title;
+    modalPrice.textContent = price;
+    modalDesc.textContent = desc;
+
     modalQuickView.classList.remove("d-none");
   });
 });
+
 // close
 const closeModal = document.querySelector(".icon-close");
 closeModal.addEventListener("click", function () {
   modalQuickView.classList.add("d-none");
 });
-// card added added
+// card added
 const btnAddQuickView = document.querySelector(".btn__add-to-cart");
 const modalAdded = document.querySelector(".modal-add");
+const yourCart = document.querySelector(".your-cart");
+const btnYourCart = document.querySelector(".btn-your-cart");
+
 btnAddQuickView.addEventListener("click", function (e) {
   e.preventDefault();
+  const titleModalAdd = document.querySelector(".modal-title-add-display");
+  titleModalAdd.textContent = modalTitle.textContent;
   modalAdded.classList.remove("d-none");
+
+  //  lay du lieu product dang xem them vao your card
+  const titleProductYourCard = titleModalAdd.textContent;
+  const priceProductYourCard = modalPrice.textContent;
+  const imgProductYourCard = document.querySelector(
+    "#carouselModalQv .carousel-inner .carousel-item.active img"
+  ).src;
+  // tao phan tu html moi
+  const cartItem = document.createElement("div");
+  cartItem.className = "cart-list row mb-3";
+  cartItem.innerHTML = `
+     <div class="cart-item__img col-3">
+       <img src="${imgProductYourCard}" alt="" class="w-100" />
+     </div>
+     <div class="cart-item__content col-9">
+       <div class="cart-item__heading py-3 fw-light">
+         <a href="#">${titleProductYourCard}</a>
+       </div>
+       <div class="cart-item__detail fw-light"> ${quantity.value}x ${priceProductYourCard}</div>
+     </div>
+   `;
+
+  //them vao your card
+  const totalBox = document.querySelector(".your-cart .total");
+  yourCart.querySelector(".your-cart__box").insertBefore(cartItem, totalBox);
+  updateTotal();
 });
+
+//tinh tien
+function updateTotal() {
+  const prices = document.querySelectorAll(".your-cart .cart-item__detail");
+  let total = 0;
+
+  prices.forEach((item) => {
+    const text = item.textContent.trim();
+    const parts = text.split("x");
+    const price = parseFloat(parts[1].replace("$", ""));
+    total += quantity.value * price;
+  });
+
+  document.querySelector(
+    ".your-cart .total"
+  ).textContent = `Total: $${total.toFixed(2)}`;
+}
+
 // close card added
 const btnModalAdd = document.querySelector(".btn-modal-add");
 btnModalAdd.addEventListener("click", function () {
   modalAdded.classList.add("d-none");
 });
 // open your cart
-const btnYourCart = document.querySelector(".btn-your-cart");
 btnYourCart.addEventListener("click", function () {
   yourCart.classList.remove("d-none");
 });
 //close your cart
 const btnCloselYourCart = document.querySelector(".btn-close__modal-your-cart");
-const yourCart = document.querySelector(".your-cart");
 btnCloselYourCart.addEventListener("click", function () {
   yourCart.classList.add("d-none");
 });

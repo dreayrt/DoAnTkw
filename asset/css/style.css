@@ -385,6 +385,15 @@ main .category .category__item .title .category__item--title-header {
   width: 80%;
   height: 90%;
 }
+
+.modalqv .carousel-inner .carousel-item img {
+  max-width: 1125px;
+  max-height: 620px;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+}
+
 .modal-detail .modal-detail__form form select {
   max-width: 250px;
   outline: none;
@@ -982,10 +991,13 @@ footer .footer__input:focus {
 }
 .shop-prod .card .thumb:hover img {
   transition: 0.5s;
+  transform: scale(1.25);
 }
 
-.shop-prod .card .thumb:hover img {
-  transform: scale(1.25);
+.shop-prod .card .thumb img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
 }
 .load-more .btn-load-more {
   transition: 0.5s;
