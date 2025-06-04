@@ -1,225 +1,237 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="vi">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- reset -->
-    <link rel="stylesheet" href="../css/reset.css" />
-    <!-- font-awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Reset CSS: chuẩn hóa style cơ bản của trình duyệt -->
+  <link rel="stylesheet" href="../css/reset.css" />
+  <!-- Font Awesome: thư viện icon -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- style bootstrap -->
-    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css" />
-    <!-- myStyle -->
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/contact.css" />
-    <title>Shop quan ao</title>
+  <!-- Bootstrap CSS: layout responsive với container, grid, flex -->
+  <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css" />
+  <!-- CSS chung cho toàn site -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <!-- CSS riêng cho trang Contact -->
+  <link rel="stylesheet" href="../css/contact.css" />
+  <title>Shop quần áo - Contact</title>
 </head>
-
 <body>
-    <!-- header -->
-    <header class="bg-dark">
-        <div class="container">
-            <div class="row py-3">
-                <div class="col-9 text-white">Free shipping nationwide</div>
-                <div class="col-1">
-                    <a href="#" class="btn text-bg-dark fs-5"> Help & FAQs </a>
-                </div>
-                <div class="col-1">
-                    <a href="#" class="btn text-bg-dark fs-5">My Account</a>
-                </div>
-                <div class="col-1">
-                    <a href="#" class="btn text-bg-dark fs-5"><i class="fa-solid fa-cart-shopping"></i></a>
-                </div>
-            </div>
+  <!-- ===== Header ===== -->
+  <header class="bg-dark">
+    <!-- .container: căn giữa nội dung, padding ngang linh hoạt -->
+    <div class="container">
+      <!-- .row: chia 12 cột, dùng flex -->
+      <div class="row py-3">
+        <!-- col-9: 9/12 cột hiển thị text -->
+        <div class="col-9 text-white">
+          Free shipping nationwide
         </div>
-    </header>
-    <!-- nav -->
-    <nav>
-        <div class="container">
-            <div class="row d-flex align-items-center">
-                <div class="col-2">
-                    <a href="#"><img src="../images/logo.png" alt="logo" class="logo-header" /></a>
-                </div>
-                <div class="col-7">
-                    <ul class="nav">
-                        <li class="nav-item me-4">
-                            <a href="#" class="nav-link">Home</a>
-                        </li>
-                        <li class="nav-item me-4">
-                            <a href="#" class="nav-link">Shop</a>
-                        </li>
-                        <li class="nav-item me-4">
-                            <a href="#" class="nav-link feature">Feature
-                                <span class="hot fs-5 text-bg-danger rounded-pill px-2">HOT</span></a>
-                        </li>
-                        <li class="nav-item me-4">
-                            <a href="#" class="nav-link">Blog</a>
-                        </li>
-                        <li class="nav-item me-4">
-                            <a href="#" class="nav-link">About</a>
-                        </li>
-                        <li class="nav-item me-4">
-                            <a href="#" class="nav-link active">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-3 input-group">
-                    <input type="text" class="form-control input-search fs-3" placeholder="Tìm kiếm..." />
-                    <span class="btn btn-search fs-3 btn-outline-dark"><i
-                            class="fa-solid fa-magnifying-glass"></i></span>
-                </div>
-            </div>
+        <!-- col-1, col-1, col-1: nút Help & FAQs, My Account, giỏ hàng -->
+        <div class="col-1">
+          <a href="#" class="btn text-bg-dark fs-5">Help & FAQs</a>
         </div>
-    </nav>
-
-    <!-- Hero Banner -->
-    <section class="contact-hero">
-        <h1>Contact</h1>
-    </section>
-    <!-- Contact me -->
-    <section class="contact-wrap py-5 bg-light">
-        <div class="container-contact">
-            <div class="contact-box bg-white border border-light rounded-3 shadow-sm p-5 mx-auto">
-                <div class="row gx-5 align-items-start">
-
-                    <!-- Send Us A Message -->
-                    <div class="col-lg-6 mb-4 mb-lg-0">
-                        <h2 class="mb-4">Send Us A Message</h2>
-
-                        <div class="position-relative mb-4">
-                            <i class="ri-mail-line input-icon"></i>
-                            <input type="email" class="form-control email-input" placeholder="Your Email Address" />
-                        </div>
-
-                        <div class="mb-4">
-                            <textarea class="form-control message-input" rows="6"
-                                placeholder="How Can We Help?"></textarea>
-                        </div>
-
-                        <button class="btn btn-dark btn-submit w-100">SUBMIT</button>
-                    </div>
-
-                    <!-- Contact Info -->
-                    <div class="col-lg-6 ps-lg-5 border-start">
-                        <h2 class="mb-4">Contact Info</h2>
-
-                        <div class="info-item d-flex mb-4">
-                            <i class="ri-map-pin-line info-icon"></i>
-                            <div>
-                                <h5>Address</h5>
-                                <p class="mb-0 text-muted">
-                                    140 Lê Trọng Tấn, Phường Tây Thạnh, Quận Tân Phú, Tp.Hồ Chí Minh
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="info-item d-flex mb-4">
-                            <i class="ri-phone-line info-icon"></i>
-                            <div>
-                                <h5>Let’s Talk</h5>
-                                <p class="mb-0">
-                                    <a href="tel:+18001236879">+84 123456789</a>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="info-item d-flex">
-                            <i class="ri-mail-line info-icon"></i>
-                            <div>
-                                <h5>Sale Support</h5>
-                                <p class="mb-0">
-                                    <a href="mailto:contact@example.com">contact@example.com</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+        <div class="col-1">
+          <a href="#" class="btn text-bg-dark fs-5">My Account</a>
         </div>
-    </section>
-    <!-- Map iframe -->
-    <section class="map-section">
-        <div class="container-fluid px-0">
-            <div class="map-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.068268553925!2d106.62647119224106!3d10.806083369806208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752be27d8b4f4d%3A0x92dcba2950430867!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBUaMawxqFuZyBUUC4gSOG7kyBDaMOtIE1pbmggKEhVSVQp!5e0!3m2!1svi!2s!4v1748337366696!5m2!1svi!2s"
-                    allowfullscreen="" loading="lazy">
-                </iframe>
-            </div>
+        <div class="col-1">
+          <a href="#" class="btn text-bg-dark fs-5">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
         </div>
-    </section>
+      </div>
+    </div>
+  </header>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container border-bottom">
-            <div class="row pb-5">
-                <!-- col-categories -->
-                <div class="col-3 footer__categories--col">
-                    <div class="footer__categories--categories-heading">
-                        <h2>Categories</h2>
-                    </div>
-                    <ul class="footer__categories--list">
-                        <li class="fw-light py-3"><a href="#"> Women </a></li>
-                        <li class="fw-light py-3"><a href="#">Men</a></li>
-                        <li class="fw-light py-3"><a href="#">Shoe</a></li>
-                        <li class="fw-light py-3"><a href="#">Watches</a></li>
-                    </ul>
-                </div>
-                <!-- col-help -->
-                <div class="col-3 footer__help--col">
-                    <div class="footer__help--help-heading">
-                        <h2>HELP</h2>
-                    </div>
-                    <ul class="footer__help--list">
-                        <li class="fw-light py-3"><a href="#"> Track Over </a></li>
-                        <li class="fw-light py-3"><a href="#">Returns</a></li>
-                        <li class="fw-light py-3"><a href="#">Shipping</a></li>
-                        <li class="fw-light py-3"><a href="#">FAQs</a></li>
-                    </ul>
-                </div>
-                <!-- col get in touch -->
-                <div class="col-3 footer__geintouch--col">
-                    <div class="footer__getintouch--getintouch-heading">
-                        <h2>GET IN TOUCH</h2>
-                    </div>
-                    <p class="text-light fw-light py-5">
-                        Any questions? Let us know in store at 8th floor, 379 Hudson St,
-                        New York, NY 10018 or call us on (+1) 96 716 6879
-                    </p>
-                    <div class="icon-getintouch">
-                        <span><a href="#"><i class="fa-brands fa-facebook-f me-4"></i></a></span>
-                        <span><a href="#"><i class="fa-brands fa-instagram me-4"></i></a></i></span>
-                        <span><a href=""><i class="fa-brands fa-pinterest-p me-4"></i></a></i></span>
-                    </div>
-                </div>
-                <!-- newsletter -->
-                <div class="col-3 footer__gnewsletter--col">
-                    <div class="footer__newsletter--newsletter-heading">
-                        <h2>NEWSLETTER</h2>
-                    </div>
-                    <!-- form -->
-                    <div class="footer__newsletter--input">
-                        <form action="">
-                            <input type="email" name="email" id="" placeholder="email@example.com"
-                                class="footer__input" />
-                        </form>
-                    </div>
-                    <!-- Subscribe -->
-                    <a href="#" class=" btn-sub rounded-pill">SUBSCRIBE</a>
-                </div>
-            </div>
+  <!-- ===== Thanh nav chính ===== -->
+  <nav>
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <!-- Logo chiếm 2/12 cột -->
+        <div class="col-2">
+          <a href="#"><img src="../images/logo.png" alt="logo" class="logo-header" /></a>
         </div>
-        <!-- copyright -->
-        <p class="copyright">Copyright © 2025.4duamenhh</p>
-    </footer>
-    <!-- script bootstrap -->
-    <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
-    <!-- script -->
-    <script src="../js/main.js"></script>
+        <!-- Menu nav chiếm 7/12 cột, dùng .nav li để tạo menu ngang -->
+        <div class="col-7">
+          <ul class="nav">
+            <li class="nav-item me-4"><a href="#" class="nav-link">Home</a></li>
+            <li class="nav-item me-4"><a href="#" class="nav-link">Shop</a></li>
+            <li class="nav-item me-4">
+              <a href="#" class="nav-link feature">
+                Feature <span class="hot fs-5 text-bg-danger rounded-pill px-2">HOT</span>
+              </a>
+            </li>
+            <li class="nav-item me-4"><a href="#" class="nav-link">Blog</a></li>
+            <li class="nav-item me-4"><a href="#" class="nav-link">About</a></li>
+            <!-- Đánh dấu active trên Contact -->
+            <li class="nav-item me-4"><a href="#" class="nav-link active">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Hộp tìm kiếm chiếm 3/12 cột -->
+        <div class="col-3 input-group">
+          <input type="text" class="form-control input-search fs-3" placeholder="Tìm kiếm..." />
+          <span class="btn btn-search fs-3 btn-outline-dark">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Hero Banner ===== -->
+  <section class="contact-hero">
+    <!-- .contact-hero: đặt ảnh nền full chiều ngang, cao 30vh, flex căn giữa tiêu đề -->
+    <h1>Liên Hệ</h1>
+  </section>
+
+  <!-- ===== Phần Contact Form & Thông tin ===== -->
+  <section class="contact-wrap py-5 bg-light">
+    <!-- container-custom (không dùng .container mặc định, nhưng vẫn căn giữa nội dung) -->
+    <div class="container-contact">
+      <!-- .contact-box: khung trắng, bo góc, shadow, giới hạn max-width 1200px -->
+      <div class="contact-box bg-white border border-light rounded-3 shadow-sm p-5 mx-auto">
+        <div class="row gx-5 align-items-start">
+          <!-- Cột trái: form gửi tin nhắn (6/12 cột trên màn ≥ lg) -->
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <h2 class="mb-4">Gửi Tin Nhắn Cho Chúng Tôi</h2>
+            <!-- Input email: .position-relative để chứa icon -->
+            <div class="position-relative mb-4">
+              <i class="ri-mail-line input-icon"></i>
+              <input type="email"
+                     class="form-control email-input"
+                     placeholder="Địa chỉ email của bạn" />
+            </div>
+            <!-- Textarea nhập nội dung -->
+            <div class="mb-4">
+              <textarea class="form-control message-input"
+                        rows="6"
+                        placeholder="Chúng tôi có thể giúp gì?"></textarea>
+            </div>
+            <!-- Nút submit full-width -->
+            <button class="btn btn-dark btn-submit w-100">GỬI</button>
+          </div>
+
+          <!-- Cột phải: thông tin liên hệ (6/12 cột) -->
+          <div class="col-lg-6 ps-lg-5 border-start">
+            <h2 class="mb-4">Thông Tin Liên Hệ</h2>
+            <!-- Địa chỉ: sử dụng flex d-flex để canh icon và text -->
+            <div class="info-item d-flex mb-4">
+              <i class="ri-map-pin-line info-icon"></i>
+              <div>
+                <h5>Địa Chỉ</h5>
+                <p class="mb-0 text-muted">
+                  140 Lê Trọng Tấn, P. Tây Thạnh, Q. Tân Phú, TP. HCM
+                </p>
+              </div>
+            </div>
+            <!-- Số điện thoại -->
+            <div class="info-item d-flex mb-4">
+              <i class="ri-phone-line info-icon"></i>
+              <div>
+                <h5>Gọi Cho Chúng Tôi</h5>
+                <p class="mb-0">
+                  <a href="tel:+84123456789">+84 123456789</a>
+                </p>
+              </div>
+            </div>
+            <!-- Email hỗ trợ -->
+            <div class="info-item d-flex">
+              <i class="ri-mail-line info-icon"></i>
+              <div>
+                <h5>Hỗ Trợ Bán Hàng</h5>
+                <p class="mb-0">
+                  <a href="mailto:contact@example.com">contact@example.com</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Map iframe ===== -->
+  <section class="map-section">
+    <!-- .container-fluid px-0: bỏ padding ngang để map full chiều ngang -->
+    <div class="container-fluid px-0">
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.068268553925!2d106.62647119224106!3d10.806083369806208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752be27d8b4f4d%3A0x92dcba2950430867!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBUaMawxqFuZyBUUC4gSOG7kyBDaMOtIE1pbmggKEhVSVQp!5e0!3m2!1svi!2s!4v1748337366696!5m2!1svi!2s"
+          allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer chung ===== -->
+  <footer>
+    <div class="container border-bottom">
+      <div class="row pb-5">
+        <!-- Cột 1: Danh mục (3/12) -->
+        <div class="col-3 footer__categories--col">
+          <div class="footer__categories--categories-heading">
+            <h2>Danh Mục</h2>
+          </div>
+          <ul class="footer__categories--list">
+            <li class="fw-light py-3"><a href="#">Nữ</a></li>
+            <li class="fw-light py-3"><a href="#">Nam</a></li>
+            <li class="fw-light py-3"><a href="#">Giày</a></li>
+            <li class="fw-light py-3"><a href="#">Đồng Hồ</a></li>
+          </ul>
+        </div>
+        <!-- Cột 2: Trợ giúp (3/12) -->
+        <div class="col-3 footer__help--col">
+          <div class="footer__help--help-heading">
+            <h2>TRỢ GIÚP</h2>
+          </div>
+          <ul class="footer__help--list">
+            <li class="fw-light py-3"><a href="#">Theo Dõi Đơn Hàng</a></li>
+            <li class="fw-light py-3"><a href="#">Đổi Trả</a></li>
+            <li class="fw-light py-3"><a href="#">Vận Chuyển</a></li>
+            <li class="fw-light py-3"><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <!-- Cột 3: Liên hệ (3/12) -->
+        <div class="col-3 footer__geintouch--col">
+          <div class="footer__getintouch--getintouch-heading">
+            <h2>LIÊN HỆ</h2>
+          </div>
+          <p class="text-light fw-light py-5">
+            Bất kỳ câu hỏi nào? Vui lòng ghé cửa hàng chúng tôi tại lầu 8, 379 Hudson St,
+            New York, NY 10018 hoặc gọi (+1) 96 716 6879
+          </p>
+          <div class="icon-getintouch">
+            <span><a href="#"><i class="fa-brands fa-facebook-f me-4"></i></a></span>
+            <span><a href="#"><i class="fa-brands fa-instagram me-4"></i></a></span>
+            <span><a href="#"><i class="fa-brands fa-pinterest-p me-4"></i></a></span>
+          </div>
+        </div>
+        <!-- Cột 4: Bản Tin (3/12) -->
+        <div class="col-3 footer__gnewsletter--col">
+          <div class="footer__newsletter--newsletter-heading">
+            <h2>BẢN TIN</h2>
+          </div>
+          <div class="footer__newsletter--input">
+            <!-- Form nhập email, thuộc tính required để validate cơ bản -->
+            <form action="">
+              <input type="email"
+                     name="email"
+                     placeholder="email@example.com"
+                     class="footer__input" />
+            </form>
+          </div>
+          <a href="#" class="btn-sub rounded-pill">ĐĂNG KÝ</a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">
+      © 2025.4duamenhh
+    </p>
+  </footer>
+
+  <!-- Bootstrap JS bundle (bao gồm Popper) -->
+  <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

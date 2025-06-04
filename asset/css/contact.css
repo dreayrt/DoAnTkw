@@ -1,103 +1,96 @@
-/* ===== Hero Banner ===== */
+/* ===== Reset mặc định (đã include file reset.css riêng) ===== */
+
+/* ===== Hero Banner (Contact) ===== */
 .contact-hero {
+    /* ảnh nền cover, căn giữa, không lặp */
     background: url("../images/bg-01.jpg") center/cover no-repeat;
     position: relative;
-    height: 30vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 30vh;               /* chiều cao 30% viewport */
+    display: flex;              /* sử dụng flex để căn giữa nội dung */
+    align-items: center;        /* dọc: căn giữa */
+    justify-content: center;    /* ngang: căn giữa */
 }
 .contact-hero::after {
+    /* lớp phủ mờ (nếu muốn thêm overlay) */
     content: "";
     position: absolute;
     inset: 0;
 }
 .contact-hero h1 {
-    position: relative;
+    position: relative;         /* để nằm trên ::after */
     color: #fff;
-    font-size: 3rem;
+    font-size: 3rem;            /* 30px */
     font-weight: 700;
 }
 
 /* ===== Contact Form & Info ===== */
-
 .contact-wrap {
-    background: #f8f9fa; /* màu nền trang nhẹ */
+    background: #f8f9fa;        /* nền sáng nhẹ */
 }
-.container-contact{
+.container-contact {
+    /* auto height theo nội dung */
     height: auto;
 }
-/* Khung trắng gốc, viền mờ, bo góc, shadow nhẹ */
+/* Khung trắng bao quanh form và info */
 .contact-box {
-    max-width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px;          /* giới hạn độ rộng lớn nhất */
+    margin: 0 auto;             /* căn giữa trong container */
 }
-
-/* Nhấn mạnh tiêu đề */
 .contact-box h2 {
     font-weight: 600;
-    font-size: 1.75rem;
+    font-size: 1.75rem;         /* 17.5px */
     color: #333;
 }
 
-/* Icon trong input */
+/* Icon trong input (position: absolute) */
 .input-icon {
     position: absolute;
     top: 50%;
     left: 1rem;
     transform: translateY(-50%);
     color: #aaa;
-    font-size: 1.25rem;
+    font-size: 1.25rem;         /* 12.5px */
 }
 
-/* Email input */
+/* Input email */
 .email-input {
-    width: 100%;
-    padding: 0.75rem 1rem 0.75rem 3rem;
-    height: 3.5rem;
+    width: 100%;                /* full chiều ngang cột */
+    padding: 0.75rem 1rem 0.75rem 3rem; /* chừa chỗ icon 3rem bên trái */
+    height: 3.5rem;             /* 35px */
     border: 1px solid #e0e0e0;
-    border-radius: 0.25rem;
+    border-radius: 0.25rem;     /* bo góc 4px */
 }
 .email-input:focus {
     outline: none;
-    border-color: #6666ff60;
-    box-shadow: 0 0 0 0.2rem rgba(102, 102, 255, 0.25);
+    border-color: #6666ff60;    /* viền khi focus */
+    box-shadow: 0 0 0 0.2rem rgba(102, 102, 255, 0.25); /* shadow trắng-xanh */
 }
-/* .form-control.message-input{
-    height: 10rem;
-} */
 
-/* Textarea */
+/* Textarea message */
 .message-input {
     border: 1px solid #e0e0e0;
     border-radius: 0.25rem;
 }
 
-/* Button */
+/* Button gửi */
 .btn-submit {
-    border-radius: 50px;
-    height: 3.5rem;
+    border-radius: 50px;        /* bo tròn thân nút */
+    height: 3.5rem;             /* 35px */
 }
 
-/* Đường phân cách cột phải */
+/* Đường phân cách cột phải (cột info) */
 .border-start {
     border-left: 1px solid #e0e0e0 !important;
 }
 
-/* Contact Info items */
+/* ===== Contact Info items ===== */
 .info-icon {
-    font-size: 1.5rem;
+    font-size: 1.5rem;          /* 15px */
     color: #555;
-    margin-right: 1rem;
-    flex-shrink: 0;
-    margin-top: 0.2rem;
+    margin-right: 1rem;         /* khoảng cách icon-text */
+    flex-shrink: 0;             /* không co lại khi flex container */
+    margin-top: 0.2rem;         /* canh cao icon */
 }
-/* .info-item h5 {
-    font-size: 1rem;
-    font-weight: 500;
-    margin-bottom: 0.25rem;
-} */
 .info-item p a {
     color: #0e0e0f60;
     text-decoration: none;
@@ -106,19 +99,18 @@
     text-decoration: underline;
 }
 
-/* Map Section */
+/* ===== Map Section ===== */
 .map-section {
   margin: 0;
   padding: 0;
 }
 .map-container {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
+  width: 100%;                 /* chiếm full chiều ngang */
+  height: 200px;               /* cố định 200px cao */
+  overflow: hidden;            /* ẩn phần tràn */
 }
-
 .map-container iframe {
   width: 100%;
   height: 100%;
-  border: 0;
+  border: 0;                   /* bỏ viền iframe */
 }
