@@ -142,7 +142,7 @@ const closeModal = document.querySelector(".icon-close");
 closeModal.addEventListener("click", function () {
   modalQuickView.classList.add("d-none");
 });
-// card added
+// cart added
 const btnAddQuickView = document.querySelector(".btn__add-to-cart");
 const modalAdded = document.querySelector(".modal-add");
 const yourCart = document.querySelector(".your-cart");
@@ -154,10 +154,10 @@ btnAddQuickView.addEventListener("click", function (e) {
   titleModalAdd.textContent = modalTitle.textContent;
   modalAdded.classList.remove("d-none");
 
-  //  lay du lieu product dang xem them vao your card
-  const titleProductYourCard = titleModalAdd.textContent;
-  const priceProductYourCard = modalPrice.textContent;
-  const imgProductYourCard = document.querySelector(
+  //  lay du lieu product dang xem them vao your cart
+  const titleProductYourCart = titleModalAdd.textContent;
+  const priceProductYourCart = modalPrice.textContent;
+  const imgProductYourCart = document.querySelector(
     "#carouselModalQv .carousel-inner .carousel-item.active img"
   ).src;
   // tao phan tu html moi
@@ -165,19 +165,30 @@ btnAddQuickView.addEventListener("click", function (e) {
   cartItem.className = "cart-list row mb-3";
   cartItem.innerHTML = `
      <div class="cart-item__img col-3">
-       <img src="${imgProductYourCard}" alt="" class="w-100" />
+       <img src="${imgProductYourCart}" alt="" class="w-100" />
      </div>
      <div class="cart-item__content col-9">
        <div class="cart-item__heading py-3 fw-light">
-         <a href="#">${titleProductYourCard}</a>
+         <a href="#">${titleProductYourCart}</a>
        </div>
-       <div class="cart-item__detail fw-light"> ${quantity.value}x ${priceProductYourCard}</div>
+       <div class="cart-item__detail fw-light"> ${quantity.value}x ${priceProductYourCart}</div>
      </div>
    `;
 
-  //them vao your card
+  //them vao your cart
   const totalBox = document.querySelector(".your-cart .total");
   yourCart.querySelector(".your-cart__box").insertBefore(cartItem, totalBox);
+
+  // luu vao localStorage
+  const currentCart = getCartFormLocalStorage();
+  currentCart.push({
+    title: titleProductYourCart,
+    price: priceProductYourCart,
+    image: imgProductYourCart,
+    quantity: quantity.value,
+  });
+  saveCartToLocalStorage(currentCart);
+  // cap nhat tong tien
   updateTotal();
 });
 
@@ -189,16 +200,57 @@ function updateTotal() {
   prices.forEach((item) => {
     const text = item.textContent.trim();
     const parts = text.split("x");
+    const quantity = parseInt(parts[0]);
     const price = parseFloat(parts[1].replace("$", ""));
-    total += quantity.value * price;
+    total += quantity * price;
   });
 
   document.querySelector(
     ".your-cart .total"
   ).textContent = `Total: $${total.toFixed(2)}`;
 }
+// lay danh sach cart o localStorage
+function getCartFormLocalStorage() {
+  const cart = localStorage.getItem("cart");
+  return cart ? JSON.parse(cart) : [];
+}
+// luu cart vao gio hang
+function saveCartToLocalStorage(cart) {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
 
-// close card added
+// lay du lieu tren localStorage
+function renderCartFromLocalStorage() {
+  const cart = getCartFormLocalStorage();
+  const cartBox = document.querySelector(".your-cart__box ");
+  const totalBox = document.querySelector(".your-cart .total");
+
+  cart.forEach((item) => {
+    const cartItem = document.createElement("div");
+    cartItem.className = "cart-list row mb-3";
+    cartItem.innerHTML = `
+      <div class="cart-item__img col-3">
+        <img src="${item.image}" alt="" class="w-100" />
+      </div>
+      <div class="cart-item__content col-9">
+        <div class="cart-item__heading py-3 fw-light">
+          <a href="#">${item.title}</a>
+        </div>
+        <div class="cart-item__detail fw-light"> ${item.quantity}x ${item.price}</div>
+      </div>
+    `;
+    cartBox.appendChild(cartItem);
+  });
+
+  cartBox.appendChild(totalBox);
+  updateTotal();
+}
+// load lai gio hang
+document.addEventListener("DOMContentLoaded", function () {
+  renderCartFromLocalStorage();
+});
+
+// close cart added
 const btnModalAdd = document.querySelector(".btn-modal-add");
 btnModalAdd.addEventListener("click", function () {
   modalAdded.classList.add("d-none");
@@ -231,17 +283,39 @@ myAcc.setAttribute("href", "");
 const boxSignOut = document.querySelector(".box-signout");
 myAcc.addEventListener("click", function (e) {
   e.preventDefault();
-  boxSignOut.classList.toggle("d-none");
+  const currUser = JSON.parse(localStorage.getItem("currentUser"));
+  if (!currUser) {
+    window.location.href = "login.html";
+  } else {
+    boxSignOut.classList.toggle("d-none");
+  }
 });
 
 // dang xuat
 const signOut = document.querySelector(".signout");
 signOut.addEventListener("click", function (e) {
   e.preventDefault();
+  // lay currentuser va  danh sach users
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+
+  const userIndex = users.findIndex(
+    (u) => u.username === currentUser.username && u.pass === currentUser.pass
+  );
+
+  if (userIndex !== -1) {
+    const currentCart = JSON.parse(localStorage.getItem("cart")) || [];
+    users[userIndex].cart = currentCart;
+    localStorage.setItem("users", JSON.stringify(users));
+  }
+
+  localStorage.removeItem("currentUser");
+  localStorage.removeItem("cart");
+
   boxSignOut.classList.add("d-none");
   myAcc.innerHTML = `My Account`;
 });
-// signout box-quay lai
+
 const comeBack = document.querySelector(".comeback");
 const iconSignOut = document.querySelector(".icon--signout i");
 comeBack.addEventListener("click", function (e) {

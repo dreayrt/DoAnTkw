@@ -41,6 +41,7 @@ header .btn:hover {
   width: 30%;
   height: 100vh;
   background-color: #fff;
+  overflow-y: auto;
 }
 .btn-close__modal-your-cart:hover {
   transition: 0.5;

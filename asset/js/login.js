@@ -19,14 +19,25 @@ const users = JSON.parse(localStorage.getItem("users")) || [];
 const loginForm = document.getElementById("loginForm");
 loginForm.addEventListener("submit", function (e) {
   e.preventDefault();
+
   const username = document.getElementById("username").value;
   const pass = document.getElementById("pass").value;
-  // tim user trung khop username và password
-  const user = users.find((u) => u.username === username && u.pass === pass);
 
-  if (user) {
+  // Tim vi tri user khop username va password voi file signUp
+  const userIndex = users.findIndex(
+    (u) => u.username === username && u.pass === pass
+  );
+
+  if (userIndex !== -1) {
+    const user = users[userIndex];
     alert("Đăng nhập thành công!");
     localStorage.setItem("currentUser", JSON.stringify(user));
+    if (Array.isArray(user.cart)) {
+      localStorage.setItem("cart", JSON.stringify(user.cart));
+    } else {
+      localStorage.setItem("cart", JSON.stringify([]));
+    }
+
     window.location.href = "index.html";
   } else {
     alert("Sai tên đăng nhập hoặc mật khẩu!");
