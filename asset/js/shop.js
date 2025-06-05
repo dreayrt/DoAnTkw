@@ -193,23 +193,6 @@ btnAddQuickView.addEventListener("click", function (e) {
   updateTotal();
 });
 
-//tinh tien
-function updateTotal() {
-  const prices = document.querySelectorAll(".your-cart .cart-item__detail");
-  let total = 0;
-
-  prices.forEach((item) => {
-    const text = item.textContent.trim();
-    const parts = text.split("x");
-    const quantity = parseInt(parts[0]);
-    const price = parseFloat(parts[1].replace("$", ""));
-    total += quantity * price;
-  });
-
-  document.querySelector(
-    ".your-cart .total"
-  ).textContent = `Total: $${total.toFixed(2)}`;
-}
 // lay danh sach cart o localStorage
 function getCartFormLocalStorage() {
   const cart = localStorage.getItem("cart");
@@ -250,6 +233,38 @@ function renderCartFromLocalStorage() {
 document.addEventListener("DOMContentLoaded", function () {
   renderCartFromLocalStorage();
 });
+//tinh tien
+function updateTotal() {
+  const prices = document.querySelectorAll(".your-cart .cart-item__detail");
+  let total = 0;
+
+  prices.forEach((item) => {
+    const text = item.textContent.trim();
+    const parts = text.split("x");
+    const quantity = parseInt(parts[0]);
+    const priceStr = parts[1].trim().replace("VNĐ", "").replace(/\./g, ""); //bieu thuc chinh quy tim tat ca dau (.):(/\./g)
+    const price = parseInt(priceStr);
+    total += quantity * price;
+  });
+  const totalFormatted = formatNumberWithDot(total);
+  document.querySelector(
+    ".your-cart .total"
+  ).textContent = `Tổng Cộng: ${totalFormatted} VNĐ`;
+}
+// them dau .
+function formatNumberWithDot(number) {
+  let str = number.toString();
+  let result = "";
+  let count = 0;
+  for (let i = str.length - 1; i >= 0; i--) {
+    result = str[i] + result;
+    count++;
+    if (count % 3 === 0 && i !== 0) {
+      result = "." + result;
+    }
+  }
+  return result;
+}
 // close card added
 const btnModalAdd = document.querySelector(".btn-modal-add");
 btnModalAdd.addEventListener("click", function () {
