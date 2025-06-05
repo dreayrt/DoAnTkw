@@ -330,3 +330,26 @@ OpenSearchShop.addEventListener("click", function () {
     iconSearchShop.classList.add("fa-magnifying-glass");
   }
 });
+// mua hang
+const modalBuy = document.querySelector(".modal-buy");
+const buyNow = document.querySelector(".buy");
+const cartItemsContainer = document.querySelector(".your-cart__box");
+buyNow.addEventListener("click", function () {
+  const cart = getCartFormLocalStorage();
+  if (cart && cart.length > 0) {
+    modalBuy.classList.remove("d-none");
+    setTimeout(() => {
+      modalBuy.classList.add("d-none");
+      const cartItems = cartItemsContainer.querySelectorAll(".cart-list");
+      cartItems.forEach((item) => item.remove());
+      clearCart();
+      updateTotal();
+    }, 1000);
+  } else {
+    alert("Giỏ hàng chưa có gì:(((");
+  }
+});
+// xoa cart o localStorage
+function clearCart() {
+  localStorage.setItem("cart", JSON.stringify([]));
+}

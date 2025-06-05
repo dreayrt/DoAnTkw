@@ -162,17 +162,18 @@ btnAddQuickView.addEventListener("click", function (e) {
   ).src;
   // tao phan tu html moi
   const cartItem = document.createElement("div");
-  cartItem.className = "cart-list row mb-3";
+  cartItem.className = "cart-list row mb-3 align-items-center";
   cartItem.innerHTML = `
      <div class="cart-item__img col-3">
        <img src="${imgProductYourCart}" alt="" class="w-100" />
      </div>
-     <div class="cart-item__content col-9">
+     <div class="cart-item__content col-7">
        <div class="cart-item__heading py-3 fw-light">
          <a href="#">${titleProductYourCart}</a>
        </div>
        <div class="cart-item__detail fw-light"> ${quantity.value}x ${priceProductYourCart}</div>
      </div>
+      <a class="cart-item__remove btn col-2">X</a>
    `;
 
   //them vao your cart
@@ -210,21 +211,21 @@ function renderCartFromLocalStorage() {
 
   cart.forEach((item) => {
     const cartItem = document.createElement("div");
-    cartItem.className = "cart-list row mb-3";
+    cartItem.className = "cart-list row mb-3 align-items-center";
     cartItem.innerHTML = `
       <div class="cart-item__img col-3">
         <img src="${item.image}" alt="" class="w-100" />
       </div>
-      <div class="cart-item__content col-9">
+      <div class="cart-item__content col-7">
         <div class="cart-item__heading py-3 fw-light">
           <a href="#">${item.title}</a>
         </div>
         <div class="cart-item__detail fw-light"> ${item.quantity}x ${item.price}</div>
       </div>
+      <a class="cart-item__remove btn col-2">X</a>
     `;
     cartBox.appendChild(cartItem);
   });
-
   cartBox.appendChild(totalBox);
   updateTotal();
 }
@@ -274,6 +275,29 @@ btnModalAdd.addEventListener("click", function () {
 btnYourCart.addEventListener("click", function () {
   yourCart.classList.remove("d-none");
 });
+// xoa san pham
+const cartBox = document.querySelector(".your-cart__box");
+cartBox.addEventListener("click", function (e) {
+  // <-- thêm tham số e vào đây
+  if (e.target.classList.contains("cart-item__remove")) {
+    const cartItemElement = e.target.closest(".cart-list");
+    const title = cartItemElement
+      .querySelector(".cart-item__heading a")
+      .textContent.trim();
+
+    // xóa phần tử HTML
+    cartItemElement.remove();
+
+    // xóa trong localStorage
+    let cart = getCartFormLocalStorage();
+    cart = cart.filter((item) => item.title !== title);
+    saveCartToLocalStorage(cart);
+
+    // cập nhật tổng tiền
+    updateTotal();
+  }
+});
+
 //close your cart
 const btnCloselYourCart = document.querySelector(".btn-close__modal-your-cart");
 btnCloselYourCart.addEventListener("click", function () {
@@ -330,7 +354,7 @@ signOut.addEventListener("click", function (e) {
   boxSignOut.classList.add("d-none");
   myAcc.innerHTML = `My Account`;
 });
-
+// giao dien truoc khi dang xuat
 const comeBack = document.querySelector(".comeback");
 const iconSignOut = document.querySelector(".icon--signout i");
 comeBack.addEventListener("click", function (e) {
@@ -343,3 +367,26 @@ comeBack.addEventListener("click", function (e) {
     boxSignOut.classList.add("d-none");
   }, 500);
 });
+// mua hang
+const modalBuy = document.querySelector(".modal-buy");
+const buyNow = document.querySelector(".buy");
+const cartItemsContainer = document.querySelector(".your-cart__box");
+buyNow.addEventListener("click", function () {
+  const cart = getCartFormLocalStorage();
+  if (cart && cart.length > 0) {
+    modalBuy.classList.remove("d-none");
+    setTimeout(() => {
+      modalBuy.classList.add("d-none");
+      const cartItems = cartItemsContainer.querySelectorAll(".cart-list");
+      cartItems.forEach((item) => item.remove());
+      clearCart();
+      updateTotal();
+    }, 1000);
+  } else {
+    alert("Giỏ hàng chưa có gì:(((");
+  }
+});
+// xoa cart o localStorage
+function clearCart() {
+  localStorage.setItem("cart", JSON.stringify([]));
+}

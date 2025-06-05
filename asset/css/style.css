@@ -75,6 +75,47 @@ header .btn:hover {
   color: #fff;
   background-color: #6666ffa1;
 }
+.your-cart__box .buy {
+  bottom: 20px;
+  left: 50%;
+  color: #fff;
+  background-color: #6666ffa1;
+  font-size: 2rem;
+  border-radius: 15px;
+  padding: 5px 10px;
+}
+.your-cart__box .buy:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+  transition: 0.5s;
+}
+/* modal buy */
+.modal-buy {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 7999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-buy .container {
+  max-width: 400px;
+  width: 90%;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 8000;
+  text-align: center;
+}
+.modal-buy__img {
+  font-size: 5rem;
+}
 /* modal help&FAQs */
 .help-faqs .card-box .card {
   width: 40%;
