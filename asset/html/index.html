@@ -27,14 +27,14 @@
     <header class="bg-dark position-relative">
       <div class="container">
         <div class="row py-3 align-items-center">
-          <div class="col-9 text-white">Miễn phí vận chuyển toàn quốc</div>
-          <div class="col-1">
+          <div class="col-lg-9 col-10 text-white">Miễn phí vận chuyển toàn quốc</div>
+          <div class="col-lg-1 d-lg-block d-none ">
             <a href="#" class="btn text-bg-dark fs-5 btn-helpfaqs">Trợ giúp & Câu hỏi</a>
           </div>
-          <div class="col-1">
+          <div class="col-lg-1 d-lg-block d-none">
             <a href="login.html" class="btn text-bg-dark fs-5 myacc ">Tài khoản</a>
           </div>
-          <div class="col-1">
+          <div class="col-lg-1 col-md-2 d-md-block d-none text-center">
             <a href="#" class="btn text-bg-dark fs-5 class btn-your-cart"
               ><i class="fa-solid fa-cart-shopping"></i
             ></a>
@@ -133,21 +133,21 @@
     <!-- nav -->
     <nav>
       <div class="container">
-        <div class="row d-flex align-items-center">
-          <div class="col-2">
+        <div class="row d-flex align-items-center position-relative">
+          <div class="col-lg-2 col-md-10 col-sm-8 ">
             <a href="#"
               ><img src="../images/logo.png" alt="logo" class="logo-header"
             /></a>
           </div>
-          <div class="col-7">
+          <div class="col-lg-7 d-none d-lg-block ">
             <ul class="nav">
-              <li class="nav-item me-4">
+              <li class="nav-item me-3">
                 <a href="index.html" class="nav-link active">Trang Chủ</a>
               </li>
-              <li class="nav-item me-4">
+              <li class="nav-item me-3">
                 <a href="shop.html" class="nav-link">Cửa Hàng</a>
               </li>
-              <li class="nav-item me-4">
+              <li class="nav-item me-3">
                 <a href="feature.html" class="nav-link feature"
                   >Nổi Bật
                   <span class="hot fs-5 text-bg-danger rounded-pill px-2"
@@ -155,29 +155,79 @@
                   ></a
                 >
               </li>
-              <li class="nav-item me-4">
+              <li class="nav-item me-3">
                 <a href="blog.html" class="nav-link">Bài Viết</a>
               </li>
-              <li class="nav-item me-4">
+              <li class="nav-item me-3">
                 <a href="about.html" class="nav-link">Giới Thiệu</a>
               </li>
-              <li class="nav-item me-4">
+              <li class="nav-item">
                 <a href="contact.html" class="nav-link">Liên Hệ</a>
               </li>
             </ul>
           </div>
-          <div class="col-3 input-group">
-            <input
-              type="text"
-              class="form-control input-search fs-3"
-              placeholder="Tìm kiếm..."
-            />
-            <span class="btn btn-search fs-3 btn-outline-dark"
-              ><i class="fa-solid fa-magnifying-glass"></i
-            ></span>
+        <div class="col-lg-3 d-none d-lg-block d-flex justify-content-center align-items-center">
+          <div class="input-group" >
+            <input type="text" class="form-control input-search fs-3" placeholder="Tìm kiếm..." />
+            <span class="btn btn-search fs-3 btn-outline-dark">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
           </div>
         </div>
+          <div class="btn btn-navbar d-lg-none col-2"><i class="fa-solid fa-bars"></i></div>
+        </div>
       </div>
+      <!-- responsive nav -->
+      <section class="container">
+       <div class="res__nav-overlay">
+         <div class="res__nav d-none">
+           <div class="row mt-5">
+            <div class="col">
+              <ul class="nav flex-column ">
+                 <li class="nav-item d-flex justify-content-center align-items-center mb-4">
+                <div class="input-group mb-3" >
+                  <input type="text" class="form-control fs-1 rounded-start-pill" placeholder="tìm kiếm..." >
+                  <button class="btn btn-search fs-3 btn-outline-light d-flex align-items-center btn-search__res rounded-end-pill ">
+                  <i class="fa-solid fa-magnifying-glass fs-1 "></i>
+                </button>
+                </div>
+              </li>
+              <li class="nav-item mb-4">
+                <a href="index.html" class="nav-link active">Trang Chủ</a>
+              </li>
+              <li class="nav-item mb-4">
+                <a href="shop.html" class="nav-link">Cửa Hàng</a>
+              </li>
+              <li class="nav-item mb-4">
+                <a href="feature.html" class="nav-link feature ">Nổi Bật
+                  <span class="hot fs-5 text-bg-danger rounded-pill px-2 ">HOT</span>
+                </a>
+              </li>
+              <li class="nav-item mb-4">
+                <a href="blog.html" class="nav-link">Bài Viết</a>
+              </li>
+              <li class="nav-item mb-4">
+                <a href="about.html" class="nav-link">Giới Thiệu</a>
+              </li>
+              <li class="nav-item mb-4">
+                <a href="contact.html" class="nav-link">Liên Hệ</a>
+              </li>
+              <li class="nav-item  mb-4">
+               <div class="d-flex justify-content-around align-items-center">
+                 <div>
+                  <a href="#" class="btn text-light fs-1 btn-helpfaqs">Trợ giúp & Câu hỏi</a>
+                </div>
+               <div>
+                  <a href="login.html" class="btn text-light fs-1 myacc ">Tài khoản</a>
+              </div>
+               </div>
+              </li>
+            </ul>
+            </div>
+           </div>
+        </div>
+       </div>
+      </section>
     </nav>
     <!-- hero -->
     <section class="hero">

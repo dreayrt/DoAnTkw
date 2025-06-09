@@ -306,28 +306,41 @@ btnCloselYourCart.addEventListener("click", function () {
 
 // open faq
 const helpFaqs = document.querySelector(".help-faqs");
-const btnHelpFaqs = document.querySelector(".btn-helpfaqs");
-btnHelpFaqs.addEventListener("click", function () {
-  helpFaqs.classList.remove("d-none");
+const btnHelpFaqs = document.querySelectorAll(".btn-helpfaqs");
+btnHelpFaqs.forEach((item) => {
+  item.addEventListener("click", function () {
+    helpFaqs.classList.remove("d-none");
+  });
 });
 
 // doi my account -->username tren localStorage
 // lay doi tuong hien tai sau khi da login thanh cong
 const currUser = JSON.parse(localStorage.getItem("currentUser"));
-const myAcc = document.querySelector(".myacc");
-myAcc.innerHTML = `<i class="fa-solid fa-user"></i> ${currUser.username}`;
-myAcc.setAttribute("href", "");
+const myAcc = document.querySelectorAll(".myacc");
+if (currUser) {
+  myAcc.forEach((item) => {
+    item.innerHTML = `<i class="fa-solid fa-user"></i> ${currUser.username}`;
+    item.setAttribute("href", "");
+  });
+} else {
+  myAcc.forEach((item) => {
+    item.innerHTML = `<i class="fa-solid fa-user"></i> My Account`;
+    item.setAttribute("href", "login.html");
+  });
+}
 
 // bat sign out
 const boxSignOut = document.querySelector(".box-signout");
-myAcc.addEventListener("click", function (e) {
-  e.preventDefault();
-  const currUser = JSON.parse(localStorage.getItem("currentUser"));
-  if (!currUser) {
-    window.location.href = "login.html";
-  } else {
-    boxSignOut.classList.toggle("d-none");
-  }
+myAcc.forEach((item) => {
+  item.addEventListener("click", function (e) {
+    e.preventDefault();
+    const currUser = JSON.parse(localStorage.getItem("currentUser"));
+    if (!currUser) {
+      window.location.href = "login.html";
+    } else {
+      boxSignOut.classList.toggle("d-none");
+    }
+  });
 });
 
 // dang xuat
@@ -352,7 +365,10 @@ signOut.addEventListener("click", function (e) {
   localStorage.removeItem("cart");
 
   boxSignOut.classList.add("d-none");
-  myAcc.innerHTML = `My Account`;
+  myAcc.forEach((item) => {
+    item.innerHTML = `My Account`;
+    item.setAttribute("href", "login.html");
+  });
 });
 // giao dien truoc khi dang xuat
 const comeBack = document.querySelector(".comeback");
@@ -390,3 +406,19 @@ buyNow.addEventListener("click", function () {
 function clearCart() {
   localStorage.setItem("cart", JSON.stringify([]));
 }
+// responsive-nav
+const resNav = document.querySelector(".res__nav");
+const btnNavbar = document.querySelector(".btn-navbar");
+const resNavOverlay = document.querySelector(".res__nav-overlay");
+btnNavbar.addEventListener("click", function () {
+  resNav.classList.remove("d-none");
+  resNavOverlay.classList.add("res__overlay");
+});
+resNavOverlay.addEventListener("click", function () {
+  resNav.classList.add("d-none");
+  resNavOverlay.classList.remove("res__overlay");
+});
+// chan su kien lan khi con nam trong phan tu cha deu co gan su kien giong nhau
+resNav.addEventListener("click", function (event) {
+  event.stopPropagation();
+});

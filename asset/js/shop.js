@@ -283,9 +283,11 @@ btnCloselYourCart.addEventListener("click", function () {
 
 // open faq
 const helpFaqs = document.querySelector(".help-faqs");
-const btnHelpFaqs = document.querySelector(".btn-helpfaqs");
-btnHelpFaqs.addEventListener("click", function () {
-  helpFaqs.classList.remove("d-none");
+const btnHelpFaqs = document.querySelectorAll(".btn-helpfaqs");
+btnHelpFaqs.forEach((item) => {
+  item.addEventListener("click", function () {
+    helpFaqs.classList.remove("d-none");
+  });
 });
 //nav-product
 const navLinkPros = document.querySelectorAll(".nav-link-product");
@@ -353,3 +355,9 @@ buyNow.addEventListener("click", function () {
 function clearCart() {
   localStorage.setItem("cart", JSON.stringify([]));
 }
+// responsive
+const resNav = document.querySelector(".res__nav");
+const btnNavbar = document.querySelector(".btn-navbar");
+btnNavbar.addEventListener("click", function () {
+  resNav.classList.remove("d-none");
+});

@@ -14,6 +14,11 @@ body {
 :root {
   --bg-coating: #6666ff60 !important;
 }
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
 /*===============common===============  */
 .active {
   font-weight: 600;
@@ -129,7 +134,7 @@ header .btn:hover {
   justify-content: center;
   align-items: center;
   background-color: #00000045;
-  z-index: 4000;
+  z-index: 20000;
 }
 .help-faqs .card-box .card-body {
   height: 310px;
@@ -142,12 +147,12 @@ textarea {
   width: 450px !important;
   height: 250px;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.375);
+  background-color: rgba(0, 0, 0, 0.741);
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 3000;
+  z-index: 20000;
 }
 .modal-signout .box-signout .card-body {
   height: 100px !important;
@@ -182,6 +187,33 @@ textarea {
   visibility: visible;
   transition: opacity 0.5s;
 }
+/* responsive*/
+.res__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.res__nav {
+  position: fixed;
+  inset: 0 40% 0 0;
+  z-index: 10000;
+  background-color: #0000008b;
+}
+.res__nav .nav .nav-item .nav-link {
+  font-size: 2.5rem;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+.res__nav .nav .nav-item .nav-link span {
+  transform: translate(170px, 10px);
+}
+
+.btn-search__res {
+  transition: transform 0.5s;
+}
+
 /*===============hero===============  */
 .hero .carousel .carousel-inner .carousel-item {
   height: 700px;
