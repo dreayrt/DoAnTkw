@@ -119,21 +119,27 @@ footerInput.addEventListener("click", function () {
 // btnModalAdd.addEventListener("click", function () {
 //   modalAdded.classList.add("d-none");
 // });
-// open your cart
-const btnYourCart = document.querySelector(".btn-your-cart");
-btnYourCart.addEventListener("click", function () {
-  yourCart.classList.remove("d-none");
-});
-//close your cart
-const btnCloselYourCart = document.querySelector(".btn-close__modal-your-cart");
-const yourCart = document.querySelector(".your-cart");
-btnCloselYourCart.addEventListener("click", function () {
-  yourCart.classList.add("d-none");
-});
-
 // open faq
 const helpFaqs = document.querySelector(".help-faqs");
-const btnHelpFaqs = document.querySelector(".btn-helpfaqs");
-btnHelpFaqs.addEventListener("click", function () {
-  helpFaqs.classList.remove("d-none");
+const btnHelpFaqs = document.querySelectorAll(".btn-helpfaqs");
+btnHelpFaqs.forEach((item) => {
+  item.addEventListener("click", function () {
+    helpFaqs.classList.remove("d-none");
+  });
+});
+// responsive-nav
+const resNav = document.querySelector(".res__nav");
+const btnNavbar = document.querySelector(".btn-navbar");
+const resNavOverlay = document.querySelector(".res__nav-overlay");
+btnNavbar.addEventListener("click", function () {
+  resNav.classList.remove("d-none");
+  resNavOverlay.classList.add("res__overlay");
+});
+resNavOverlay.addEventListener("click", function () {
+  resNav.classList.add("d-none");
+  resNavOverlay.classList.remove("res__overlay");
+});
+// chan su kien lan khi con nam trong phan tu cha deu co gan su kien giong nhau
+resNav.addEventListener("click", function (event) {
+  event.stopPropagation();
 });

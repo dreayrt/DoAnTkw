@@ -23,101 +23,81 @@
     <title>shop quan ao</title>
   </head>
   <body>
-    <header class="bg-dark position-relative">
+ <header class="bg-dark position-relative">
       <div class="container">
         <div class="row py-3 align-items-center">
-          <div class="col-10 text-white">Miễn phí vận chuyển toàn quốc</div>
-          <div class="col-2">
-            <a href="#" class="btn text-bg-dark fs-5 btn-helpfaqs">
-              Trợ giúp & Câu hỏi
-            </a>
+          <div class="col-lg-10 col-10 text-white">Miễn phí vận chuyển toàn quốc</div>
+          <div class="col-lg-1 d-lg-block d-none ">
+            <a href="#" class="btn text-bg-dark fs-5 btn-helpfaqs">Trợ giúp & Câu hỏi</a>
           </div>
         </div>
       </div>
-      </div>
-      <!-- modal help&FAQs -->
-      <div class="help-faqs d-none">
-        <div class="card-box">
-          <div class="card text-center">
-            <div class="card-header fw-bold p-3 bg-dark text-bg-dark">
-              Get Help
+    <!-- modal help&FAQs -->
+     <section class="help-faqs d-none">
+       <div class="card-box ">
+      <div class="card text-center ">
+        <div class="card-header fw-bold p-3 bg-dark text-bg-dark">Get Help</div>
+        <div class="card-body p-3">
+          <form action="">
+            <div class="d-flex justify-content-between">
+              <input type="text" placeholder="name" class="form-control me-4" />
+              <input type="email" placeholder="email" class="form-control" />
             </div>
-            <div class="card-body p-3">
-              <form action="">
-                <div class="d-flex justify-content-between">
-                  <input
-                    type="text"
-                    placeholder="name"
-                    class="form-control me-4"
-                  />
-                  <input
-                    type="email"
-                    placeholder="email"
-                    class="form-control"
-                  />
-                </div>
-                <div class="py-3">
-                  <input
-                    type="text"
-                    placeholder="Your Questions Title"
-                    class="form-control"
-                  />
-                </div>
-                <div class="d-flex justify-content-center mb-3">
-                  <textarea
-                    name=""
-                    id=""
-                    cols="85"
-                    rows="5"
-                    class="fw-light"
-                    placeholder="Question in detail"
-                  ></textarea>
-                </div>
-                <button
-                  class="btn btn-outline-success btn-sm d-inline-flex align-items-center w-100 justify-content-center p-3"
-                  type="submit"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
-                    fill="currentColor"
-                    class="me-2 bi bi-envelope-check-fill"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 4.697v4.974A4.491 4.491 0 0 0 12.5 8a4.49 4.49 0 0 0-1.965.45l-.338-.207L16 4.697Z"
-                    ></path>
-                    <path
-                      d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z"
-                    ></path>
-                  </svg>
-                  <span class="fs-3">Subscribe</span>
-                </button>
-              </form>
+            <div class="py-3">
+              <input
+                type="text"
+                placeholder="Your Questions Title"
+                class="form-control"
+              />
             </div>
-          </div>
+            <div class="d-flex justify-content-center mb-3">
+              <textarea name="" id="" cols="85" rows="5" class="fw-light" placeholder="Question in detail"></textarea>
+            </div>
+            <button
+              class="btn btn-outline-success btn-sm d-inline-flex align-items-center w-100 justify-content-center p-3"
+              type="submit"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="me-2 bi bi-envelope-check-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 4.697v4.974A4.491 4.491 0 0 0 12.5 8a4.49 4.49 0 0 0-1.965.45l-.338-.207L16 4.697Z"
+                ></path>
+                <path
+                  d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z"
+                ></path>
+              </svg>
+              <span class="fs-3">Subscribe</span>
+            </button>
+          </form>
         </div>
       </div>
+    </div>
+     </section>
     </header>
     <!-- nav -->
-    <nav>
+   <nav>
       <div class="container">
-        <div class="row d-flex align-items-center">
-          <div class="col-2">
+        <div class="row d-flex align-items-center position-relative">
+          <div class="col-lg-2 col-md-10 col-sm-8 ">
             <a href="#"
               ><img src="../images/logo.png" alt="logo" class="logo-header"
             /></a>
           </div>
-          <div class="col-7">
+          <div class="col-lg-7 d-none d-lg-block ">
             <ul class="nav">
-              <li class="nav-item me-4">
-                <a href="index.html" class="nav-link ">Trang Chủ </a>
+              <li class="nav-item me-3">
+                <a href="index.html" class="nav-link active">Trang Chủ</a>
               </li>
-              <li class="nav-item me-4">
+              <li class="nav-item me-3">
                 <a href="shop.html" class="nav-link">Cửa Hàng</a>
               </li>
-              <li class="nav-item me-4">
+              <li class="nav-item me-3">
                 <a href="feature.html" class="nav-link feature"
                   >Nổi Bật
                   <span class="hot fs-5 text-bg-danger rounded-pill px-2"
@@ -125,29 +105,76 @@
                   ></a
                 >
               </li>
-              <li class="nav-item me-4">
+              <li class="nav-item me-3">
                 <a href="blog.html" class="nav-link">Bài Viết</a>
               </li>
-              <li class="nav-item me-4">
-                <a href="about.html" class="nav-link active">Giới Thiệu</a>
+              <li class="nav-item me-3">
+                <a href="about.html" class="nav-link">Giới Thiệu</a>
               </li>
-              <li class="nav-item me-4">
+              <li class="nav-item">
                 <a href="contact.html" class="nav-link">Liên Hệ</a>
               </li>
             </ul>
           </div>
-          <div class="col-3 input-group">
-            <input
-              type="text"
-              class="form-control input-search fs-3"
-              placeholder="Tìm kiếm..."
-            />
-            <span class="btn btn-search fs-3 btn-outline-dark"
-              ><i class="fa-solid fa-magnifying-glass"></i
-            ></span>
+        <div class="col-lg-3 d-none d-lg-block d-flex justify-content-center align-items-center">
+          <div class="input-group" >
+            <input type="text" class="form-control input-search fs-3" placeholder="Tìm kiếm..." />
+            <span class="btn btn-search fs-3 btn-outline-dark">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
           </div>
         </div>
+          <div class="btn btn-navbar d-lg-none col-2"><i class="fa-solid fa-bars"></i></div>
+        </div>
       </div>
+      <!-- responsive nav -->
+      <section class="container">
+       <div class="res__nav-overlay">
+         <div class="res__nav d-none">
+           <div class="row mt-5">
+            <div class="col">
+              <ul class="nav flex-column ">
+                 <li class="nav-item d-flex justify-content-center align-items-center mb-4">
+                <div class="input-group mb-3" >
+                  <input type="text" class="form-control fs-1 rounded-start-pill" placeholder="tìm kiếm..." >
+                  <button class="btn btn-search fs-3 btn-outline-light d-flex align-items-center btn-search__res rounded-end-pill ">
+                  <i class="fa-solid fa-magnifying-glass fs-1 "></i>
+                </button>
+                </div>
+              </li>
+              <li class="nav-item mb-4">
+                <a href="index.html" class="nav-link active">Trang Chủ</a>
+              </li>
+              <li class="nav-item mb-4">
+                <a href="shop.html" class="nav-link">Cửa Hàng</a>
+              </li>
+              <li class="nav-item mb-4">
+                <a href="feature.html" class="nav-link feature ">Nổi Bật
+                  <span class="hot fs-5 text-bg-danger rounded-pill px-2 ">HOT</span>
+                </a>
+              </li>
+              <li class="nav-item mb-4">
+                <a href="blog.html" class="nav-link">Bài Viết</a>
+              </li>
+              <li class="nav-item mb-4">
+                <a href="about.html" class="nav-link">Giới Thiệu</a>
+              </li>
+              <li class="nav-item mb-4">
+                <a href="contact.html" class="nav-link">Liên Hệ</a>
+              </li>
+              <li class="nav-item  mb-4">
+               <div class="d-flex justify-content-around align-items-center">
+                 <div>
+                  <a href="#" class="btn text-light fs-1 btn-helpfaqs">Trợ giúp & Câu hỏi</a>
+                </div>
+               </div>
+              </li>
+            </ul>
+            </div>
+           </div>
+        </div>
+       </div>
+      </section>
     </nav>
 	<main>
          <!-- Title page -->
@@ -158,7 +185,7 @@
     <div class="container">
       <!-- Our Story -->
       <div class="story row align-items-center">
-        <div class="story-content col-8">
+        <div class="story-content col-md-8 col-sm-6">
           <h3 class="fw-bold">Câu chuyện của chúng tôi</h3>
           <p class="story-paragraph py-3">
             ZIUZIU – Không chỉ là một cửa hàng, mà là một tuyên ngôn thời trang Có một thương hiệu thời trang mang cái tên khác lạ: ZIUZIU. Tại đây, mọi giới hạn về phong cách hay giới tính đều được phá vỡ. Đó không chỉ là nơi để mua sắm — mà là một không gian cho những tâm hồn dám thể hiện mình.
@@ -167,20 +194,15 @@
             Bạn có thể là cô gái cá tính với váy đen asymmetrical. Bạn có thể là người mẫu mạnh mẽ, bước ra từ một concept chụp ảnh phá cách. Bạn cũng có thể là một chàng trai chỉ cần chiếc áo sơ mi vừa vặn để toát lên sự tự tin. Hay đơn giản, bạn chỉ cần một outfit để nói rằng: “Tôi là chính tôi”.
           </p>
         </div>
-        <div class="col-4">
+        <div class="col-md-4 col-sm-6">
           <div class="story-img">
             <img src="../images/about-01.jpg" alt="" class="w-100">
         </div>
         </div>
       </div>
       <!-- Our Mission -->
-      <div class="row mission align-items-center">
-       <div class="col-4">
-      <div class="mission-img">
-            <img src="../images/about-02.jpg" alt="" class="w-100">
-        </div>
-       </div>
-       <div class="col-8">
+      <div class="row mission align-items-center gx-md-4">
+       <div class="col-md-8 col-sm-6 order-md-2">
           <div class="mission-text">
           <h3 class="mission-title fw-bold">Sứ mệnh của chúng tôi</h3>
           <p class="mission-paragraph">
@@ -194,6 +216,11 @@
           </div>
         </div>
        </div>
+       <div class="col-md-4 col-sm-6 order-md-1">
+      <div class="mission-img">
+            <img src="../images/about-02.jpg" alt="" class="w-100">
+        </div>
+       </div>
       </div>
     </div>
     </div>	
@@ -203,7 +230,7 @@
       <div class="container border-bottom">
         <div class="row pb-5">
           <!-- col-categories -->
-          <div class="col-3 footer__categories--col">
+          <div class="col-lg-3 col-md-6 footer__categories--col">
             <div class="footer__categories--categories-heading">
               <h2>DANH MỤC</h2>
             </div>
@@ -215,7 +242,7 @@
             </ul>
           </div>
           <!-- col-help -->
-          <div class="col-3 footer__help--col">
+          <div class="col-lg-3 col-md-6 footer__help--col">
             <div class="footer__help--help-heading">
               <h2>HỖ TRỢ</h2>
             </div>
@@ -227,7 +254,7 @@
             </ul>
           </div>
           <!-- col get in touch -->
-          <div class="col-3 footer__geintouch--col">
+          <div class="col-lg-3 col-md-6 footer__geintouch--col">
             <div class="footer__getintouch--getintouch-heading">
               <h2>LIÊN HỆ</h2>
             </div>
@@ -241,7 +268,7 @@
             </div>
           </div>
           <!-- newsletter -->
-          <div class="col-3 footer__gnewsletter--col">
+          <div class="col-lg-3 col-md-6 footer__gnewsletter--col">
             <div class="footer__newsletter--newsletter-heading">
               <h2>BẢN TIN</h2>
             </div>

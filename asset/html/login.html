@@ -27,74 +27,19 @@
     <!-- header -->
     <header class="bg-dark position-relative">
       <div class="container">
-        <div class="row py-3">
-          <div class="col-11 text-white">Free shipping nationwide</div>
-          <div class="col-1">
-            <a href="#" class="btn text-bg-dark fs-5 btn-helpfaqs">
-              Help & FAQs
-            </a>
+        <div class="row py-3 align-items-center">
+          <div class="col-lg-10 col-10 text-white">
+            Miễn phí vận chuyển toàn quốc
           </div>
-        </div>
-      </div>
-      <!-- modal your cart -->
-      <div class="your-cart d-none">
-        <div class="your-cart__box p-5">
-          <div class="d-flex justify-content-between align-items-center mb-4">
-            <div>
-              <h2>Your Cart</h2>
-            </div>
-            <div class="btn btn-close__modal-your-cart fw-bold fs-2">X</div>
-          </div>
-          <!--cart list  -->
-          <div class="cart-list row mb-3">
-            <div class="cart-item__img col-3">
-              <img src="../images/item-cart-01.jpg" alt="" class="w-100" />
-            </div>
-            <div class="cart-item__content col-9">
-              <div class="cart-item__heading py-3 fw-light">
-                <a href="#"> White Shirt Pleat</a>
-              </div>
-              <div class="cart-item__detail fw-light">1 x $19.00</div>
-            </div>
-          </div>
-          <div class="cart-list row mb-3">
-            <div class="cart-item__img col-3">
-              <img src="../images/item-cart-02.jpg" alt="" class="w-100" />
-            </div>
-            <div class="cart-item__content col-9">
-              <div class="cart-item__heading py-3 fw-light">
-                <a href="#"> Converse All Star </a>
-              </div>
-              <div class="cart-item__detail fw-light">1 x $39.00</div>
-            </div>
-          </div>
-          <div class="cart-list row">
-            <div class="cart-item__img col-3">
-              <img src="../images/item-cart-03.jpg" alt="" class="w-100" />
-            </div>
-            <div class="cart-item__content col-9">
-              <div class="cart-item__heading py-3 fw-light">
-                <a href="#"> Nixon Porter Leather </a>
-              </div>
-              <div class="cart-item__detail fw-light">1 x $17.00</div>
-            </div>
-          </div>
-          <!-- total -->
-          <p class="fs-4 total mb-4">Total: $75.00</p>
-          <div
-            class="btn-yourcart-footer d-flex justify-content-center align-items-center"
-          >
-            <div class="btn-yourcart btn-viewcart me-3">
-              <a href="#">VIEW CART</a>
-            </div>
-            <div class="btn-yourcart btn-checkout">
-              <a href="#">CHECK OUT</a>
-            </div>
+          <div class="col-lg-1 d-lg-block d-none">
+            <a href="#" class="btn text-bg-dark fs-5 btn-helpfaqs"
+              >Trợ giúp & Câu hỏi</a
+            >
           </div>
         </div>
       </div>
       <!-- modal help&FAQs -->
-      <div class="help-faqs d-none">
+      <section class="help-faqs d-none">
         <div class="card-box">
           <div class="card text-center">
             <div class="card-header fw-bold p-3 bg-dark text-bg-dark">
@@ -156,54 +101,104 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </header>
     <!-- nav -->
     <nav>
-      <div class="container z-1 position-relative">
-        <div class="row d-flex align-items-center">
-          <div class="col-2">
+      <div class="container">
+        <div class="row d-flex align-items-center position-relative">
+          <div class="col-lg-2 col-md-10 col-sm-8">
             <a href="#"
               ><img src="../images/logo.png" alt="logo" class="logo-header"
             /></a>
           </div>
-          <div class="col-10">
+          <div class="col-lg-7 d-none d-lg-block">
             <ul class="nav">
-              <li class="nav-item me-4">
-                <a href="index.html" class="nav-link">Home</a>
+              <li class="nav-item me-3">
+                <a href="index.html" class="nav-link active">Trang Chủ</a>
               </li>
-              <li class="nav-item me-4">
-                <a href="shop.html" class="nav-link">Shop</a>
+              <li class="nav-item me-3">
+                <a href="shop.html" class="nav-link">Cửa Hàng</a>
               </li>
-              <li class="nav-item me-4">
+              <li class="nav-item me-3">
                 <a href="feature.html" class="nav-link feature"
-                  >Feature
+                  >Nổi Bật
                   <span class="hot fs-5 text-bg-danger rounded-pill px-2"
                     >HOT</span
                   ></a
                 >
               </li>
-              <li class="nav-item me-4">
-                <a href="blog.html" class="nav-link">Blog</a>
+              <li class="nav-item me-3">
+                <a href="blog.html" class="nav-link">Bài Viết</a>
               </li>
-              <li class="nav-item me-4">
-                <a href="about.html" class="nav-link">About</a>
+              <li class="nav-item me-3">
+                <a href="about.html" class="nav-link">Giới Thiệu</a>
               </li>
-              <li class="nav-item me-4">
-                <a href="contact.html" class="nav-link">Contact</a>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link">Liên Hệ</a>
               </li>
             </ul>
           </div>
+          <div class="btn btn-navbar d-lg-none col-2">
+            <i class="fa-solid fa-bars"></i>
+          </div>
         </div>
       </div>
+      <!-- responsive nav -->
+      <section class="container">
+        <div class="res__nav-overlay">
+          <div class="res__nav d-none">
+            <div class="row mt-5">
+              <div class="col">
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-4">
+                    <a href="index.html" class="nav-link active">Trang Chủ</a>
+                  </li>
+                  <li class="nav-item mb-4">
+                    <a href="shop.html" class="nav-link">Cửa Hàng</a>
+                  </li>
+                  <li class="nav-item mb-4">
+                    <a href="feature.html" class="nav-link feature"
+                      >Nổi Bật
+                      <span class="hot fs-5 text-bg-danger rounded-pill px-2"
+                        >HOT</span
+                      >
+                    </a>
+                  </li>
+                  <li class="nav-item mb-4">
+                    <a href="blog.html" class="nav-link">Bài Viết</a>
+                  </li>
+                  <li class="nav-item mb-4">
+                    <a href="about.html" class="nav-link">Giới Thiệu</a>
+                  </li>
+                  <li class="nav-item mb-4">
+                    <a href="contact.html" class="nav-link">Liên Hệ</a>
+                  </li>
+                  <li class="nav-item mb-4">
+                    <div
+                      class="d-flex justify-content-around align-items-center"
+                    >
+                      <div>
+                        <a href="#" class="btn text-light fs-1 btn-helpfaqs"
+                          >Trợ giúp & Câu hỏi</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </nav>
     <section class="login">
       <div class="container">
         <div class="row justify-content-center align-items-center">
-          <div class="col-5 login-img">
+          <div class="col-md-5 col-sm-6 login-img">
             <img src="../images/logo.png" alt="" />
           </div>
-          <div class="col-7 login-form">
+          <div class="col-md-7 col-sm-6 login-form">
             <form id="loginForm">
               <div class="login-form__username">
                 <label for="username" class="mb-2">Username: </label>
