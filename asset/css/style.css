@@ -82,7 +82,7 @@ header .btn:hover {
 }
 .your-cart__box .buy {
   bottom: 20px;
-  left: 50%;
+  right: 5%;
   color: #fff;
   background-color: #6666ffa1;
   font-size: 2rem;
@@ -647,6 +647,11 @@ main .category .category__item .title .category__item--title-header {
   background-color: #6666ffa1;
 }
 /* responsive */
+@media (min-width: 992px) {
+  .modal-add .close__modal-add {
+    transform: translate(-40px, -50px);
+  }
+}
 @media (min-width: 767.98px) and (max-width: 991.98px) {
   .modal-add .close__modal-add {
     transform: translate(60px, -70px);
