@@ -58,6 +58,42 @@ decrease.addEventListener("click", function () {
     quantity.value = 0;
   }
 });
+// rang buoc form
+const sizeSelect = document.querySelector("#size");
+const colorSelect = document.querySelector("#color");
+const addToCartBtn = document.querySelector("#addToCartBtn");
+// ham kiem tra trang thai
+function checkOptions() {
+  const sizeValue = sizeSelect.value;
+  const colorValue = colorSelect.value;
+
+  if (sizeValue && colorValue) {
+    if (parseInt(quantity.value) >= 1) {
+      addToCartBtn.classList.remove("disabled");
+    } else {
+      addToCartBtn.classList.add("disabled");
+    }
+  } else {
+    addToCartBtn.classList.add("disabled");
+  }
+}
+sizeSelect.addEventListener("change", checkOptions);
+colorSelect.addEventListener("change", checkOptions);
+// cap nhat so luong va check
+increase.addEventListener("click", function () {
+  let value = parseInt(quantity.value) || 0;
+  quantity.value = value;
+  checkOptions();
+});
+decrease.addEventListener("click", function () {
+  let value = parseInt(quantity.value) || 0;
+  if (value > 0) {
+    quantity.value = value;
+  }
+  checkOptions();
+});
+checkOptions();
+
 // hieu ung tuong ung anh cua carousel va anh nho
 const carouselModal = document.querySelector("#carouselModalQv");
 const carouselModalInner = document.querySelector(
@@ -283,7 +319,7 @@ cartBox.addEventListener("click", function (e) {
     const title = cartItemElement
       .querySelector(".cart-item__heading a")
       .textContent.trim();
-      cartItemElement.remove();
+    cartItemElement.remove();
     let cart = getCartFormLocalStorage();
     cart = cart.filter((item) => item.title !== title);
     saveCartToLocalStorage(cart);
