@@ -371,3 +371,48 @@ resNavOverlay.addEventListener("click", function () {
 resNav.addEventListener("click", function (event) {
   event.stopPropagation();
 });
+// loc san pham
+const priceItems = document.querySelectorAll(".price-list li");
+const productCards = document.querySelectorAll(".shop-prod .card");
+
+// ham chuyen doi text->so
+function parsePrice(text) {
+  return parseInt(text.replace(/[^\d]/g, ""));
+}
+
+priceItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    const text = item.innerText.trim();
+
+    let min = 0;
+    let max = Infinity;
+
+    // xac dinh khoang gia
+    if (text.includes("50.00VNĐ") && text.includes("1.000.000VNĐ")) {
+      min = 50000;
+      max = 1000000;
+    } else if (text.includes("1.000.00VNĐ") && text.includes("1.500.00VNĐ")) {
+      min = 1000000;
+      max = 1500000;
+    } else if (text.includes("1.500.000VNĐ") && text.includes("2.000.00VNĐ")) {
+      min = 1500000;
+      max = 2000000;
+    } else if (text.includes("2.000.00VNĐ+")) {
+      min = 2000000;
+    } else {
+      // khon gioi han
+      min = 0;
+      max = Infinity;
+    }
+    // loc san pham
+    productCards.forEach((card) => {
+      const priceText = card.querySelector(".card-text").innerText;
+      const priceValue = parsePrice(priceText);
+      if (priceValue >= min && priceValue <= max) {
+        card.parentElement.style.display = "block";
+      } else {
+        card.parentElement.style.display = "none";
+      }
+    });
+  });
+});
