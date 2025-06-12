@@ -278,22 +278,15 @@ btnYourCart.addEventListener("click", function () {
 // xoa san pham
 const cartBox = document.querySelector(".your-cart__box");
 cartBox.addEventListener("click", function (e) {
-  // <-- thêm tham số e vào đây
   if (e.target.classList.contains("cart-item__remove")) {
     const cartItemElement = e.target.closest(".cart-list");
     const title = cartItemElement
       .querySelector(".cart-item__heading a")
       .textContent.trim();
-
-    // xóa phần tử HTML
-    cartItemElement.remove();
-
-    // xóa trong localStorage
+      cartItemElement.remove();
     let cart = getCartFormLocalStorage();
     cart = cart.filter((item) => item.title !== title);
     saveCartToLocalStorage(cart);
-
-    // cập nhật tổng tiền
     updateTotal();
   }
 });

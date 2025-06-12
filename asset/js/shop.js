@@ -18,7 +18,7 @@
 //     item.classList.remove("overview__item--active");
 //   });
 // }
-// //heart1 -> heart2
+//heart1 -> heart2
 const heart1s = document.querySelectorAll(".heart1");
 heart1s.forEach((heart1) => {
   heart1.addEventListener("click", function () {
@@ -168,12 +168,13 @@ btnAddQuickView.addEventListener("click", function (e) {
      <div class="cart-item__img col-3">
        <img src="${imgProductYourCart}" alt="" class="w-100" />
      </div>
-     <div class="cart-item__content col-9">
+     <div class="cart-item__content col-7">
        <div class="cart-item__heading py-3 fw-light">
          <a href="#">${titleProductYourCart}</a>
        </div>
        <div class="cart-item__detail fw-light"> ${quantity.value}x ${priceProductYourCart}</div>
      </div>
+      <a class="cart-item__remove btn col-2">X</a>
    `;
 
   //them vao your cart
@@ -211,17 +212,18 @@ function renderCartFromLocalStorage() {
 
   cart.forEach((item) => {
     const cartItem = document.createElement("div");
-    cartItem.className = "cart-list row mb-3";
+    cartItem.className = "cart-list row mb-3 d-flex align-items-center";
     cartItem.innerHTML = `
       <div class="cart-item__img col-3">
         <img src="${item.image}" alt="" class="w-100" />
       </div>
-      <div class="cart-item__content col-9">
+      <div class="cart-item__content col-7">
         <div class="cart-item__heading py-3 fw-light">
           <a href="#">${item.title}</a>
         </div>
         <div class="cart-item__detail fw-light"> ${item.quantity}x ${item.price}</div>
       </div>
+      <a class="cart-item__remove btn col-2">X</a>
     `;
     cartBox.appendChild(cartItem);
   });
@@ -265,6 +267,21 @@ function formatNumberWithDot(number) {
   }
   return result;
 }
+// xoa san pham
+const cartBox = document.querySelector(".your-cart__box");
+cartBox.addEventListener("click", function (e) {
+  if (e.target.classList.contains("cart-item__remove")) {
+    const cartItemElement = e.target.closest(".cart-list");
+    const title = cartItemElement
+      .querySelector(".cart-item__heading a")
+      .textContent.trim();
+    cartItemElement.remove();
+    let cart = getCartFormLocalStorage();
+    cart = cart.filter((item) => item.title !== title);
+    saveCartToLocalStorage(cart);
+    updateTotal();
+  }
+});
 // close card added
 const btnModalAdd = document.querySelector(".btn-modal-add");
 btnModalAdd.addEventListener("click", function () {
@@ -332,6 +349,7 @@ OpenSearchShop.addEventListener("click", function () {
     iconSearchShop.classList.add("fa-magnifying-glass");
   }
 });
+
 // mua hang
 const modalBuy = document.querySelector(".modal-buy");
 const buyNow = document.querySelector(".buy");
