@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- reset -->
+    <link rel="stylesheet" href="../css/reset.css" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- style bootstrap -->
+    <link
+      rel="stylesheet"
+      href="../bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
+    <!-- myStyle -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/blogdetail.css">
+    <title>Shop ZiuZiu</title>
+  </head>
+  <body>
+ <header class="bg-dark position-relative">
+      <div class="container">
+        <div class="row py-3 align-items-center">
+          <div class="col-lg-10 col-10 text-white">Miễn phí vận chuyển toàn quốc</div>
+          <div class="col-lg-1 d-lg-block d-none ">
+            <a href="#" class="btn text-bg-dark fs-5 btn-helpfaqs">Trợ giúp & Câu hỏi</a>
+          </div>
+        </div>
+      </div>
+    <!-- modal help&FAQs -->
+     <section class="help-faqs d-none">
+       <div class="card-box ">
+      <div class="card text-center ">
+        <div class="card-header fw-bold p-3 bg-dark text-bg-dark">Get Help</div>
+        <div class="card-body p-3">
+          <form action="">
+            <div class="d-flex justify-content-between">
+              <input type="text" placeholder="name" class="form-control me-4" />
+              <input type="email" placeholder="email" class="form-control" />
+            </div>
+            <div class="py-3">
+              <input
+                type="text"
+                placeholder="Your Questions Title"
+                class="form-control"
+              />
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+              <textarea name="" id="" cols="85" rows="5" class="fw-light" placeholder="Question in detail"></textarea>
+            </div>
+            <button
+              class="btn btn-outline-success btn-sm d-inline-flex align-items-center w-100 justify-content-center p-3"
+              type="submit"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="me-2 bi bi-envelope-check-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 4.697v4.974A4.491 4.491 0 0 0 12.5 8a4.49 4.49 0 0 0-1.965.45l-.338-.207L16 4.697Z"
+                ></path>
+                <path
+                  d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z"
+                ></path>
+              </svg>
+              <span class="fs-3">Subscribe</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+     </section>
+    </header>
+    <!-- nav -->
+   <nav>
+      <div class="container">
+        <div class="row d-flex align-items-center position-relative">
+          <div class="col-lg-2 col-md-10 col-sm-8 ">
+            <a href="#"
+              ><img src="../images/logo.png" alt="logo" class="logo-header"
+            /></a>
+          </div>
+          <div class="col-lg-7 d-none d-lg-block ">
+            <ul class="nav">
+              <li class="nav-item me-3">
+                <a href="index.html" class="nav-link active">Trang Chủ</a>
+              </li>
+              <li class="nav-item me-3">
+                <a href="shop.html" class="nav-link">Cửa Hàng</a>
+              </li>
+              <li class="nav-item me-3">
+                <a href="feature.html" class="nav-link feature"
+                  >Nổi Bật
+                  <span class="hot fs-5 text-bg-danger rounded-pill px-2"
+                    >HOT</span
+                  ></a
+                >
+              </li>
+              <li class="nav-item me-3">
+                <a href="blog.html" class="nav-link">Bài Viết</a>
+              </li>
+              <li class="nav-item me-3">
+                <a href="about.html" class="nav-link">Giới Thiệu</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link">Liên Hệ</a>
+              </li>
+            </ul>
+          </div>
+        <div class="col-lg-3 d-none d-lg-block d-flex justify-content-center align-items-center">
+          <div class="input-group" >
+            <input type="text" class="form-control input-search fs-3" placeholder="Tìm kiếm..." />
+            <span class="btn btn-search fs-3 btn-outline-dark">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+          </div>
+        </div>
+          <div class="btn btn-navbar d-lg-none col-2"><i class="fa-solid fa-bars"></i></div>
+        </div>
+      </div>
+      <!-- responsive nav -->
+      <section class="container">
+       <div class="res__nav-overlay">
+         <div class="res__nav d-none">
+           <div class="row mt-5">
+            <div class="col">
+              <ul class="nav flex-column ">
+                 <li class="nav-item d-flex justify-content-center align-items-center mb-4">
+                <div class="input-group mb-3" >
+                  <input type="text" class="form-control fs-1 rounded-start-pill" placeholder="tìm kiếm..." >
+                  <button class="btn btn-search fs-3 btn-outline-light d-flex align-items-center btn-search__res rounded-end-pill ">
+                  <i class="fa-solid fa-magnifying-glass fs-1 "></i>
+                </button>
+                </div>
+              </li>
+              <li class="nav-item mb-4">
+                <a href="index.html" class="nav-link active">Trang Chủ</a>
+              </li>
+              <li class="nav-item mb-4">
+                <a href="shop.html" class="nav-link">Cửa Hàng</a>
+              </li>
+              <li class="nav-item mb-4">
+                <a href="feature.html" class="nav-link feature ">Nổi Bật
+                  <span class="hot fs-5 text-bg-danger rounded-pill px-2 ">HOT</span>
+                </a>
+              </li>
+              <li class="nav-item mb-4">
+                <a href="blog.html" class="nav-link">Bài Viết</a>
+              </li>
+              <li class="nav-item mb-4">
+                <a href="about.html" class="nav-link">Giới Thiệu</a>
+              </li>
+              <li class="nav-item mb-4">
+                <a href="contact.html" class="nav-link">Liên Hệ</a>
+              </li>
+              <li class="nav-item  mb-4">
+               <div class="d-flex justify-content-around align-items-center">
+                 <div>
+                  <a href="#" class="btn text-light fs-1 btn-helpfaqs">Trợ giúp & Câu hỏi</a>
+                </div>
+               </div>
+              </li>
+            </ul>
+            </div>
+           </div>
+        </div>
+       </div>
+      </section>
+    </nav>
+    <main>
+        <!-- breadcrumb -->
+        <section class="breadcrumb">
+            <div class="container">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html">Trang Chủ</a></li>
+    <li class="breadcrumb-item " aria-current="page"><a href="blog.html">Bài Viết</a></li>
+    <li class="breadcrumb-item active fw-bold" aria-current="page"> <a href="#">Bảng tổng hợp quà tặng cho nam giới trong mùa lễ</a></li>
+  </ol>
+</nav>
+            </div>
+        </section>
+        <!-- blog -->
+        <section class="blog">
+<!-- Blog Content Section -->
+<section class="blog-content">
+  <div class="container">
+    <div class="row">
+      <!-- Cột trái: Bài viết blog -->
+      <div class="blog-post-list col-md-8  ">
+        <div class="blog-post-item">
+          <div class="blog-post-item__img mb-5 ">
+          <div class="position-relative ">
+            <img src="../images/blog-02.jpg" class="w-100" alt="Blog image"  />
+            <div class="position-absolute text-center px-3 py-2 blog-post-item__date">
+              <h5 class="fw-bold fs-1">18</h5>
+              <small>Tháng 4 2025</small>
+            </div>
+          </div>
+        </div>
+        <!-- Nội dung bài viết -->
+        <div class=" blog-post-item__detail ">
+              <p class="text-muted mb-0 pt-2 pb-4">
+              Bởi Admin | 18 tháng 4, 2025 | Phong cách đường phố, Thời trang, Cặp đôi | 8 Bình luận
+            </p>
+          <h4 class="fw-bold mb-3 blog-post-item__detail--heading">Bảng tổng hợp quà tặng cho nam giới trong mùa lễ</h4>
+          <p class="text-muted desc">
+           Hãy tưởng tượng bạn có thể mặc váy quanh năm – kể cả trong mùa đông! Việc chọn đúng kiểu dáng và chất liệu sẽ giúp bạn vừa giữ ấm vừa thời trang. Một chiếc váy dày kết hợp cùng áo khoác dài, khăn len và bốt cao cổ không chỉ tạo nên phong cách thanh lịch mà còn vô cùng tiện lợi. Đừng ngại thử những lớp trang phục để tăng phần cá tính. Một chiếc áo len oversize khoác ngoài váy liền thân là lựa chọn hoàn hảo cho những ngày se lạnh.
+          </p>
+          <p class="text-muted desc">
+           Ngoài ra, hãy kết hợp váy với quần legging hoặc quần tất dày để giữ ấm và tạo điểm nhấn cho tổng thể. Phụ kiện như nón len, găng tay, túi da hoặc thắt lưng cũng góp phần nâng tầm bộ trang phục. Đừng quên chọn màu sắc phù hợp với mùa đông như xám, nâu, đỏ rượu hoặc xanh đậm để giữ vẻ sang trọng. Dù là đi làm, dạo phố hay dự tiệc, váy vẫn là món đồ không thể thiếu nếu bạn biết cách phối hợp khéo léo.
+          </p>
+          <!-- tag -->
+<section class="tag__detail ">
+    <div class="container d-flex align-items-center">
+        <div class="tag__heading me-5">Thẻ</div>
+        <div class="tag__btn">
+<a href="#" class="btn rounded-pill me-2">Phong cách đường phố</a>
+</div>
+<div class="tag__btn"><a href="#" class="btn rounded-pill">Thủ Công</a></div>
+    </div>
+</section>
+<section class="comment">
+    <div class="container">
+        <h2 class="fw-bold">Bình Luận</h2>
+        <p class="text-muted">Địa chỉ email của bạn sẽ không được hiển thị. Các trường bắt buộc được đánh dấu *</p>
+        <!-- form comment -->
+        <form action="" >
+        <div class="row">
+                <div class="col">
+                <textarea name="comment-text" id="" placeholder="Bình luận..." class="w-100 form-control fs-3" cols="50" rows="5"></textarea>
+            </div>
+        </div>
+            <div class="row">
+                <div class=" col-4">
+                <input type="text" name="name" id="" placeholder="Họ và tên*" class="w-100 form-control fs-3">
+            </div>
+            </div>
+           <div class="row">
+             <div class="col-4">
+                <input type="email" name="email" id="" placeholder="Email*"class="w-100 form-control fs-3">
+            </div>
+           </div>
+           <div>
+            <button class="rounded-pill px-3 py-2 postcomment-btn" type="submit">Gửi bình luận</button>
+           </div>
+        </form>
+    </div>
+
+</section>
+        </div>
+        </div>     
+      </div>
+      <!-- Cột phải: Sidebar -->
+      <div class="col-md-4 sidebar">
+        <!-- Search -->
+        <div class="input-group rounded-pill border sidebar-search ">
+          <input type="text" class="form-control border-1 fs-4" placeholder="Search"  />
+          <a href="#"class="input-group-text bg-white border-0 fs-2"> <i class="fa fa-search "></i></a>
+        </div>
+        <!-- Categories -->
+        <div class="mb-5">
+          <h5 class="fw-bold my-5 fs-2 ">Danh mục</h5>
+          <ul class="list-unstyled">
+            <li class="border-bottom border-top py-2">
+              <a href="#" class="text-decoration-none text-dark-emphasis">Thời trang</a>
+            </li>
+            <li class="border-bottom py-2">
+              <a href="#" class="text-decoration-none text-dark-emphasis">Làm đẹp</a>
+            </li>
+            <li class="border-bottom py-2">
+              <a href="#" class="text-decoration-none text-dark-emphasis">Phong cách đường phố</a>
+            </li>
+            <li class="border-bottom py-2">
+              <a href="#" class="text-decoration-none text-dark-emphasis">Phong cách sống</a>
+            </li>
+            <li class="border-bottom py-2">
+              <a href="#" class="text-decoration-none text-dark-emphasis">Tự làm & Thủ công</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Featured Products -->
+        <div class="mb-5">
+          <h5 class="fw-bold my-5 fs-2">Sản phẩm nổi bật</h5>
+          <div class="d-flex mb-3">
+            <img src="../images/product-min-01.jpg" alt="product" style="width: 60px; height: 100px; object-fit: cover;" class="me-3" />
+            <div class="d-flex flex-column justify-content-between py-3">
+              <p class="mb-1">Áo sơ mi trắng với chi tiết ly sau</p>
+              <span class="text-muted">1.219.000VNĐ</span>
+            </div>
+          </div>
+        </div>
+ <!-- Featured Products -->
+        <div class="mb-5 ">
+          
+          <div class="d-flex mb-3">
+            <img src="../images/product-min-02.jpg" alt="product" style="width: 60px; height: 100px; object-fit: cover;" class="me-3" />
+            <div class=" d-flex flex-column justify-content-between py-3">
+              <p class="mb-1">Giày Converse All Star Hi vải đen</p>
+              <span class="text-muted">2.256.020VNĐ</span>
+            </div>
+          </div>
+        </div>
+        <!-- Featured Products -->
+        <div class="mb-5 ">
+          
+          <div class="d-flex mb-3">
+            <img src="../images/product-min-03.jpg" alt="product" style="width: 60px; height: 100px; object-fit: cover;" class="me-3" />
+            <div class="d-flex flex-column justify-content-between py-3">
+              <p class="mb-1">Đồng hồ Nixon Porter dây da màu da bò</p>
+              <span class="text-muted">1.217.500VNĐ</span>
+            </div>
+          </div>
+        </div>
+        <!-- Archive -->
+<div class="mb-5 archive">
+  <h5 class="fw-bold mb-4 fs-2">Archive</h5>
+  <ul class="list-unstyled">
+    <li class="d-flex justify-content-between py-2">
+      <a href="#" class="text-decoration-none text-dark">Tháng 7 2020</a>
+      <a href="#">(9)</a>
+    </li>
+    <li class="d-flex justify-content-between py-2">
+      <a href="#" class="text-decoration-none text-dark">Tháng 6 2023</a>
+      <a href="#">(39)</a>
+    </li>
+    <li class="d-flex justify-content-between py-2">
+      <a href="#" class="text-decoration-none text-dark">Tháng 5 2024</a>
+      <a href="#">(29)</a>
+    </li>
+    <li class="d-flex justify-content-between py-2">
+      <a href="#" class="text-decoration-none text-dark">Tháng 4 2025</a>
+       <a href="#">(35)</a>
+    </li>
+    <li class="d-flex justify-content-between py-2">
+      <a href="#" class="text-decoration-none text-dark">Tháng 3 2018</a>
+      <a href="#">(22)</a>
+    </li>
+    <li class="d-flex justify-content-between py-2">
+      <a href="#" class="text-decoration-none text-dark">Tháng 2 2018</a>
+      <a href="#">(32)</a>
+    </li>
+    <li class="d-flex justify-content-between py-2">
+      <a href="#" class="text-decoration-none text-dark">Tháng 1 2025</a>
+      <a href="#">(21)</a>
+    </li>
+    <li class="d-flex justify-content-between py-2">
+      <a href="#" class="text-decoration-none text-dark">Tháng 12 2020</a>
+      <a href="#">(26)</a>
+    </li>
+  </ul>
+</div>
+<!-- Tags -->
+<div class="mb-5 tag">
+  <h5 class="fw-bold mb-4 fs-2">Thẻ</h5>
+  <div class="d-flex flex-wrap gap-2">
+    <a href="#" class="tag-link">Thời trang</a>
+    <a href="#" class="tag-link">Phong cách sống</a>
+    <a href="#" class="tag-link">Denim</a>
+    <a href="#" class="tag-link">Phong cách đường phố</a>
+    <a href="#" class="tag-link">Thủ công</a>
+  </div>
+</div>
+      </div>
+    </div>
+   
+  </div>
+</section>
+        </section>
+
+    </main>
+<footer>
+      <div class="container border-bottom">
+        <div class="row pb-5">
+          <!-- col-categories -->
+          <div class="col-lg-3 col-md-6 footer__categories--col">
+            <div class="footer__categories--categories-heading">
+              <h2>DANH MỤC</h2>
+            </div>
+            <ul class="footer__categories--list">
+              <li class="fw-light py-3"><a href="#"> Nữ </a></li>
+              <li class="fw-light py-3"><a href="#">Nam</a></li>
+              <li class="fw-light py-3"><a href="#">Giày</a></li>
+              <li class="fw-light py-3"><a href="#">Đồng hồ</a></li>
+            </ul>
+          </div>
+          <!-- col-help -->
+          <div class="col-lg-3 col-md-6 footer__help--col">
+            <div class="footer__help--help-heading">
+              <h2>HỖ TRỢ</h2>
+            </div>
+            <ul class="footer__help--list">
+              <li class="fw-light py-3"><a href="#"> Theo dõi đơn hàng</a></li>
+              <li class="fw-light py-3"><a href="#">Trả hàng</a></li>
+              <li class="fw-light py-3"><a href="#">Vận chuyển</a></li>
+              <li class="fw-light py-3"><a href="#">Thắc mắc</a></li>
+            </ul>
+          </div>
+          <!-- col get in touch -->
+          <div class="col-lg-3 col-md-6 footer__geintouch--col">
+            <div class="footer__getintouch--getintouch-heading">
+              <h2>LIÊN HỆ</h2>
+            </div>
+            <p class="text-light fw-light py-5">
+              Có câu hỏi nào? Hãy đến cửa hàng chúng tôi tại tầng 3, số 140 đường Lê Trọng Tấn, Tân Phú, HCM hoặc gọi cho chúng tôi theo số (+84) 96 71 6879
+            </p>
+            <div class="icon-getintouch">
+              <span><a href="#"><i class="fa-brands fa-facebook-f me-4"></i></a></span>
+              <span><a href="#"><i class="fa-brands fa-instagram me-4"></i></a></i></span>
+              <span><a href="#"><i class="fa-brands fa-pinterest-p me-4"></i></a></i></span>
+            </div>
+          </div>
+          <!-- newsletter -->
+          <div class="col-lg-3 col-md-6 footer__gnewsletter--col">
+            <div class="footer__newsletter--newsletter-heading">
+              <h2>BẢN TIN</h2>
+            </div>
+            <!-- form -->
+            <div class="footer__newsletter--input">
+              <form action="">
+                <input
+                  type="email"
+                  name="email"
+                  id=""
+                  placeholder="email@example.com"
+                  class="footer__input"
+                />
+              </form>
+            </div>
+            <!-- Subscribe -->
+             <a href="#" class=" btn-sub rounded-pill">Đăng ký</a>
+          </div>
+        </div>
+        <div class="iconpay__list d-flex justify-content-center mb-5">
+          <div class="iconpay__item me-3">
+            <img src="../images/icon-pay-01.png" alt="">
+          </div>
+          <div class="iconpay__item me-3">
+            <img src="../images/icon-pay-02.png" alt="">
+          </div>
+          <div class="iconpay__item me-3">
+            <img src="../images/icon-pay-03.png" alt="">
+          </div>
+          <div class="iconpay__item">
+            <img src="../images/icon-pay-04.png" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- copyright -->
+       <p class="copyright">Copyright © 2025.4duamenhh</p>
+    </footer>
+    <!-- script bootstrap -->
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- script -->
+    <script src="../js/blog.js"></script>
+  </body>
+</html>

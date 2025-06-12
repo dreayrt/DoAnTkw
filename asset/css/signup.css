@@ -1,0 +1,20 @@
+.card {
+  margin: 70px auto;
+  max-width: 70%;
+  box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.2);
+}
+.signup-btn,
+.reset-btn {
+  border: 2px solid rgba(0, 0, 0, 0.103);
+  background-color: #6666ffa1;
+  transition: 0.5s;
+}
+.signup-form__btn-submit .signup-btn:hover {
+  background-color: black;
+}
+.signup-form__btn-submit .reset-btn:hover {
+  background-color: black;
+}
+input {
+  font-size: 2rem !important;
+}
