@@ -1,681 +1,600 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Reset CSS: chuẩn hóa -->
-    <link rel="stylesheet" href="../css/reset.css" />
-    <!-- Font Awesome: thư viện icon -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- Bootstrap CSS cho grid, container, responsive -->
-    <link
-      rel="stylesheet"
-      href="../bootstrap-5.3.3-dist/css/bootstrap.min.css"
-    />
-    <!-- CSS riêng trang Feature -->
-    <link rel="stylesheet" href="../css/feature.css" />
-    <!-- Remixicon: icon cho tính năng (Why Choose Us) -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <title>Shop ZiuZiu – Feature</title>
-  </head>
-  <body>
-    <!-- ===== Thanh nav ===== -->
-    <nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Reset CSS: chuẩn hóa style giữa các trình duyệt -->
+  <link rel="stylesheet" href="../css/reset.css" />
+  <!-- Font Awesome: thư viện icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Bootstrap CSS: grid, container, responsive -->
+  <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css" />
+  <!-- CSS style -->
+   <link rel="stylesheet" href="../css/style.css">
+  <!-- CSS chung trang Feature -->
+  <link rel="stylesheet" href="../css/feature.css" />
+  <!-- Remixicon: icon cho tính năng (Why Choose Us) -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet" />
+  <title>Shop ZiuZiu </title>
+</head>
+
+<body>
+  <!-- ===== Thanh nav ===== -->
+   <nav>
       <div class="container">
-        <div class="row d-flex align-items-center">
-          <!-- Logo 2/12 cột -->
-          <div class="col-2">
+        <div class="row d-flex align-items-center position-relative">
+          <div class="col-lg-2 col-md-10 col-sm-8 ">
             <a href="#"
-              ><img
-                src="../images/logo-white.png"
-                alt="logo"
-                class="logo-header"
+              ><img src="../images/logo.png" alt="logo" class="logo-header"
             /></a>
           </div>
-          <!-- Menu nav 7/12 cột -->
-          <div class="col-7">
+          <div class="col-lg-7 d-none d-lg-block ">
             <ul class="nav">
-              <li class="nav-item me-4">
-                <a href="index.html" class="nav-link">Trang Chủ</a>
+              <li class="nav-item me-3">
+                <a href="index.html" class="nav-link active">Trang Chủ</a>
               </li>
-              <li class="nav-item me-4">
+              <li class="nav-item me-3">
                 <a href="shop.html" class="nav-link">Cửa Hàng</a>
               </li>
-              <li class="nav-item me-4">
-                <a href="feature.html" class="nav-link feature active">
-                  Nổi Bật
+              <li class="nav-item me-3">
+                <a href="feature.html" class="nav-link feature"
+                  >Nổi Bật
                   <span class="hot fs-5 text-bg-danger rounded-pill px-2"
                     >HOT</span
-                  >
-                </a>
+                  ></a
+                >
               </li>
-              <li class="nav-item me-4">
-                <a href="blog.html" class="nav-link">Blog</a>
+              <li class="nav-item me-3">
+                <a href="blog.html" class="nav-link">Bài Viết</a>
               </li>
-              <li class="nav-item me-4">
+              <li class="nav-item me-3">
                 <a href="about.html" class="nav-link">Giới Thiệu</a>
               </li>
-              <li class="nav-item me-4">
+              <li class="nav-item">
                 <a href="contact.html" class="nav-link">Liên Hệ</a>
               </li>
             </ul>
           </div>
-          <!-- Hộp tìm kiếm 3/12 cột -->
-          <div class="col-3 input-group">
-            <input
-              type="text"
-              class="form-control input-search fs-3"
-              placeholder="Tìm kiếm..."
-            />
+        <div class="col-lg-3 d-none d-lg-block d-flex justify-content-center align-items-center">
+          <div class="input-group" >
+            <input type="text" class="form-control input-search fs-3" placeholder="Tìm kiếm..." />
             <span class="btn btn-search fs-3 btn-outline-dark">
               <i class="fa-solid fa-magnifying-glass"></i>
             </span>
           </div>
         </div>
+          <div class="btn btn-navbar d-lg-none col-2"><i class="fa-solid fa-bars"></i></div>
+        </div>
       </div>
+      <!-- responsive nav -->
+      <section class="container">
+       <div class="res__nav-overlay">
+         <div class="res__nav d-none">
+           <div class="row mt-5">
+            <div class="col">
+              <ul class="nav flex-column ">
+                 <li class="nav-item d-flex justify-content-center align-items-center mb-4">
+                <div class="input-group mb-3" >
+                  <input type="text" class="form-control fs-1 rounded-start-pill" placeholder="tìm kiếm..." >
+                  <button class="btn btn-search fs-3 btn-outline-light d-flex align-items-center btn-search__res rounded-end-pill ">
+                  <i class="fa-solid fa-magnifying-glass fs-1 "></i>
+                </button>
+                </div>
+              </li>
+              <li class="nav-item mb-4">
+                <a href="index.html" class="nav-link active">Trang Chủ</a>
+              </li>
+              <li class="nav-item mb-4">
+                <a href="shop.html" class="nav-link">Cửa Hàng</a>
+              </li>
+              <li class="nav-item mb-4">
+                <a href="feature.html" class="nav-link feature ">Nổi Bật
+                  <span class="hot fs-5 text-bg-danger rounded-pill px-2 ">HOT</span>
+                </a>
+              </li>
+              <li class="nav-item mb-4">
+                <a href="blog.html" class="nav-link">Bài Viết</a>
+              </li>
+              <li class="nav-item mb-4">
+                <a href="about.html" class="nav-link">Giới Thiệu</a>
+              </li>
+              <li class="nav-item mb-4">
+                <a href="contact.html" class="nav-link">Liên Hệ</a>
+              </li>
+            </ul>
+            </div>
+           </div>
+        </div>
+       </div>
+      </section>
     </nav>
 
-    <!-- ===== Hero Carousel ===== -->
-    <section class="hero">
-      <!-- Carousel Bootstrap (chiếm full chiều cao màn) -->
-      <div
-        id="carouselExampleAutoplaying"
-        class="carousel slide carousel-fade"
-        data-bs-ride="carousel"
-        data-bs-pause="false"
-      >
-        <div class="carousel-inner">
-          <!-- Slide 1 (active ban đầu) -->
-          <div class="carousel-item active">
-            <!-- .slide-item để cover toàn bộ background -->
-            <div
-              style="background-image: url('../images/slide-05.jpg')"
-              class="slide-item h-100"
-            >
-              <!-- Nội dung text nằm trên nền, vị trí relative + z-index -->
-              <div class="content">
-                <p>BỘ SƯU TẬP NỮ 2025</p>
-                <span>NEW SEASON</span>
-                <a
-                  href="/shop.html"
-                  class="btn fs-1 rounded-pill hero__btn--shopnow"
-                >
-                  MUA NGAY
-                </a>
-              </div>
+  <!-- ===== Hero Carousel ===== -->
+  <section class="hero">
+    <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel"
+      data-bs-pause="false">
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <!-- .slide-item: background cover full height -->
+          <div style="background-image: url('../images/slide-05.jpg')" class="slide-item h-100">
+            <!-- content: text và nút căn giữa -->
+            <div class="content">
+              <p>BỘ SƯU TẬP NỮ 2025</p>
+              <span>NEW SEASON</span>
+              <a href="/shop.html" class="btn fs-1 rounded-pill hero__btn--shopnow">
+                MUA NGAY
+              </a>
             </div>
           </div>
-          <!-- Slide 2 -->
-          <div class="carousel-item">
-            <div
-              style="background-image: url('../images/slide-06.jpg')"
-              class="slide-item h-100"
-            >
-              <div class="content">
-                <p>THỜI TRANG NAM THỜI THƯỢNG</p>
-                <span>Ấn Tượng &amp; Lịch Lãm</span>
-                <a
-                  href="/shop.html"
-                  class="btn fs-1 rounded-pill hero__btn--shopnow"
-                >
-                  MUA NGAY
-                </a>
-              </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div style="background-image: url('../images/slide-06.jpg')" class="slide-item h-100">
+            <div class="content">
+              <p>THỜI TRANG NAM THỜI THƯỢNG</p>
+              <span>Ấn Tượng &amp; Lịch Lãm</span>
+              <a href="/shop.html" class="btn fs-1 rounded-pill hero__btn--shopnow">
+                MUA NGAY
+              </a>
             </div>
           </div>
-          <!-- Slide 3 -->
-          <div class="carousel-item">
-            <div
-              style="background-image: url('../images/slide-07.jpg')"
-              class="slide-item h-100"
-            >
-              <div class="content">
-                <p>BỘ SƯU TẬP MỚI</p>
-                <span>Ưu Đãi Sốc Cho Mùa Hè Này</span>
-                <a
-                  href="/shop.html"
-                  class="btn fs-1 rounded-pill hero__btn--shopnow"
-                >
-                  MUA NGAY
-                </a>
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div style="background-image: url('../images/slide-07.jpg')" class="slide-item h-100">
+            <div class="content">
+              <p>BỘ SƯU TẬP MỚI</p>
+              <span>Ưu Đãi Sốc Cho Mùa Hè Này</span>
+              <a href="/shop.html" class="btn fs-1 rounded-pill hero__btn--shopnow">
+                MUA NGAY
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Nút điều hướng slide lùi -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Trước</span>
+      </button>
+      <!-- Nút điều hướng slide tiến -->
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Tiếp</span>
+      </button>
+    </div>
+
+    <!-- Carousel thumbnails: dùng flex, căn giữa -->
+    <div class="carousel-thumbnails d-flex justify-content-center mt-3">
+      <div class="thumb-item mx-2 active" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0">
+        <img src="../images/thumb-01.jpg" alt="Trang Phục Nữ" />
+        <span class="thumb-caption">Trang Phục Nữ</span>
+      </div>
+      <div class="thumb-item mx-2" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1">
+        <img src="../images/thumb-02.jpg" alt="Trang Phục Nam" />
+        <span class="thumb-caption">Trang Phục Nam</span>
+      </div>
+      <div class="thumb-item mx-2" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2">
+        <img src="../images/thumb-03.jpg" alt="Hàng Mới" />
+        <span class="thumb-caption">Hàng Mới</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== New Arrivals For You ===== -->
+  <section class="container my-5">
+    <h1 class="tx1">New Arrivals For You</h1>
+    <div id="newArrivalsCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Mỗi .carousel-item chứa 4 card -->
+        <div class="carousel-item active">
+          <div class="row gx-4">
+            <div class="col-md-3 col-sm-6">
+              <div class="card product-card h-100">
+                <span class="newarrival-badge">New Arrival</span>
+                <img src="../images/product-01.jpg" class="card-img-top" alt="Esprit Ruffle Shirt">
+                <div class="card-body">
+                  <h4 class="fw-medium">Esprit Ruffle Shirt</h4>
+                  <p class="price mb-1">1.235.231VNĐ</p>
+                  <a href="shop.html" class="btn btn-outline-dark mt-2">Mua ngay</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="card product-card h-100">
+                <span class="newarrival-badge">New Arrival</span>
+                <img src="../images/product-02.jpg" class="card-img-top" alt="Esprit Ruffle Shirt">
+                <div class="card-body">
+                  <h4 class="fw-medium">Herschel supply</h4>
+                  <p class="price mb-1">1.256.164VNĐ</p>
+                  <a href="shop.html" class="btn btn-outline-dark mt-2">Mua ngay</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="card product-card h-100">
+                <span class="newarrival-badge">New Arrival</span>
+                <img src="../images/product-08.jpg" class="card-img-top" alt="Esprit Ruffle Shirt">
+                <div class="card-body">
+                  <h4 class="fw-medium">Shirt in Stretch Cotton</h4>
+                  <p class="price mb-1">1.252.616VNĐ</p>
+                  <a href="shop.html" class="btn btn-outline-dark mt-2">Mua ngay</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="card product-card h-100">
+                <span class="newarrival-badge">New Arrival</span>
+                <img src="../images/product-04.jpg" class="card-img-top" alt="Esprit Ruffle Shirt">
+                <div class="card-body">
+                  <h4 class="fw-medium">Only Check Trouser</h4>
+                  <p class="price mb-1">1.275.200VNĐ</p>
+                  <a href="shop.html" class="btn btn-outline-dark mt-2">Mua ngay</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- Nút điều hướng slide lùi -->
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <div class="carousel-item">
+          <div class="row gx-4">
+            <div class="col-md-3 col-sm-6">
+              <div class="card product-card h-100">
+                <span class="newarrival-badge">New Arrival</span>
+                <img src="../images/product-05.jpg" class="card-img-top" alt="Esprit Ruffle Shirt">
+                <div class="card-body">
+                  <h4 class="fw-medium">Classic Trench Coat</h4>
+                  <p class="price mb-1">1.255.002VNĐ</p>
+                  <a href="shop.html" class="btn btn-outline-dark mt-2">Mua ngay</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="card product-card h-100">
+                <span class="newarrival-badge">New Arrival</span>
+                <img src="../images/product-11.jpg" class="card-img-top" alt="Esprit Ruffle Shirt">
+                <div class="card-body">
+                  <h4 class="fw-medium">Femme T-Shirt In Stripe</h4>
+                  <p class="price mb-1">1.355.852VNĐ</p>
+                  <a href="shop.html" class="btn btn-outline-dark mt-2">Mua ngay</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="card product-card h-100">
+                <span class="newarrival-badge">New Arrival</span>
+                <img src="../images/product-10.jpg" class="card-img-top" alt="Esprit Ruffle Shirt">
+                <div class="card-body">
+                  <h4 class="fw-medium">Converse All Star Hi Plimsolls</h4>
+                  <p class="price mb-1">1.275.001VNĐ</p>
+                  <a href="shop.html" class="btn btn-outline-dark mt-2">Mua ngay</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="card product-card h-100">
+                <span class="newarrival-badge">New Arrival</span>
+                <img src="../images/product-09.jpg" class="card-img-top" alt="Esprit Ruffle Shirt">
+                <div class="card-body">
+                  <h4 class="fw-medium">Shirt in Stretch Cotton</h4>
+                  <p class="price mb-1">1.252.616VNĐ</p>
+                  <a href="shop.html" class="btn btn-outline-dark mt-2">Mua ngay</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Các slide tiếp theo copy tương tự -->
+      </div>
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#newArrivalsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#newArrivalsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ===== Banner + Countdown ===== -->
+  <section class="container bg-body-secondary my-5">
+    <!-- countdown-banner: ảnh nền, height 55vh, flex căn giữa nội dung -->
+    <section class="countdown-banner">
+      <div class="countdown-content">
+        <!-- Tiêu đề banner -->
+        <h3 class="tittle two text-center my-lg-4 mt-3">
+          ƯU ĐÃI CÓ HẠN MÙA HÈ NÀY
+        </h3>
+        <!-- Khung hiển thị thời gian -->
+        <div class="countdown-wrapper">
+          <div class="time-box">
+            <span id="days" class="number">0</span>
+            <span class="label">Ngày</span>
+          </div>
+          <div class="time-box">
+            <span id="hours" class="number">00</span>
+            <span class="label">Giờ</span>
+          </div>
+          <div class="time-box">
+            <span id="minutes" class="number">00</span>
+            <span class="label">Phút</span>
+          </div>
+          <div class="time-box">
+            <span id="seconds" class="number">00</span>
+            <span class="label">Giây</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Dòng sản phẩm Flash Sale -->
+    <!-- ===== Flash Sale ===== -->
+    <section class="flash-sale-section container my-3">
+      <div class="row gx-4">
+        <!-- Card mẫu, copy thêm 3 lần tương tự -->
+        <div class="col-6 col-md-3 mb-4">
+          <div class="card flash-card h-100 position-relative text-center">
+            <span class="flash-badge">-30%</span>
+            <img src="../images/product-07.jpg" alt="Áo Nữ Esprit Ruffle" class="flash-card-img">
+            <div class="flash-card-body d-flex flex-column">
+              <h4 class="mb-2">Vintage Inspired Classic</h4>
+              <p class="flash-original-price mb-1">1.343.201</p>
+              <p class="flash-sale-price mb-3">940.240VNĐ</p>
+              <a href="shop.html" class="btn btn-outline-danger flash-btn">Mua ngay</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <div class="card flash-card h-100 position-relative text-center">
+            <span class="flash-badge">-20%</span>
+            <img src="../images/product-12.jpg" alt="Áo Nữ Esprit Ruffle" class="flash-card-img">
+            <div class="flash-card-body d-flex flex-column">
+              <h4 class="mb-2">Herschel supply</h4>
+              <p class="flash-original-price mb-1">1.256.642</p>
+              <p class="flash-sale-price mb-3">1.005.313VNĐ</p>
+              <a href="shop.html" class="btn btn-outline-danger flash-btn">Mua ngay</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <div class="card flash-card h-100 position-relative text-center">
+            <span class="flash-badge">-40%</span>
+            <img src="../images/product-15.jpg" alt="Áo Nữ Esprit Ruffle" class="flash-card-img">
+            <div class="flash-card-body d-flex flex-column">
+              <h4 class="mb-2">Pretty Little Thing</h4>
+              <p class="flash-original-price mb-1">1.354.719</p>
+              <p class="flash-sale-price mb-3">812.831VNĐ</p>
+              <a href="shop.html" class="btn btn-outline-danger flash-btn">Mua ngay</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <div class="card flash-card h-100 position-relative text-center">
+            <span class="flash-badge">-60%</span>
+            <img src="../images/product-14.jpg" alt="Áo Nữ Esprit Ruffle" class="flash-card-img">
+            <div class="flash-card-body d-flex flex-column">
+              <h4 class="mb-2">T-Shirt with Sleeve</h4>
+              <p class="flash-original-price mb-1">1.258.491</p>
+              <p class="flash-sale-price mb-3">530.367VNĐ</p>
+              <a href="shop.html" class="btn btn-outline-danger flash-btn">Mua ngay</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- ===== Testimonials ===== -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <!-- Tiêu đề phần -->
+      <div class="row mb-4">
+        <div class="col text-center">
+          <h1 class="tx2">Testimonials</h1>
+          <p class="text-muted">
+            Những lời nhận xét chân thành từ khách hàng của chúng tôi
+          </p>
+        </div>
+      </div>
+      <!-- Carousel lời nhận xét -->
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Slide 1 chứa 3 nhận xét -->
+          <div class="carousel-item active">
+            <div class="row gx-4">
+              <div class="col-12 col-md-4">
+                <div class="card border-0 shadow-sm h-100 text-center p-4">
+                  <img src="https://i.pravatar.cc/100?img=32" class="rounded-circle mb-3" alt="Khách hàng 1" width="100"
+                    height="100" />
+                  <p class="fst-italic">
+                    “Dịch vụ tuyệt vời! Tôi rất hài lòng với chất lượng sản
+                    phẩm và sự tận tâm của đội ngũ.”
+                  </p>
+                  <h5 class="mb-0">Nguyễn Văn A</h5>
+                  <small class="text-muted">CEO, Công ty ABC</small>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 d-none d-md-block">
+                <div class="card border-0 shadow-sm h-100 text-center p-4">
+                  <img src="https://i.pravatar.cc/100?img=47" class="rounded-circle mb-3" alt="Khách hàng 2" width="100"
+                    height="100" />
+                  <p class="fst-italic">
+                    “Giao hàng nhanh chóng, sản phẩm đúng như mô tả. Mình sẽ
+                    tiếp tục ủng hộ dài lâu!”
+                  </p>
+                  <h5 class="mb-0">Trần Thị B</h5>
+                  <small class="text-muted">Freelancer</small>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 d-none d-md-block">
+                <div class="card border-0 shadow-sm h-100 text-center p-4">
+                  <img src="https://i.pravatar.cc/100?img=12" class="rounded-circle mb-3" alt="Khách hàng 3" width="100"
+                    height="100" />
+                  <p class="fst-italic">
+                    “Tôi thực sự ấn tượng với support 24/7 của các bạn. Mọi
+                    vấn đề đều được giải quyết nhanh chóng.”
+                  </p>
+                  <h5 class="mb-0">Lê Văn C</h5>
+                  <small class="text-muted">Developer, XYZ Corp.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 với 3 nhận xét khác -->
+          <div class="carousel-item">
+            <div class="row gx-4">
+              <div class="col-12 col-md-4">
+                <div class="card border-0 shadow-sm h-100 text-center p-4">
+                  <img src="https://i.pravatar.cc/100?img=58" class="rounded-circle mb-3" alt="Khách hàng 4" width="100"
+                    height="100" />
+                  <p class="fst-italic">
+                    “Chất lượng vượt mong đợi và nhân viên thân thiện, chuyên
+                    nghiệp.”
+                  </p>
+                  <h5 class="mb-0">Phạm Thị D</h5>
+                  <small class="text-muted">Manager, DEF Ltd.</small>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 d-none d-md-block">
+                <div class="card border-0 shadow-sm h-100 text-center p-4">
+                  <img src="https://i.pravatar.cc/100?img=23" class="rounded-circle mb-3" alt="Khách hàng 5" width="100"
+                    height="100" />
+                  <p class="fst-italic">
+                    “Giá cả hợp lý, dịch vụ tốt. Tôi rất hài lòng và giới
+                    thiệu bạn bè.”
+                  </p>
+                  <h5 class="mb-0">Vũ Anh E</h5>
+                  <small class="text-muted">Designer</small>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 d-none d-md-block">
+                <div class="card border-0 shadow-sm h-100 text-center p-4">
+                  <img src="https://i.pravatar.cc/100?img=20" class="rounded-circle mb-3" alt="Khách hàng 6" width="100"
+                    height="100" />
+                  <p class="fst-italic">
+                    “Tôi đánh giá 5 sao cho khoản chăm sóc khách hàng và độ
+                    tin cậy sản phẩm.”
+                  </p>
+                  <h5 class="mb-0">Đỗ Thị F</h5>
+                  <small class="text-muted">Entrepreneur</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Controls Prev/Next của carousel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
           <span class="visually-hidden">Trước</span>
         </button>
-        <!-- Nút điều hướng slide tiến -->
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
           <span class="visually-hidden">Tiếp</span>
         </button>
       </div>
+    </div>
+  </section>
 
-      <!-- Carousel thumbnails: đặt position absolute, bottom, translateX(-50%) để căn giữa -->
-      <div class="carousel-thumbnails d-flex justify-content-center mt-3">
-        <div
-          class="thumb-item mx-2 active"
-          data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide-to="0"
-        >
-          <img src="../images/thumb-01.jpg" alt="Trang Phục Nữ" />
-          <span class="thumb-caption">Trang Phục Nữ</span>
+  <!-- ===== Why Choose Us (Tại Sao Chọn Chúng Tôi) ===== -->
+  <section class="feature-section bg-light">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="feature-box">
+            <div class="icon-wrapper">
+              <i class="ri-hand"></i>
+            </div>
+            <h5>Uy Tín, Chất Lượng</h5>
+            <p>Dịch vụ tận tâm, cam kết 100% hài lòng.</p>
+            <a href="#" class="btn btn-outline-warning">Mua Ngay</a>
+          </div>
         </div>
-        <div
-          class="thumb-item mx-2"
-          data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide-to="1"
-        >
-          <img src="../images/thumb-02.jpg" alt="Trang Phục Nam" />
-          <span class="thumb-caption">Trang Phục Nam</span>
+        <div class="col">
+          <div class="feature-box">
+            <div class="icon-wrapper">
+              <i class="ri-rocket-line"></i>
+            </div>
+            <h5>Miễn Phí Vận Chuyển</h5>
+            <p>Giao hàng nhanh trong 24h.</p>
+            <a href="#" class="btn btn-outline-warning">Mua Ngay</a>
+          </div>
         </div>
-        <div
-          class="thumb-item mx-2"
-          data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide-to="2"
-        >
-          <img src="../images/thumb-03.jpg" alt="Hàng Mới" />
-          <span class="thumb-caption">Hàng Mới</span>
+        <div class="col">
+          <div class="feature-box">
+            <div class="icon-wrapper">
+              <i class="ri-store-2-line"></i>
+            </div>
+            <h5>Có Sẵn Tại Cửa Hàng</h5>
+            <p>Có sẵn tại các chi nhánh toàn quốc.</p>
+            <a href="#" class="btn btn-outline-warning">Mua Ngay</a>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ===== New Arrivals (Hàng Mới) ===== -->
-    <section class="container my-5">
-      <!-- Tiêu đề phần: margin dọc 2rem -->
-      <h1 class="tx1">New Arrivals For You</h1>
-      <!-- .row g-4: hàng 4 cột, gap 1.5rem -->
-      <div class="row g-4">
-        <!-- Mỗi .col-md-3 col-sm-6: 3/12 cột trên màn ≥ md, 6/12 cột trên màn nhỏ -->
-        <div class="col-md-3 col-sm-6">
-          <div class="card h-100">
-            <!-- position-relative để đặt badge -->
-            <div class="position-relative">
-              <img
-                src="../images/product-01.jpg"
-                class="card-img-top"
-                alt="Áo Nữ Esprit Ruffle"
-              />
-              <span class="badge bg-success position-absolute top-0 start-0 m-2"
-                >Mới</span
-              >
+  <!-- Section 2: Inline Features (4 tính năng ngang) -->
+  <section class="inline-section">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="col">
+          <div class="inline-feature">
+            <div class="icon-circle">
+              <i class="ri-gift-line"></i>
             </div>
-            <div class="card-body d-flex justify-content-between align-items-center">
-              <div class="card-body__content">
-                <p>Áo Nữ Esprit Ruffle</p>
-              <p class="card-text text-muted">390.000VNĐ</p>
-              </div>
-              <div>
-                <img src="../images/icon-heart-01.png" alt="" class="heart1" />
-              </div>
+            <div>
+              <h6>Chất Lượng Tốt Nhất</h6>
+              <p>Sản phẩm chính hãng, kiểm định đầy đủ.</p>
             </div>
           </div>
         </div>
-        <!-- Lặp lại với 3 sản phẩm khác -->
-        <div class="col-md-3 col-sm-6">
-          <div class="card h-100">
-            <img
-              src="../images/product-02.jpg"
-              class="card-img-top"
-              alt="Balo Herschel"
-            />
-            <div
-              class="card-body d-flex justify-content-between align-items-center"
-            >
-              <div class="card-body__content">
-                <p>Balo Herschel Chính Hãng</p>
-                <p class="card-text text-muted">820.000VNĐ</p>
-              </div>
-              <div>
-                <img src="../images/icon-heart-01.png" alt="" class="heart1" />
-              </div>
+        <div class="col">
+          <div class="inline-feature">
+            <div class="icon-circle">
+              <i class="ri-shield-line"></i>
+            </div>
+            <div>
+              <h6>Bảo Mật Tuyệt Đối</h6>
+              <p>Chính sách bảo mật 100% an toàn.</p>
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="card h-100">
-            <img
-              src="../images/product-03.jpg"
-              class="card-img-top"
-              alt="Quần Only Check"
-            />
-            <div
-              class="card-body d-flex justify-content-between align-items-center"
-            >
-              <div class="card-body__content">
-                <p>Quần Only Check</p>
-                <p class="card-text text-muted">600.000VNĐ</p>
-              </div>
-              <div>
-                <img src="../images/icon-heart-01.png" alt="" class="heart1" />
-              </div>
+        <div class="col">
+          <div class="inline-feature">
+            <div class="icon-circle">
+              <i class="ri-money-dollar-box-line"></i>
+            </div>
+            <div>
+              <h6>Thanh Toán Khi Nhận Hàng</h6>
+              <p>Hoàn tiền nếu không hài lòng.</p>
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="card h-100">
-            <img
-              src="../images/product-04.jpg"
-              class="card-img-top"
-              alt="Áo Khoác Trench"
-            />
-            <div
-              class="card-body d-flex justify-content-between align-items-center"
-            >
-              <div class="card-body__content">
-                <p>Áo Khoác Classic Trench</p>
-                <p class="card-text text-muted">1.800.000VNĐ</p>
-              </div>
-              <div>
-                <img src="../images/icon-heart-01.png" alt="" class="heart1" />
-              </div>
+        <div class="col">
+          <div class="inline-feature">
+            <div class="icon-circle">
+              <i class="ri-truck-line"></i>
+            </div>
+            <div>
+              <h6>Giao Hàng Miễn Phí</h6>
+              <p>Miễn phí toàn quốc cho đơn trên 500K.</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ===== Banner + Countdown ===== -->
-    <section class="container my-5">
-      <!-- countdown-banner: background ảnh, height 55vh, flex để căn giữa nội dung -->
-      <section class="countdown-banner">
-        <div class="countdown-content">
-          <!-- .tittle.two: tiêu đề banner -->
-          <h3 class="tittle two text-center my-lg-4 mt-3">
-            KHUYẾN MÃI MÙA HÈ NÀY
-          </h3>
-          <!-- Khung hiển thị ngày/giờ/phút/giây -->
-          <div class="countdown-wrapper">
-            <div class="time-box">
-              <span id="days" class="number">0</span>
-              <span class="label">Ngày</span>
-            </div>
-            <div class="time-box">
-              <span id="hours" class="number">00</span>
-              <span class="label">Giờ</span>
-            </div>
-            <div class="time-box">
-              <span id="minutes" class="number">00</span>
-              <span class="label">Phút</span>
-            </div>
-            <div class="time-box">
-              <span id="seconds" class="number">00</span>
-              <span class="label">Giây</span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Dòng sản phẩm Flash Sale (lặp lại layout giống New Arrivals) -->
-      <div class="row g-4 mt-5">
-        <div class="col-md-3 col-sm-6">
-          <div class="card h-100">
-            <div class="position-relative">
-              <img
-                src="../images/product-07.jpg"
-                class="card-img-top"
-                alt="Áo Nữ Esprit Ruffle"
-              />
-              <span class="badge bg-success position-absolute top-0 start-0 m-2"
-                >Mới</span
-              >
-            </div>
-            <div
-              class="card-body d-flex justify-content-between align-items-center"
-            >
-              <div class="card-body__content">
-                <p>Áo Nữ Esprit Ruffle</p>
-                <p class="card-text text-muted">390.000VNĐ</p>
-              </div>
-              <div>
-                <img src="../images/icon-heart-01.png" alt="" class="heart1" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Lặp lại 3 sản phẩm còn lại -->
-        <div class="col-md-3 col-sm-6">
-          <div class="card h-100">
-            <img
-              src="../images/product-02.jpg"
-              class="card-img-top"
-              alt="Balo Herschel"
-            />
-            <div
-              class="card-body d-flex justify-content-between align-items-center"
-            >
-              <div class="card-body__content">
-                <p>Balo Herschel Chính Hãng</p>
-                <p class="card-text text-muted">820.000₫</p>
-              </div>
-              <div>
-                <img src="../images/icon-heart-01.png" alt="" class="heart1" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="card h-100">
-            <img
-              src="../images/product-03.jpg"
-              class="card-img-top"
-              alt="Quần Only Check"
-            />
-            <div class="card-body d-flex justify-content-between align-items-center">
-              <div class="card-body__content">
-                <p>Quần Only Check</p>
-                <p class="card-text text-muted">600.000₫</p>
-              </div>
-              <div>
-                <img src="../images/icon-heart-01.png" alt="" class="heart1" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="card h-100">
-            <img
-              src="../images/product-04.jpg"
-              class="card-img-top"
-              alt="Áo Khoác Trench"
-            />
-            <div class="card-body d-flex justify-content-between align-items-center">
-              <div class="card-body__content">
-                <p>Áo Khoác Classic Trench</p>
-                <p class="card-text text-muted">1.800.000₫</p>
-              </div>
-              <div>
-                <img src="../images/icon-heart-01.png" alt="" class="heart1" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Testimonials ===== -->
-    <section class="py-5 bg-light">
-      <div class="container">
-        <!-- Tiêu đề phần -->
-        <div class="row mb-4">
-          <div class="col text-center">
-            <h1 class="tx2">Testimonials</h1>
-            <p class="text-muted">
-              Những lời nhận xét chân thành từ khách hàng của chúng tôi
-            </p>
-          </div>
-        </div>
-        <!-- Carousel lời nhận xét -->
-        <div
-          id="testimonialCarousel"
-          class="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <!-- Slide 1 chứa 3 nhận xét -->
-            <div class="carousel-item active">
-              <div class="row gx-4">
-                <!-- Mỗi cột chiếm 12 cột trên < md, 4 cột trên ≥ md -->
-                <div class="col-12 col-md-4">
-                  <div class="card border-0 shadow-sm h-100 text-center p-4">
-                    <img
-                      src="https://i.pravatar.cc/100?img=32"
-                      class="rounded-circle mb-3"
-                      alt="Khách hàng 1"
-                      width="100"
-                      height="100"
-                    />
-                    <p class="fst-italic">
-                      “Dịch vụ tuyệt vời! Tôi rất hài lòng với chất lượng sản
-                      phẩm và sự tận tâm của đội ngũ.”
-                    </p>
-                    <h5 class="mb-0">Nguyễn Văn A</h5>
-                    <small class="text-muted">CEO, Công ty ABC</small>
-                  </div>
-                </div>
-                <!-- Chỉ hiển thị 2 nhận xét còn lại trên màn ≥ md -->
-                <div class="col-12 col-md-4 d-none d-md-block">
-                  <div class="card border-0 shadow-sm h-100 text-center p-4">
-                    <img
-                      src="https://i.pravatar.cc/100?img=47"
-                      class="rounded-circle mb-3"
-                      alt="Khách hàng 2"
-                      width="100"
-                      height="100"
-                    />
-                    <p class="fst-italic">
-                      “Giao hàng nhanh chóng, sản phẩm đúng như mô tả. Mình sẽ
-                      tiếp tục ủng hộ dài lâu!”
-                    </p>
-                    <h5 class="mb-0">Trần Thị B</h5>
-                    <small class="text-muted">Freelancer</small>
-                  </div>
-                </div>
-                <div class="col-12 col-md-4 d-none d-md-block">
-                  <div class="card border-0 shadow-sm h-100 text-center p-4">
-                    <img
-                      src="https://i.pravatar.cc/100?img=12"
-                      class="rounded-circle mb-3"
-                      alt="Khách hàng 3"
-                      width="100"
-                      height="100"
-                    />
-                    <p class="fst-italic">
-                      “Tôi thực sự ấn tượng với support 24/7 của các bạn. Mọi
-                      vấn đề đều được giải quyết nhanh chóng.”
-                    </p>
-                    <h5 class="mb-0">Lê Văn C</h5>
-                    <small class="text-muted">Developer, XYZ Corp.</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Slide 2 với 3 nhận xét khác -->
-            <div class="carousel-item">
-              <div class="row gx-4">
-                <div class="col-12 col-md-4">
-                  <div class="card border-0 shadow-sm h-100 text-center p-4">
-                    <img
-                      src="https://i.pravatar.cc/100?img=58"
-                      class="rounded-circle mb-3"
-                      alt="Khách hàng 4"
-                      width="100"
-                      height="100"
-                    />
-                    <p class="fst-italic">
-                      “Chất lượng vượt mong đợi và nhân viên thân thiện, chuyên
-                      nghiệp.”
-                    </p>
-                    <h5 class="mb-0">Phạm Thị D</h5>
-                    <small class="text-muted">Manager, DEF Ltd.</small>
-                  </div>
-                </div>
-                <div class="col-12 col-md-4 d-none d-md-block">
-                  <div class="card border-0 shadow-sm h-100 text-center p-4">
-                    <img
-                      src="https://i.pravatar.cc/100?img=23"
-                      class="rounded-circle mb-3"
-                      alt="Khách hàng 5"
-                      width="100"
-                      height="100"
-                    />
-                    <p class="fst-italic">
-                      “Giá cả hợp lý, dịch vụ tốt. Tôi rất hài lòng và giới
-                      thiệu bạn bè.”
-                    </p>
-                    <h5 class="mb-0">Vũ Anh E</h5>
-                    <small class="text-muted">Designer</small>
-                  </div>
-                </div>
-                <div class="col-12 col-md-4 d-none d-md-block">
-                  <div class="card border-0 shadow-sm h-100 text-center p-4">
-                    <img
-                      src="https://i.pravatar.cc/100?img=20"
-                      class="rounded-circle mb-3"
-                      alt="Khách hàng 6"
-                      width="100"
-                      height="100"
-                    />
-                    <p class="fst-italic">
-                      “Tôi đánh giá 5 sao cho khoản chăm sóc khách hàng và độ
-                      tin cậy sản phẩm.”
-                    </p>
-                    <h5 class="mb-0">Đỗ Thị F</h5>
-                    <small class="text-muted">Entrepreneur</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Controls (Prev/Next) của carousel -->
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#testimonialCarousel"
-            data-bs-slide="prev"
-          >
-            <span
-              class="carousel-control-prev-icon bg-dark rounded-circle p-2"
-              aria-hidden="true"
-            ></span>
-            <span class="visually-hidden">Trước</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#testimonialCarousel"
-            data-bs-slide="next"
-          >
-            <span
-              class="carousel-control-next-icon bg-dark rounded-circle p-2"
-              aria-hidden="true"
-            ></span>
-            <span class="visually-hidden">Tiếp</span>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Why Choose Us (Tại Sao Chọn Chúng Tôi) ===== -->
-    <!-- Section 1: Feature Boxes -->
-    <section class="feature-section bg-light">
-      <div class="container">
-        <!-- .row-cols-1 row-cols-md-3: 1 cột trên < md, 3 cột trên ≥ md, g-4 gap=1.5rem -->
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col">
-            <div class="feature-box">
-              <div class="icon-wrapper">
-                <i class="ri-hand"></i>
-              </div>
-              <h5>Uy Tín, Chất Lượng</h5>
-              <p>Dịch vụ tận tâm, cam kết 100% hài lòng.</p>
-              <a href="#" class="btn btn-outline-warning">Mua Ngay</a>
-            </div>
-          </div>
-          <div class="col">
-            <div class="feature-box">
-              <div class="icon-wrapper">
-                <i class="ri-rocket-line"></i>
-              </div>
-              <h5>Miễn Phí Vận Chuyển</h5>
-              <p>Giao hàng nhanh trong 24h.</p>
-              <a href="#" class="btn btn-outline-warning">Mua Ngay</a>
-            </div>
-          </div>
-          <div class="col">
-            <div class="feature-box">
-              <div class="icon-wrapper">
-                <i class="ri-store-2-line"></i>
-              </div>
-              <h5>Có Sẵn Tại Cửa Hàng</h5>
-              <p>Có sẵn tại các chi nhánh toàn quốc.</p>
-              <a href="#" class="btn btn-outline-warning">Mua Ngay</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 2: Inline Features (4 tính năng ngang) -->
-    <section class="inline-section">
-      <div class="container">
-        <!-- row-cols-lg-4: 4 cột trên ≥ lg, 2 cột trên ≥ md, 1 cột mobile -->
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-          <div class="col">
-            <div class="inline-feature">
-              <div class="icon-circle">
-                <i class="ri-gift-line"></i>
-              </div>
-              <div>
-                <h6>Chất Lượng Tốt Nhất</h6>
-                <p>Sản phẩm chính hãng, kiểm định đầy đủ.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="inline-feature">
-              <div class="icon-circle">
-                <i class="ri-shield-line"></i>
-              </div>
-              <div>
-                <h6>Bảo Mật Tuyệt Đối</h6>
-                <p>Chính sách bảo mật 100% an toàn.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="inline-feature">
-              <div class="icon-circle">
-                <i class="ri-money-dollar-box-line"></i>
-              </div>
-              <div>
-                <h6>Thanh Toán Khi Nhận Hàng</h6>
-                <p>Hoàn tiền nếu không hài lòng.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="inline-feature">
-              <div class="icon-circle">
-                <i class="ri-truck-line"></i>
-              </div>
-              <div>
-                <h6>Giao Hàng Miễn Phí</h6>
-                <p>Miễn phí toàn quốc cho đơn trên 500K.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Footer ===== -->
-     <footer>
+  <!-- ===== Footer ===== -->
+  <footer>
       <div class="container border-bottom">
         <div class="row pb-5">
           <!-- col-categories -->
-          <div class="col-3 footer__categories--col">
+          <div class="col-lg-3 col-md-6 footer__categories--col">
             <div class="footer__categories--categories-heading">
               <h2>DANH MỤC</h2>
             </div>
@@ -687,7 +606,7 @@
             </ul>
           </div>
           <!-- col-help -->
-          <div class="col-3 footer__help--col">
+          <div class="col-lg-3 col-md-6 footer__help--col">
             <div class="footer__help--help-heading">
               <h2>HỖ TRỢ</h2>
             </div>
@@ -699,7 +618,7 @@
             </ul>
           </div>
           <!-- col get in touch -->
-          <div class="col-3 footer__geintouch--col">
+          <div class="col-lg-3 col-md-6 footer__geintouch--col">
             <div class="footer__getintouch--getintouch-heading">
               <h2>LIÊN HỆ</h2>
             </div>
@@ -713,7 +632,7 @@
             </div>
           </div>
           <!-- newsletter -->
-          <div class="col-3 footer__gnewsletter--col">
+          <div class="col-lg-3 col-md-6 footer__gnewsletter--col">
             <div class="footer__newsletter--newsletter-heading">
               <h2>BẢN TIN</h2>
             </div>
@@ -752,9 +671,10 @@
        <p class="copyright">Copyright © 2025.4duamenhh</p>
     </footer>
 
-    <!-- Bootstrap JS bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- JS Feature -->
-    <script src="../js/feature.js"></script>
-  </body>
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JS Feature -->
+  <script src="../js/feature.js"></script>
+</body>
+
 </html>

@@ -108,7 +108,7 @@ nav input.input-search {
   text-align: center;
   top: 40%;
   transform: translateY(-40%);
-  margin: 0 170px; /* margin ngang để tránh sát mép */
+  margin: 0 170px !important; /* margin ngang để tránh sát mép */
 }
 .hero .content p {
   font-size: 2.5rem; /* 25px */
@@ -145,7 +145,9 @@ nav input.input-search {
   border-radius: 0.4rem; /* 4px */
   overflow: hidden; /* ẩn phần thừa */
   border: 2px solid transparent;
-  transition: border 0.3s, transform 0.3s;
+  transition:
+    border 0.3s,
+    transform 0.3s;
   background: rgba(0, 0, 0, 0.4);
   text-align: center;
   width: 14rem; /* 140px */
@@ -402,7 +404,9 @@ footer a:hover {
   font-size: 2.5rem; /* 25px */
   color: #fff;
   background-color: #6666ff60;
-  transition: background-color 0.5s, color 0.5s;
+  transition:
+    background-color 0.5s,
+    color 0.5s;
   text-align: center;
 }
 .btn-sub:hover {
@@ -454,7 +458,9 @@ h1.tx2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
   height: 100%; /* chiếm full chiều cao cột */
   background: #fff;
 }
@@ -630,4 +636,127 @@ h1.tx2 {
   .time-box .label {
     font-size: 1rem; /* 10px */
   }
+}
+
+/* ===== New Arrivals For You ===== */
+.product-card .price {
+  font-size: 1.6rem;
+  color: #333;
+}
+.product-card .btn {
+  height: 30px;
+  width: 100%;
+}
+.product-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.product-card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+.product-card .btn {
+  margin-top: auto;
+  height: 30px;
+}
+.product-card .newarrival-badge {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: #333;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+/* Cố định khung ảnh và ép ảnh nằm giữa */
+.product-card .card-img-top {
+  width: 300px;
+  height: 350px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  margin: 0 auto;
+}
+.product-card .price{
+  color: #6c757d;
+}
+/* Áp dụng riêng cho New Arrivals carousel */
+.carousel-control-prev,
+.carousel-control-next {
+  /* đặt background mờ để tách nút ra khỏi ảnh */
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Đổi màu icon (vì mặc định là trắng trên nền sáng) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+  /* hoặc dùng filter: brightness(0) saturate(100%) để thành đen */
+}
+
+/* ===== Flash Sale Section ===== */
+.flash-sale-section h2 {
+  font-family: "Segoe UI", sans-serif;
+  letter-spacing: 1px;
+}
+
+.flash-sale-section .flash-card {
+  border: none;
+  overflow: hidden;
+}
+
+/* Badge giảm giá */
+.flash-sale-section .flash-badge {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: #dc3545;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Ảnh trong Flash Sale (chỉ khu vực này) */
+.flash-sale-section .flash-card-img {
+  width: 100%;
+  height: 330px; /* điều chỉnh cao mong muốn */
+  object-fit: cover; /* crop vừa khung, giữ tỉ lệ */
+  object-position: center;
+}
+
+/* Body card flex để đẩy nút xuống đáy */
+.flash-sale-section .flash-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+/* Giá gốc gạch ngang */
+.flash-sale-section .flash-original-price {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+/* Giá sale nổi bật */
+.flash-sale-section .flash-sale-price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #dc3545;
+}
+
+/* Nút Mua ngay chỉ ảnh hưởng Flash Sale */
+.flash-sale-section .flash-btn {
+  height: 30px;
+  margin-top: auto;
+  width: 100%;
 }
