@@ -163,7 +163,7 @@ btnAddQuickView.addEventListener("click", function (e) {
   ).src;
   // tao phan tu html moi
   const cartItem = document.createElement("div");
-  cartItem.className = "cart-list row mb-3";
+  cartItem.className = "cart-list row mb-3 d-flex align-items-center";
   cartItem.innerHTML = `
      <div class="cart-item__img col-3">
        <img src="${imgProductYourCart}" alt="" class="w-100" />
