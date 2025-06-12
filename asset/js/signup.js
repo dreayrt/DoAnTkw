@@ -31,11 +31,16 @@ signupForm.addEventListener("submit", function (e) {
     pass,
   };
   //lay danh sach hien co o localStorage
-  const users = JSON.parse(localStorage.getItem("users")) || [];
-  // user la mang, neu localStorage chua co thi mac dinh []
+  const users = JSON.parse(localStorage.getItem("users")) || []; // user la mang, neu localStorage chua co thi mac dinh []
+  // keim tra ton tai
+  const isDuplicate = users.some((user) => user.username === username);
 
+  if (isDuplicate) {
+    alert("Tên đăng nhập đã tồn tại. Vui lòng chọn tên khác.");
+    signupForm.reset();
+    return;
+  }
   users.push(newUser);
-
   //luu mang users tro lai localStorage
   localStorage.setItem("users", JSON.stringify(users));
 

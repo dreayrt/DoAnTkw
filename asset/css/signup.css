@@ -15,4 +15,6 @@
 .signup-form__btn-submit .reset-btn:hover {
   background-color: black;
 }
-
+input {
+  font-size: 2rem !important;
+}
